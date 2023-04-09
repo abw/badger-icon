@@ -5,9 +5,11 @@ const Examples = () =>
   <div className="debug-icons">
     {/* <Icon name="fa-check" className="fa-4x"/> */}
     <IconWeights name="point-up"/>
-    <IconWeights name="point-up.fill"/>
-    <IconWeights name="point-up.fill.opacity=50%"/>
-    <IconWeights name="point-up.fill.color=#ff7f00"/>
+    <IconWeights name="point-right.fill"/>
+    <IconWeights name="point-down.fill.opacity=50%"/>
+    <IconWeights name="point-left.fill.color=#ff7f00"/>
+    <IconWeights name="point-up-down"/>
+    <IconWeights name="point-left-right"/>
     <IconWeights name="check"/>
     <IconWeights name="check.square"/>
     <IconWeights name="cross"/>

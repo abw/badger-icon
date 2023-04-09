@@ -28,6 +28,18 @@ const Home = () =>
         </p>
       </div>
     </div>
+    <h2>Control</h2>
+    <Control/>
+
+    <h2>Rotated Icons</h2>
+    <div className="debug-icons">
+      <Icon name="arrow-up" className="fa-6x"/>
+      <Icon name="arrow-up" className="fa-6x right"/>
+      <Icon name="arrow-up" className="fa-6x down"/>
+      <Icon name="arrow-up" className="fa-6x left"/>
+    </div>
+
+    <h2>Stacked Icons</h2>
     <Icons className="fa-8x">
       <Icon name="square.fill"/>
       <Icon name="check" color="white" transform="shrink-6"/>
@@ -45,7 +57,13 @@ const Home = () =>
       <Icon name="square10.fill" color="magenta" transform="shrink-6"/>
       <Icon name="check.thicker.opacity=50%" color="white" transform="shrink-10"/>
     </Icons>
-    <Control/>
+    <Icons className="fa-8x">
+      <Icon name="square20.fill" color="orange"/>
+      <Icon name="point-up.fill.opacity=50%" color="white" transform="shrink-6"/>
+      <Icon name="square20.thin.opacity=50%" color="white"/>
+    </Icons>
+
+    <h2>Icons</h2>
     <Examples/>
     <div>
       <ul className="large menu">
