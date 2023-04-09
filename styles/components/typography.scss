@@ -1,0 +1,45 @@
+h1 {
+  font-size: $size-largest;
+  line-height: 1.1;
+  font-weight: bold;
+}
+h2 {
+  font-size: $size-larger;
+  line-height: 1.2;
+  font-weight: bold;
+}
+h3 {
+  font-size: $size-large;
+  line-height: 1.3;
+  font-weight: bold;
+}
+h4 {
+  font-size: $size-largish;
+  line-height: 1.4;
+  font-weight: bold;
+}
+p {
+  margin: 1rem 0;
+}
+p.intro {
+  font-size: 1.4em;
+}
+p.subintro {
+  font-size: 1.25em;
+}
+ul.menu {
+  padding: 1rem;
+  list-style: disc;
+}
+li {
+  margin-bottom: 1rem;
+}
+a {
+  font-weight: 500;
+  color: $brand-color;
+  text-decoration: inherit;
+  &:hover {
+    color: $brand-darkish;
+  }
+}
+
