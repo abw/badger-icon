@@ -99,7 +99,7 @@ body {
     font-size: 0.8rem;
   }
 }
-code.code {
+p > code, code.code {
   background-color: hsl($brand-hue, 30%, 95%);
   border: 1px solid hsl($brand-hue, 40%, 90%);
   color: hsl($brand-hue, 90%, 30%);

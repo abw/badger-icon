@@ -1,79 +1,81 @@
 import React from 'react'
-import iconlib from './iconlib.js'
+import iconlib from './singlelib.js'
 import { classNames } from './Utils/index.js'
-import { fail, isString } from '@abw/badger-utils'
+import { fail, isString, splitList } from '@abw/badger-utils'
 import { Transform } from './Transform.jsx'
 import pathStyle from './Styles.js'
+import { parseSpec } from './Parse.js'
 
 const faProps = {
   fixedWidth: 'fa-fw',
   spin: ' fa-spin',
 }
 
-export const Icon = ({icons=iconlib, transform, ...props}) => {
-  // icon can be specified as "icon" or "name" property and can be a string
-  // like "badger spin" where anything after the first icon name is added as
-  // a fa-XXX class
-  const spec  = props.icon || props.name
-  const [name, ...styles] = spec.split('.')
-  const pStyle = pathStyle(styles)
-
+export const Icon = ({icons=iconlib, className='', transform, ...props}) => {
+  const names = splitList(props.icon || props.name)
+  const specs = names.map( name => parseSpec(name, icons) )
   /*
   console.log('spec: ', spec)
   console.log('styles: ', styles)
   console.log('pathStyle: ', pStyle)
   */
+  console.log('specs: ', specs)
 
 
   // lookup the icon in the icons library
-  const icon = getIcon(name, icons)
+  //const icon = getIcon(name, icons)
+  const icon = specs[0]
 
-  if (! icon) {
-    console.log(`Invalid icon name: ${name}`)
-    return null
-  }
+  //if (! icon) {
+  //  console.log(`Invalid icon name: ${name}`)
+  //  return null
+  //}
   // pull out the pertinent data
-  const { minx, miny, width, height, style } = icon
+
+  const { minx=0, miny=0, width, height, style } = icon.icon
 
   // construct a className from the className, color and/or size properties
-  const className = classNames(props, faProps)
+  // const className = classNames(props, faProps)
+  // const className = ''
 
   return (
     <svg
       aria-hidden="true" focusable="false"
       className={`svg-inline--fa icon ${className}`}
       role="img" xmlns="http://www.w3.org/2000/svg"
-      viewBox={`${minx||0} ${miny||0} ${width} ${height}`}
-      style={style && ReactStyle(style)}
+      viewBox={`${minx} ${miny} ${width} ${height}`}
+      // style={style && ReactStyle(style)}
       onClick={props.onClick}
     >
-      { transform
-        ? <Transform icon={icon} transform={transform}>
-            <IconPaths name={name} icon={icon} style={pStyle}/>
-          </Transform>
-        : <IconPaths name={name} icon={icon} style={pStyle}/>
+      { specs.map(
+        ({name, icon, className, style, transform}, n) => transform
+          ? <Transform key={n} icon={icon} transform={transform} className={className}>
+              <IconPaths name={name} icon={icon} style={style} className={className}/>
+            </Transform>
+          : <IconPaths key={n} name={name} icon={icon} style={style} className={className}/>
+      )
       }
     </svg>
   )
 }
 
-const IconPaths = ({icon, style}) => {
+const IconPaths = ({icon, style, className=''}) => {
   const {paths, path} = icon
   if (paths) {
     return paths.map(
-      (path, n) => <Path path={path} key={n} style={style}/>
+      (path, n) => <Path path={path} key={n} style={style} className={className}/>
     )
   }
   if (path) {
-    return <Path path={path} style={style}/>
+    return <Path path={path} style={style} className={className}/>
   }
   console.log('No path or paths for icon')
 }
 
-const Path = ({path, style}) =>
+const Path = ({path, style, className}) =>
   isString(path)
-    ? <path fill="currentColor" d={path} style={style}/>
-    : <PathWithAttrs path={path} style={style}/>
+    ? <path fill="currentColor" d={path} style={style} className={className}/>
+    : <PathWithAttrs path={path} style={style} className={className}/>
 
 const PathWithAttrs = ({path, style}) => {
   const {d, opacity=null} = path

@@ -29,9 +29,15 @@ const Home = () =>
       </div>
     </div>
     <h2>Control</h2>
-    <Control/>
+    <Icon name="arrow"/>
+    <Icon name="arrow" className="right"/>
+    <Icon name="arrow-flop"/>
+    <Icon name="arrow-grow16.red"/>
+    <Icon name="square?fill=red check-shrink8-thick.white" className="fa-6x"/>
+    {/* <Control/> */}
 
     <h2>Rotated Icons</h2>
+    {/*
     <div className="debug-icons">
       <Icon name="arrow-up" className="fa-6x"/>
       <Icon name="arrow-up" className="fa-6x right"/>
@@ -65,6 +71,7 @@ const Home = () =>
 
     <h2>Icons</h2>
     <Examples/>
+    */}
     <div>
       <ul className="large menu">
         <li>

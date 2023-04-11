@@ -1,10 +1,11 @@
+import { isString } from '@abw/badger-utils'
 import React from 'react'
 
 export function Transform({icon, transform, children}) {
   const { width, height } = icon
   const halfw = width / 2
   const halfh = height / 2
-  const trans = parseTransform(transform)
+  const trans = isString(transform) ? parseTransform(transform) : transform
   const tx    = trans.x * width  / 16
   const ty    = trans.y * height / 16
   const sx    = trans.size / 16 * (trans.flipX ? -1 : 1)
@@ -96,4 +97,43 @@ export function parseTransform(transformString) {
     },
     transform
   )
+}
+
+export const transformers = {
+  flip: (transform) => ({
+    ...transform,
+    flipX: true
+  }),
+  flop: (transform) => ({
+    ...transform,
+    flipY: true
+  }),
+  grow: (transform, n) => ({
+    ...transform,
+    size: transform.size + n
+  }),
+  shrink: (transform, n) => ({
+    ...transform,
+    size: transform.size - n
+  }),
+  left: (transform, n) => ({
+    ...transform,
+    x: transform.x - n
+  }),
+  right: (transform, n) => ({
+    ...transform,
+    x: transform.x + n
+  }),
+  up: (transform, n) => ({
+    ...transform,
+    y: transform.y - n
+  }),
+  down: (transform, n) => ({
+    ...transform,
+    y: transform.y + n
+  }),
+  rotate: (transform, n) => ({
+    ...transform,
+    rotate: transform.rotate + n
+  }),
 }

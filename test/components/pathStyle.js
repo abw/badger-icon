@@ -19,7 +19,7 @@ test(
       .toMatchObject({
         fill:         'none',
         stroke:       'currentColor',
-        strokeWidth:  '80px'
+        strokeWidth:  '64px'
       })
   }
 )
@@ -31,7 +31,7 @@ test(
       .toMatchObject({
         fill:             'none',
         stroke:           'currentColor',
-        strokeWidth:      '80px',
+        strokeWidth:      '64px',
         strokeLinecap:    'round',
         strokeLinejoin:   'round',
         strokeMiterlimit: '1.5'
