@@ -16,21 +16,21 @@ export default defineConfig({
     minify: true,
     sourcemap: false,
     lib: {
-      entry: "lib/index.jsx",
+      entry: 'lib/index.jsx',
       name: '@abw/react-icon',
       fileName: 'react-icon',
     },
     rollupOptions: {
       external: [
-        "react",
-        "react-dom",
-        "react/jsx-runtime"
+        'react',
+        'react-dom',
+        'react/jsx-runtime'
       ],
       output: {
         globals: {
-          "react": "react",
-          "react-dom": "ReactDOM",
-          "react/jsx-runtime": "react/jsx-runtime"
+          'react': 'react',
+          'react-dom': 'ReactDOM',
+          'react/jsx-runtime': 'react/jsx-runtime'
         },
       },
     },

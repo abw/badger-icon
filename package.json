@@ -20,11 +20,12 @@
     "react"
   ],
   "scripts": {
-    "dev": "vite",
-    "test": "vitest",
-    "build": "vite build",
-    "build:docs": "vite build --outDir docs --config vite.docs.js",
-    "preview": "vite preview --outDir docs --config vite.docs.js",
+    "dev": "vite --config vite.docs.js",
+    "test": "vitest --ui --coverage",
+    "build": "$npm_execpath build:lib && $npm_execpath build:docs",
+    "build:lib": "vite build",
+    "build:docs": "vite build -config vite.docs.js",
+    "preview": "vite preview --config vite.docs.js",
     "lint": "eslint 'lib/**/*.{js,jsx}' 'src/**/*.{js,jsx}'",
     "icons": "svg-icon-librarian -f icons/config.yaml -c icons/custom -o lib/iconlib.js -y"
   },
@@ -36,25 +37,33 @@
     "url": "https://github.com/abw/react-icon/issues"
   },
   "dependencies": {
-    "@abw/badger-utils": "^1.0.19",
+    "@abw/badger-utils": "^1.0.21",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@abw/badger-css": "^0.2.5",
+    "@abw/badger-react-ui": "^0.0.1",
     "@abw/badger-timestamp": "^1.0.4",
+    "@abw/react-context": "^2.0.3",
+    "@abw/react-night-and-day": "^0.0.6",
     "@abw/svg-icon-librarian": "^1.0.9",
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^14.0.0",
-    "@types/react": "^18.0.28",
-    "@types/react-dom": "^18.0.11",
-    "@vitejs/plugin-react": "^3.1.0",
-    "eslint": "^8.37.0",
-    "eslint-plugin-react": "^7.32.2",
-    "jsdom": "^21.1.1",
-    "react-router-dom": "^6.10.0",
+    "@testing-library/jest-dom": "^6.1.4",
+    "@testing-library/react": "^14.1.0",
+    "@types/react": "^18.2.37",
+    "@types/react-dom": "^18.2.15",
+    "@vitejs/plugin-react": "^4.1.1",
+    "@vitest/coverage-v8": "^0.34.6",
+    "@vitest/ui": "^0.34.6",
+    "eslint": "^8.53.0",
+    "eslint-plugin-react": "^7.33.2",
+    "jsdom": "^22.1.0",
+    "react-router-dom": "^6.18.0",
     "react-syntax-highlighter": "^15.5.0",
-    "sass": "^1.60.0",
-    "vite": "^4.2.0",
-    "vitest": "^0.29.8"
+    "sass": "^1.69.5",
+    "vite": "^4.5.0",
+    "vite-jsconfig-paths": "^2.0.1",
+    "vite-plugin-svgr": "^4.1.0",
+    "vitest": "^0.34.6"
   }
 }
