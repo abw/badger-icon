@@ -1,22 +1,28 @@
 import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import jsconfigPaths    from 'vite-jsconfig-paths'
+import svgr             from 'vite-plugin-svgr'
+import react            from '@vitejs/plugin-react'
 import define from  './vite.defs.js'
 
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    react(),
+    svgr(),
+    jsconfigPaths()
+  ],
   define,
   test: {
     environment: 'jsdom',
     globals: true,
     setupFiles: './test/setup.js',
     include: ['test/**/*.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
-    exclude: ['test/setup.js', 'test/lib']
+    exclude: ['test/setup.js', 'test/lib', 'test/old']
   },
   build: {
     minify: true,
     sourcemap: false,
     lib: {
-      entry: 'lib/index.jsx',
+      entry: 'lib/index.js',
       name: '@abw/react-icon',
       fileName: 'react-icon',
     },
