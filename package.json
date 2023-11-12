@@ -24,7 +24,7 @@
     "test": "vitest --ui --coverage",
     "build": "$npm_execpath build:lib && $npm_execpath build:docs",
     "build:lib": "vite build",
-    "build:docs": "vite build -config vite.docs.js",
+    "build:docs": "vite build --config vite.docs.js",
     "preview": "vite preview --config vite.docs.js",
     "lint": "eslint 'lib/**/*.{js,jsx}' 'src/**/*.{js,jsx}'",
     "icons": "svg-icon-librarian -f icons/config.yaml -c icons/custom -o lib/iconlib.js -y"
