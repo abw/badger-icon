@@ -26,7 +26,7 @@ function buildRoutes(pages) {
       },
       { }
     )
-  console.log(`paths after ignore:`, paths)
+  // console.log(`paths after ignore:`, paths)
 
 
   // find all the paths that end in /_layout
