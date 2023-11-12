@@ -1,0 +1,8 @@
+## using npm
+$ npm add @abw/react-icon
+
+## using yarn
+$ yarn add @abw/react-icon
+
+## using pnpm
+$ pnpm add @abw/react-icon

@@ -6,39 +6,14 @@ export const GettingStartedMenu = {
   ]
 }
 
-export const ComponentsMenu = {
-  title:  'Components',
-  path: '/components',
+export const IconsMenu = {
+  title:  'Icons',
+  path: '/icons',
   items: [
     {
-      to: '/components/alert',
-      text: 'Alert',
-      tocName: 'alert',
-    },
-    {
-      to: '/components/button',
-      text: 'Button',
-      tocName: 'button',
-    },
-    {
-      to: '/components/buttons',
-      text: 'Buttons',
-      tocName: 'buttons',
-    },
-    {
-      to: '/components/confirm',
-      text: 'Confirm',
-      tocName: 'confirm',
-    },
-    {
-      to: '/components/icon',
-      text: 'Icon',
-      tocName: 'icon'
-    },
-    {
-      to: '/components/modal',
-      text: 'Modal',
-      tocName: 'modal'
-    },
+      to: '/icons/simple',
+      text: 'Simple Icon',
+      tocName: 'simple',
+    }
   ]
 }

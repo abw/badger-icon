@@ -1,6 +1,15 @@
 @charset "utf-8";
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap');
 
+$brand-hue:   26;
+$brand-color: 'orange';
+// $link-color: 'yellow';
+$brand-colors: (
+  brand: $brand-color,
+  // link: $link-color
+) !default;
+
+
 // Load the Badger CSS styles
 // See https://abw.github.io/badger-css/
 @import '@abw/badger-css/styles/badger.scss';
@@ -10,7 +19,7 @@
 @import '@abw/react-night-and-day/styles/night-and-day.css';
 
 // Load the additional badger-react-ui styles
-// @import '../../styles/badger-css-react-ui.scss';
+// @import '@abw/badger-react-ui/styles/badger-react-ui.scss';
 
 // Load the site-specific styles
 @import "config/all.scss";
