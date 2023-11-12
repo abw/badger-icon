@@ -1,6 +1,7 @@
 import { test, expect } from 'vitest'
 import {
-  resolveIconData, DEFAULT_ICON_WIDTH, DEFAULT_ICON_HEIGHT
+  resolveIconData, DEFAULT_ICON_WIDTH, DEFAULT_ICON_HEIGHT,
+  nullTransform
 } from '@/lib/index.js'
 
 const iconData = {
@@ -19,50 +20,43 @@ test(
   () => expect(
     resolveIconData('foo-bar-baz', iconData)
   ).toEqual({
-    name:    'foo-bar-baz',
-    dashes:  [ ],
-    classes: [ ],
-    style:   { },
-    icon: {
-      path:   'simple path',
-      width:  DEFAULT_ICON_WIDTH,
-      height: DEFAULT_ICON_HEIGHT,
-    },
+    name:   'foo-bar-baz',
+    path:   'simple path',
+    width:  DEFAULT_ICON_WIDTH,
+    height: DEFAULT_ICON_HEIGHT,
   })
 )
 
 test(
   'resolveIconData() with simple string path and dashes',
   () => expect(
-    resolveIconData('foo-bar-baz-wam-bam', iconData)
+    resolveIconData('foo-bar-baz-flipx', iconData)
   ).toEqual({
-    name:    'foo-bar-baz',
-    dashes:  ['wam', 'bam'],
-    classes: [ ],
-    style:   { },
-    icon: {
-      path:   'simple path',
-      width:  DEFAULT_ICON_WIDTH,
-      height: DEFAULT_ICON_HEIGHT,
-    },
+    name:   'foo-bar-baz',
+    path:   'simple path',
+    width:  DEFAULT_ICON_WIDTH,
+    height: DEFAULT_ICON_HEIGHT,
+    transform: {
+      ...nullTransform,
+      flipX: true
+    }
   })
 )
 
 test(
   'resolveIconData() with simple string path, dashes and classes',
   () => expect(
-    resolveIconData('foo-bar-baz-wam-bam.wibble.frusset.pouch', iconData)
+    resolveIconData('foo-bar-baz-right=4.wibble.frusset.pouch', iconData)
   ).toEqual({
-    name:    'foo-bar-baz',
-    dashes:  ['wam', 'bam'],
-    classes: ['wibble', 'frusset', 'pouch'],
-    style:   { },
-    icon: {
-      path:   'simple path',
-      width:  DEFAULT_ICON_WIDTH,
-      height: DEFAULT_ICON_HEIGHT,
-      className: 'wibble frusset pouch'
-    },
+    name:   'foo-bar-baz',
+    path:   'simple path',
+    width:  DEFAULT_ICON_WIDTH,
+    height: DEFAULT_ICON_HEIGHT,
+    className: 'wibble frusset pouch',
+    transform: {
+      ...nullTransform,
+      x: 4
+    }
   })
 )
 
@@ -71,15 +65,10 @@ test(
   () => expect(
     resolveIconData('foo-bar', iconData)
   ).toEqual({
-    name:     'foo-bar',
-    dashes:   [ ],
-    classes:  [ ],
-    style:    { },
-    icon: {
-      path:   'nested path',
-      width:  DEFAULT_ICON_WIDTH,
-      height: DEFAULT_ICON_HEIGHT,
-    },
+    name:   'foo-bar',
+    path:   'nested path',
+    width:  DEFAULT_ICON_WIDTH,
+    height: DEFAULT_ICON_HEIGHT,
   })
 )
 
@@ -88,16 +77,11 @@ test(
   () => expect(
     resolveIconData('foo-bar.wig.wam', iconData)
   ).toEqual({
-    name:     'foo-bar',
-    dashes:   [ ],
-    classes:  ['wig', 'wam'],
-    style:    { },
-    icon: {
-      path:   'nested path',
-      width:  DEFAULT_ICON_WIDTH,
-      height: DEFAULT_ICON_HEIGHT,
-      className: 'wig wam'
-    },
+    name:       'foo-bar',
+    path:       'nested path',
+    width:      DEFAULT_ICON_WIDTH,
+    height:     DEFAULT_ICON_HEIGHT,
+    className:  'wig wam'
   })
 )
 
@@ -106,15 +90,10 @@ test(
   () => expect(
     resolveIconData('foo', iconData)
   ).toEqual({
-    name:     'foo',
-    dashes:   [ ],
-    classes:  [ ],
-    style:    { },
-    icon: {
-      path:   'another path',
-      width:  524,
-      height: DEFAULT_ICON_HEIGHT,
-    },
+    name:   'foo',
+    path:   'another path',
+    width:  524,
+    height: DEFAULT_ICON_HEIGHT,
   })
 )
 
@@ -123,15 +102,10 @@ test(
   () => expect(
     resolveIconData('wiz', iconData)
   ).toEqual({
-    name:     'wiz',
-    dashes:   [ ],
-    classes:  [ ],
-    style:    { },
-    icon: {
-      path:   'yet another path',
-      width:  32,
-      height: 24,
-    },
+    name:   'wiz',
+    path:   'yet another path',
+    width:  32,
+    height: 24,
   })
 )
 
@@ -140,23 +114,18 @@ test(
   () => expect(
     resolveIconData('woz', iconData)
   ).toEqual({
-    name:     'woz',
-    dashes:   [ ],
-    classes:  [ ],
-    style:    { },
-    icon: {
-      path:   'transformed path',
-      width:  DEFAULT_ICON_WIDTH,
-      height: DEFAULT_ICON_HEIGHT,
-      transform: {
-        x:      0,
-        y:      0,
-        size:   20,
-        flipX:  false,
-        flipY:  false,
-        rotate: 45
-      }
-    },
+    name:   'woz',
+    path:   'transformed path',
+    width:  DEFAULT_ICON_WIDTH,
+    height: DEFAULT_ICON_HEIGHT,
+    transform: {
+      x:      0,
+      y:      0,
+      size:   20,
+      flipX:  false,
+      flipY:  false,
+      rotate: 45
+    }
   })
 )
 
@@ -165,23 +134,18 @@ test(
   () => expect(
     resolveIconData('waz', iconData)
   ).toEqual({
-    name:     'waz',
-    dashes:   [ ],
-    classes:  [ ],
-    style:    { },
-    icon: {
-      path:   'waz path',
-      width:  DEFAULT_ICON_WIDTH,
-      height: DEFAULT_ICON_HEIGHT,
-      transform: {
-        x:      3,
-        y:      0,
-        size:   14,
-        flipX:  false,
-        flipY:  false,
-        rotate: 90
-      }
-    },
+    name:   'waz',
+    path:   'waz path',
+    width:  DEFAULT_ICON_WIDTH,
+    height: DEFAULT_ICON_HEIGHT,
+    transform: {
+      x:      3,
+      y:      0,
+      size:   14,
+      flipX:  false,
+      flipY:  false,
+      rotate: 90
+    }
   })
 )
 
@@ -190,19 +154,14 @@ test(
   () => expect(
     resolveIconData('flim', iconData)
   ).toEqual({
-    name:     'flim',
-    dashes:   [ ],
-    classes:  [ ],
-    style:    { },
-    icon: {
-      path:   'flim path',
-      width:  DEFAULT_ICON_WIDTH,
-      height: DEFAULT_ICON_HEIGHT,
-      style: {
-        fill: 'red',
-        'stroke-width': '99'
-      }
-    },
+    name:   'flim',
+    path:   'flim path',
+    width:  DEFAULT_ICON_WIDTH,
+    height: DEFAULT_ICON_HEIGHT,
+    style: {
+      fill: 'red',
+      'stroke-width': '99'
+    }
   })
 )
 
@@ -211,19 +170,14 @@ test(
   () => expect(
     resolveIconData('flam', iconData)
   ).toEqual({
-    name:     'flam',
-    dashes:   [ ],
-    classes:  [ ],
-    style:    { },
-    icon: {
-      path:   'flam path',
-      width:  DEFAULT_ICON_WIDTH,
-      height: DEFAULT_ICON_HEIGHT,
-      style: {
-        fill: 'blue',
-        'stroke-width': 24
-      }
-    },
+    name:   'flam',
+    path:   'flam path',
+    width:  DEFAULT_ICON_WIDTH,
+    height: DEFAULT_ICON_HEIGHT,
+    style: {
+      fill: 'blue',
+      'stroke-width': 24
+    }
   })
 )
 
@@ -232,23 +186,15 @@ test(
   () => expect(
     resolveIconData('flam?fill=orange&stroke-linecap=butt', iconData)
   ).toEqual({
-    name:     'flam',
-    dashes:   [ ],
-    classes:  [ ],
-    style:    {
+    name:   'flam',
+    path:   'flam path',
+    width:  DEFAULT_ICON_WIDTH,
+    height: DEFAULT_ICON_HEIGHT,
+    style: {
       fill: 'orange',
-      'stroke-linecap': 'butt',
-    },
-    icon: {
-      path:   'flam path',
-      width:  DEFAULT_ICON_WIDTH,
-      height: DEFAULT_ICON_HEIGHT,
-      style: {
-        fill: 'orange',
-        'stroke-width': 24,
-        'stroke-linecap': 'butt'
-      }
-    },
+      'stroke-width': 24,
+      'stroke-linecap': 'butt'
+    }
   })
 )
 
@@ -257,19 +203,14 @@ test(
   () => expect(
     resolveIconData('flam', iconData)
   ).toEqual({
-    name:     'flam',
-    dashes:   [ ],
-    classes:  [ ],
-    style:    { },
-    icon: {
-      path:   'flam path',
-      width:  DEFAULT_ICON_WIDTH,
-      height: DEFAULT_ICON_HEIGHT,
-      style: {
-        fill: 'blue',
-        'stroke-width': 24,
-      }
-    },
+    name:   'flam',
+    path:   'flam path',
+    width:  DEFAULT_ICON_WIDTH,
+    height: DEFAULT_ICON_HEIGHT,
+    style: {
+      fill: 'blue',
+      'stroke-width': 24,
+    }
   })
 )
 
@@ -278,21 +219,80 @@ test(
   () => expect(
     resolveIconData('foo-bar-baz?fill=red;stroke-width=4', iconData)
   ).toEqual({
-    name:    'foo-bar-baz',
-    dashes:  [ ],
-    classes: [ ],
-    style:   {
+    name:   'foo-bar-baz',
+    path:   'simple path',
+    width:  DEFAULT_ICON_WIDTH,
+    height: DEFAULT_ICON_HEIGHT,
+    style: {
       fill: 'red',
       'stroke-width': '4'
-    },
-    icon: {
-      path:   'simple path',
-      width:  DEFAULT_ICON_WIDTH,
-      height: DEFAULT_ICON_HEIGHT,
-      style: {
-        fill: 'red',
-        'stroke-width': '4'
-      }
-    },
+    }
   })
+)
+
+test(
+  'resolveIconData() path with -right=4 to move',
+  () => expect(
+    resolveIconData('foo-bar-right=4', iconData)
+  ).toEqual({
+    name:   'foo-bar',
+    path:   'nested path',
+    width:  DEFAULT_ICON_WIDTH,
+    height: DEFAULT_ICON_HEIGHT,
+    transform: {
+      ...nullTransform,
+      x: 4
+    }
+  })
+)
+
+test(
+  'resolveIconData() path with -right to rotate',
+  () => expect(
+    resolveIconData('foo-bar-right', iconData)
+  ).toEqual({
+    name:   'foo-bar',
+    path:   'nested path',
+    width:  DEFAULT_ICON_WIDTH,
+    height: DEFAULT_ICON_HEIGHT,
+    transform: {
+      ...nullTransform,
+      rotate: 90
+    }
+  })
+)
+
+test(
+  'resolveIconData() path with -right to rotate and -right:4 to move',
+  () => expect(
+    resolveIconData('foo-bar-right-right:4', iconData)
+  ).toEqual({
+    name:   'foo-bar',
+    path:   'nested path',
+    width:  DEFAULT_ICON_WIDTH,
+    height: DEFAULT_ICON_HEIGHT,
+    transform: {
+      ...nullTransform,
+      x: 4,
+      rotate: 90
+    }
+  })
+)
+
+test(
+  'resolveIconData() with missing icon',
+  () => expect(
+    () => resolveIconData('no-such-icon', iconData)
+  ).toThrowError(
+    /^No icon found matching any leading subset of no-such-icon$/
+  )
+)
+
+test(
+  'resolveIconData() with missing icon and query',
+  () => expect(
+    () => resolveIconData('no-such-icon?foo=bar&baz', iconData)
+  ).toThrowError(
+    /^No icon found matching any leading subset of no-such-icon$/
+  )
 )

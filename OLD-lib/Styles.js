@@ -1,4 +1,4 @@
-import { fail, isArray, splitList } from '@abw/badger-utils'
+import { fail, isArray } from '@abw/badger-utils'
 
 const baseWidth     = 16
 const widthMultiple = n => `${baseWidth * n}px`

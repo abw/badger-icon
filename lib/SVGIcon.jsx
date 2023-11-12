@@ -1,7 +1,8 @@
 import React from 'react'
 import { DEFAULT_ICON_HEIGHT, DEFAULT_ICON_WIDTH } from './constants.js'
 import Transform from './Transform.jsx'
-import { Path } from './Path.jsx'
+import { Path } from './SVG/Path.jsx'
+import { reactifty } from './utils/reactify.js'
 
 export const SVGIcon = ({
   path,
@@ -20,7 +21,7 @@ export const SVGIcon = ({
     role="img" aria-hidden="true" focusable="false"
     viewBox={`${minx} ${miny} ${width} ${height}`}
     className={`${className} icon`}
-    style={style}
+    style={reactifty(style)}
     onClick={onClick}
   >
     { transform

@@ -89,3 +89,40 @@ test(
     style:    { }
   })
 )
+
+test(
+  'resolveIconName() with three parts and dashed params',
+  () => expect(
+    resolveIconName('foo-bar-baz-wam=10-bam=20', iconData)
+  ).toEqual({
+    name:     'foo-bar-baz',
+    dashes:   ['wam=10', 'bam=20'],
+    classes:  [ ],
+    style:    { }
+  })
+)
+
+test(
+  'resolveIconName() with three parts and floating point params',
+  () => expect(
+    resolveIconName('foo-bar-baz-wam=1.2-bam=2.3', iconData)
+  ).toEqual({
+    name:     'foo-bar-baz',
+    dashes:   ['wam=1.2', 'bam=2.3'],
+    classes:  [ ],
+    style:    { }
+  })
+)
+
+test(
+  'resolveIconName() with three parts and floating point params then classes',
+  () => expect(
+    resolveIconName('foo-bar-baz-wam=1.2-bam=2.3.large', iconData)
+  ).toEqual({
+    name:     'foo-bar-baz',
+    dashes:   ['wam=1.2', 'bam=2.3'],
+    classes:  ['large'],
+    style:    { }
+  })
+)
+

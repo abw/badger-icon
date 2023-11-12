@@ -55,6 +55,7 @@ code:not(.codeblock code):not(.toc code) {
   border: 1px solid var(--code-border);
   padding: 0 4px;
   border-radius: 4px;
+  text-wrap: nowrap;
 }
 
 div.example {

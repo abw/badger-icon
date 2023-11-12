@@ -35,6 +35,39 @@ test(
 )
 
 test(
+  'splitIconName() with multiple dashes and values',
+  () => expect(
+    splitIconName('foo-bar-baz-stroke:3-fill=#ff7f00-grow=4')
+  ).toEqual({
+    dashes: ['foo', 'bar', 'baz', 'stroke:3', 'fill=#ff7f00', 'grow=4'],
+    classes: [ ],
+    style: { }
+  })
+)
+
+test(
+  'splitIconName() with negative values',
+  () => expect(
+    splitIconName('foo-x=-4-rotate:-90')
+  ).toEqual({
+    dashes: ['foo', 'x=-4', 'rotate:-90'],
+    classes: [ ],
+    style: { }
+  })
+)
+
+test(
+  'splitIconName() with floats',
+  () => expect(
+    splitIconName('foo-strokewidth:0.5')
+  ).toEqual({
+    dashes: ['foo', 'strokewidth:0.5'],
+    classes: [ ],
+    style: { }
+  })
+)
+
+test(
   'splitIconName() with multiple classes',
   () => expect(
     splitIconName('foo.bar.baz')
@@ -46,7 +79,7 @@ test(
 )
 
 test(
-  'splitIconName() with multiple dashed and classes',
+  'splitIconName() with multiple dashes and classes',
   () => expect(
     splitIconName('foo-bar-baz.wam.bam')
   ).toEqual({
