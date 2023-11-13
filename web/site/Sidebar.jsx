@@ -1,11 +1,12 @@
 import React from 'react'
 import Menu from './Menu.jsx'
-import { GettingStartedMenu, IconsMenu } from './Menus.jsx'
+import { GettingStartedMenu, IconMenu, ModifiersMenu } from './Menus.jsx'
 
 const Sidebar = () =>
   <>
     <Menu {...GettingStartedMenu}/>
-    <Menu {...IconsMenu}/>
+    <Menu {...IconMenu}/>
+    <Menu {...ModifiersMenu}/>
   </>
 
 export default Sidebar

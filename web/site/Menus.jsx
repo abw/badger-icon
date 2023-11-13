@@ -6,14 +6,82 @@ export const GettingStartedMenu = {
   ]
 }
 
-export const IconsMenu = {
-  title:  'Icons',
-  path: '/icons',
+export const IconMenu = {
+  title:  'Icon',
+  path: '/icon',
   items: [
     {
-      to: '/icons/simple',
-      text: 'Simple Icon',
-      tocName: 'simple',
+      to: '/icon',
+      text: 'Introduction',
+      exact: true
+    },
+    {
+      to: '/icon/name',
+      code: 'name',
+    },
+    {
+      to: '/icon/className',
+      code: 'className',
+    },
+    {
+      to: '/icon/path',
+      code: 'path',
+    },
+    {
+      to: '/icon/size',
+      code: 'size',
+    },
+    {
+      to: '/icon/type',
+      code: 'type',
+    },
+  ]
+}
+
+
+export const ModifiersMenu = {
+  title:  'Modifiers',
+  path: '/modifiers',
+  items: [
+    {
+      to: '/modifiers',
+      text: 'Introduction',
+      exact: true
+    },
+    {
+      to: '/modifiers/direction',
+      text: 'Direction',
+      tocName: 'direction',
+    },
+    {
+      to: '/modifiers/rotate',
+      text: 'Rotate',
+      tocName: 'rotate',
+    },
+    {
+      to: '/modifiers/flip',
+      text: 'Flip',
+      tocName: 'flip',
+    },
+    {
+      to: '/modifiers/grow',
+      text: 'Grow',
+      tocName: 'grow',
+    },
+    {
+      to: '/modifiers/shrink',
+      text: 'Shrink',
+      tocName: 'shrink',
+    },
+    {
+      to: '/modifiers/weight',
+      text: 'Weight',
+      tocName: 'weight',
+    },
+    {
+      to: '/modifiers/strokewidth',
+      text: 'Stroke Width',
+      tocName: 'strokewidth',
     }
   ]
 }

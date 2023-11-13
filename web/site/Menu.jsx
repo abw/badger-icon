@@ -15,6 +15,7 @@ const Menu = ({title, path, items, tocs}) => {
         { items.map(
           item => {
             const active = resolved.pathname === item.to
+            item.text ||= <span className="font-mono">{item.code}</span>
             return (
               <li key={item.to}>
                 <Link className="item" {...item}/>

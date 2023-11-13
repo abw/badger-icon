@@ -1,6 +1,5 @@
-import { Icon } from '@/lib/index.js'
-import { splitList } from '@abw/badger-utils'
 import React from 'react'
+import Icons from '../examples/Icons.jsx'
 
 const Home = () =>
   <div className="prose flow">
@@ -53,7 +52,10 @@ const Home = () =>
 
     <h2>Direction</h2>
     <p>
-      Icons are assumed to be pointing upwards by default.  Adding the {' '}
+      Icons are assumed to be pointing upwards by default.  Adding the{' '}
+      <code>-up</code> suffix makes no difference, but you might prefer to add
+      it to be explicit about which way the icon is supposed to be pointing.
+      Adding the {' '}
       <code>-right</code> suffix rotates it 90&deg; to make it point right.
       The <code>-down</code> suffix rotates it 180&deg; to make it point down
       and <code>-left</code> rotates it 270&deg; to point left;
@@ -84,6 +86,23 @@ const Home = () =>
       be used to set the stroke and fill colors.
     </p>
     <Icons names="square square-stroke=red square-fill=#007fff"/>
+
+    <h2>Opacity</h2>
+    <p>
+      The <code>-opacity=NN</code> suffix can be used to set the opacity.
+      The stroke and fill opacity can be set separately with{' '}
+      <code>-strokeopacity=NN</code> and <code>-fillopacity=NN</code>.
+    </p>
+    <Icons names="square-fill-opacity=50% square-fill-strokeopacity=0.5 square-fill-fillopacity=50%" />
+
+    <h2>CSS Classes</h2>
+    <p>
+      CSS classes can be added to the end of an icon name, separated by
+      periods.
+    </p>
+    <Icons
+      names="arrow.blue.fgc-30 arrow.blue.fgc-50 arrow.blue.fgc-70"
+    />
 
     {/*
     <div className="flex gap-2 x4 mar-b-4">
@@ -118,19 +137,4 @@ const Home = () =>
     */}
 
   </div>
-
-const Icons = ({names}) =>
-  <div className="grid-fill gap-4 mar-t-8">
-    { splitList(names).map(
-      name =>
-        <div
-          key={name}
-          className="text-center bgc-100 bgd-0 fgc-30 fgd-70 pad-4 shadow-2"
-        >
-          <Icon name={name} className="x4"/>
-          <div className="smallest mar-t-4">{name}</div>
-        </div>
-    )}
-  </div>
-
 export default Home

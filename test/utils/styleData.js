@@ -68,6 +68,6 @@ test(
   () => expect(
     styleData('thin')
   ).toEqual({
-    strokeWidth: '4.42%'
+    strokeWidth: '6.63%'
   })
 )

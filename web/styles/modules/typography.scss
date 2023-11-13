@@ -35,10 +35,11 @@ a:not(button, .button) {
   }
 }
 .hover {
-  color: var(--color-50);
+  color: var(--link-text);
   transition: 0.3s;
   &:hover {
-    color: var(--color-40);
+    cursor: pointer;
+    color: var(--link-hover);
     transition: 0.15s;
   }
 }
