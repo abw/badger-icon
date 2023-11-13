@@ -1,7 +1,17 @@
 # react-icon
 
-This is the README for react-icon.  It was created using
-[badger-scaffold-js](https://github.com/abw/badger-scaffold-js).
+This module implements a React component for rendering SVG icons.
+
+What makes this unique is that icon names can have modifiers to change the
+orientation, size, position and style properties of the icon.  For example,
+if you have an `arrow` icon defined, pointing up, then specifying the name
+as `arrow-right` will rotate it through 90 degrees to point to the right.
+
+Similarly, `arrow-thick` will increase the stroke width and `arrow-thin` will
+reduce it.
+
+See the [website](https://abw.github.io/react-icon) for full documentation
+and examples.
 
 ## Getting Started
 
@@ -22,7 +32,12 @@ $ pnpm add @abw/react-icon
 You can then import the modules and start using them.
 
 ```jsx
-import { Hello } from '@abw/react-icon'
+import { Icon } from '@abw/react-icon'
+
+const YourComponent = () =>
+  <Icon name="arrow-right"/>
+
+export default YourComponent
 ```
 
 ## Notes for Maintainers
@@ -58,7 +73,13 @@ To build for production.
 $ pnpm build
 ```
 
-To build the documentation.
+To build just the library code for production.
+
+```bash
+$ pnpm build:lib
+```
+
+To build just the the documentation.
 
 ```bash
 $ pnpm build:docs
@@ -76,30 +97,6 @@ Check source code for formatting errors.
 $ pnpm lint
 ```
 
+## Author
 
-## Project Structure
-
-The main project code is in the `lib` directory.  The `index.jsx` is the
-main entry point.
-
-Running `pnpm build` creates a production build in the `dist`
-directory.
-
-The `src` directory contains the web site for development, testing and
-documentation.  The `index.html` is the main entry point.
-
-Running `pnpm dev` runs a development web server for the site.
-
-Running `pnpm build:docs` builds the site and saves the bundled
-output in the `docs` directory.  Any additional resources in the `public`
-directory will be included in there.
-
-The `styles` directory contains SASS stylesheets used by the web site.
-The `main.scss` file is the main stylesheet which is imported into
-`src/main.jsx`.
-
-The `test` directory contains test scripts which will be run by
-`pnpm test`.  The `test/setup.js` file is a special setup file.
-Any files in `test/lib` are assumed to be components used by tests and
-are not test scripts in their own right.  They are ignored by the test
-runner.
+Andy Wardley
