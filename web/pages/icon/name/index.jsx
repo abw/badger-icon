@@ -71,6 +71,90 @@ const IconName = () =>
       undent={4}
       expand
     />
+    <h2>Name Tokenisation Example</h2>
+    <div className="cols-2">
+      <p>
+        Here&apos;s an example to help clarify how a complex name is tokenised.
+      </p>
+    </div>
+    <div>
+      <div className="smaller">Name</div>
+      <div className="flex">
+        <div className="large font-mono border pad-v-2 pad-h-4 surface-5 shadow-2">
+          <span className="red fgc-50">arrow</span>-<span className="orange fgc-50">rotate=-45-opacity=0.4</span>.<span className="yellow fgc-50">x2.shadow-2</span><br/>
+        </div>
+      </div>
+    </div>
+    <div className="flex start gap-4 stack-laptop">
+      <div>
+        <div className="smaller red fgc-50 fgd-60">Icon</div>
+        <div className="large font-mono border pad-v-2 pad-h-4 surface-5 red shadow-2 mar-b-4">
+          arrow
+        </div>
+      </div>
+      <div className="mar-b-4">
+        <div className="smaller orange fgc-50 fgd-60">Modifiers</div>
+        <div className="large font-mono border pad-v-2 pad-h-4 surface-5 orange shadow-2 mar-b-4">
+          rotate=-45-opacity=0.4
+        </div>
+        <div className="flex start gap-4 stack-tablet">
+          <div className="large font-mono border pad-v-2 pad-h-4 surface-3 orange shadow-2 mar-b-4">
+            rotate=-45
+          </div>
+          <div className="large font-mono border pad-v-2 pad-h-4 surface-3 orange shadow-2 mar-b-4">
+            opacity=0.4
+          </div>
+        </div>
+      </div>
+      <div>
+        <div className="smaller yellow fgc-50 fgd-60">Classes</div>
+        <div>
+          <div className="large font-mono border pad-v-2 pad-h-4 surface-5 yellow shadow-2 mar-b-4">
+            x2.shadow-2
+          </div>
+        </div>
+        <div className="flex gap-4 stack-tablet">
+          <div className="large font-mono border pad-v-2 pad-h-4 surface-3 yellow shadow-2 mar-b-4">
+            x2
+          </div>
+          <div className="large font-mono border pad-v-2 pad-h-4 surface-3 yellow shadow-2 mar-b-4">
+            shadow-2
+          </div>
+        </div>
+      </div>
+    </div>
+    <div className="cols-2">
+      <p>
+        Working from right to left, the CSS classes start at the first period
+        that isn&apos;t immediately before a number.  That rules out the period
+        in the value of <code>0.4</code> for <code>opacity</code>.
+      </p>
+      <p>
+        So the CSS classes start just after that, with <code>x2</code> being the first
+        CSS class.  The CSS classes are then split on periods, giving us{' '}
+        <code>x2</code> and <code>shadow-2</code>.
+      </p>
+      <p>
+        Everything before that point is then split on hyphens, excluding
+        any that come immediately before a number.  So the hyphen in
+        the <code>-45</code> value for <code>rotate</code> is treated as a
+        minus sign rather than a delimited.  The result is that this part is
+        split into three tokens: <code>arrow</code>, <code>rotate=-45</code>{' '}
+        and <code>opacity=0.4</code>.
+      </p>
+      <p>
+        The icon name is the longest leading subset of those components that
+        matches a name in the icon library.  In this case it&apos;s just{' '}
+        <code>arrow</code>, but you can have an icon name with hyphens in it,
+        e.g. <code>arrow-alt</code>, and the algorithm will use that for the
+        name.
+      </p>
+      <p>
+        Any tokens remaining after the icon name has been resolved
+        are assumed to be modifiers.  In this example, that&apos;s{' '}
+        <code>rotate=-45</code> and <code>opacity=0.4</code>.
+      </p>
+    </div>
 
     <h2>Default Icons</h2>
     <div className="cols-2">

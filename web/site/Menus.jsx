@@ -35,6 +35,14 @@ export const IconMenu = {
       to: '/icon/type',
       code: 'type',
     },
+    {
+      to: '/icon/style',
+      code: 'style',
+    },
+    {
+      to: '/icon/transform',
+      code: 'transform',
+    },
   ]
 }
 

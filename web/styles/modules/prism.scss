@@ -3,14 +3,14 @@
   --yaml: var(--violet-40);
   --comment: var(--grey-60);
   --punctuation: var(--grey20-70);
-  --tag: var(--blue-50);
-  --attr-name: var(--violet-40);
-  --attr-value: var(--purple-50);
-  --string: var(--purple-60);
-  --function: var(--purple-20);
+  --tag: var(--orange-30);
+  --attr-name: var(--maroon-50);
+  --attr-value: var(--orange-50);
+  --string: var(--orange-30);
+  --function: var(--yellow-50);
   --variable: var(--maroon-40);
-  --keyword: var(--violet-20);
-  --property: var(--indigo-40);
+  --keyword: var(--brown-60);
+  --property: var(--brown-50);
   --selector: var(--teal-40);
   color: var(--grey20-60);
 
@@ -71,17 +71,19 @@
     --border: var(--grey-25);
     --color: var(--grey-50);
     --shell: var(--brown-60);
-    --comment: var(--grey-50);
+    --yaml: var(--violet-60);
+    --comment: var(--grey-40);
     --punctuation: var(--grey20-40);
-    --tag: var(--blue-50);
-    --attr-name: var(--violet-60);
-    --attr-value: var(--purple-70);
-    --string: var(--purple-65);
-    --function: var(--purple-80);
-    --variable: var(--maroon-70);
-    --keyword: var(--violet-70);
-    --property: var(--indigo-60);
+    --tag: var(--orange-70);
+    --attr-name: var(--maroon-50);
+    --attr-value: var(--orange-50);
+    --string: var(--orange-60);
+    --function: var(--yellow-50);
+    --variable: var(--maroon-60);
+    --keyword: var(--brown-50);
+    --property: var(--brown-50);
     --selector: var(--teal-60);
+
   }
 }
 /*
