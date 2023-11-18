@@ -1,14 +1,15 @@
 import React from 'react'
 import { it, expect } from 'vitest'
 import { render } from '@testing-library/react'
-import { Icon } from '@/lib/index.js'
+import { Icon, IconData } from '@/lib/index.js'
 
 it(
-  'icon with path',
+  'icon by name',
   () => {
     const { container } = render(
-      <Icon path="M1,2L511,512"/>
+      <Icon name="angle"/>
     )
+    // screen.debug()
     const icon = container.querySelector('svg.icon')
     const path = icon.querySelector('path')
     expect(icon).toHaveClass('icon')
@@ -18,7 +19,7 @@ it(
     )
     expect(path).toHaveAttribute(
       'd',
-      expect.stringMatching('M1,2L511,512')
+      expect.stringMatching(IconData.icons.angle.replace(/^line:/, ''))
     )
   }
 )
