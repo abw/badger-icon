@@ -5,14 +5,18 @@ import {
 } from '@/lib/index.js'
 
 const iconData = {
-  'foo-bar-baz':  'simple path',
-  'foo-bar':      { path: 'nested path' },
-  'foo':          { path: 'another path', width: 524 },
-  'wiz':          { path: 'yet another path', width: 32, height: 24 },
-  'woz':          { path: 'transformed path', transform: 'rotate:45;grow=4' },
-  'waz':          { path: 'waz path', transform: { rotate: 90, shrink: 2, right: 3 } },
-  'flim':         { path: 'flim path', style: 'fill:red;stroke-width:99' },
-  'flam':         { path: 'flam path', style: { fill: 'blue', 'stroke-width': 24 } },
+  icons: {
+    'foo-bar-baz':  'simple path',
+    'foo-bar':      { path: 'nested path' },
+    'foo':          { path: 'another path', width: 524 },
+    'wiz':          { path: 'yet another path', width: 32, height: 24 },
+    'woz':          { path: 'transformed path', transform: 'rotate:45;grow=4' },
+    'waz':          { path: 'waz path', transform: { rotate: 90, shrink: 2, right: 3 } },
+    'flim':         { path: 'flim path', style: 'fill:red;stroke-width:99' },
+    'flam':         { path: 'flam path', style: { fill: 'blue', 'stroke-width': 24 } },
+    'wam':          { path: 'wam path', style: 'stroke-width:24' },
+    'bam':          { path: 'bam path', style: { 'stroke-width': 24 } },
+  }
 }
 
 test(
@@ -24,6 +28,9 @@ test(
     path:   'simple path',
     width:  DEFAULT_ICON_WIDTH,
     height: DEFAULT_ICON_HEIGHT,
+    style: {
+      fill: 'currentColor'
+    }
   })
 )
 
@@ -39,6 +46,9 @@ test(
     transform: {
       ...nullTransform,
       flipX: true
+    },
+    style: {
+      fill: 'currentColor'
     }
   })
 )
@@ -56,6 +66,9 @@ test(
     transform: {
       ...nullTransform,
       x: 4
+    },
+    style: {
+      fill: 'currentColor'
     }
   })
 )
@@ -69,6 +82,9 @@ test(
     path:   'nested path',
     width:  DEFAULT_ICON_WIDTH,
     height: DEFAULT_ICON_HEIGHT,
+    style: {
+      fill: 'currentColor'
+    }
   })
 )
 
@@ -81,7 +97,10 @@ test(
     path:       'nested path',
     width:      DEFAULT_ICON_WIDTH,
     height:     DEFAULT_ICON_HEIGHT,
-    className:  'wig wam'
+    className:  'wig wam',
+    style: {
+      fill: 'currentColor'
+    }
   })
 )
 
@@ -94,6 +113,9 @@ test(
     path:   'another path',
     width:  524,
     height: DEFAULT_ICON_HEIGHT,
+    style: {
+      fill: 'currentColor'
+    }
   })
 )
 
@@ -106,6 +128,9 @@ test(
     path:   'yet another path',
     width:  32,
     height: 24,
+    style: {
+      fill: 'currentColor'
+    }
   })
 )
 
@@ -118,6 +143,9 @@ test(
     path:   'transformed path',
     width:  DEFAULT_ICON_WIDTH,
     height: DEFAULT_ICON_HEIGHT,
+    style: {
+      fill: 'currentColor'
+    },
     transform: {
       x:      0,
       y:      0,
@@ -138,6 +166,9 @@ test(
     path:   'waz path',
     width:  DEFAULT_ICON_WIDTH,
     height: DEFAULT_ICON_HEIGHT,
+    style: {
+      fill: 'currentColor'
+    },
     transform: {
       x:      3,
       y:      0,
@@ -176,6 +207,38 @@ test(
     height: DEFAULT_ICON_HEIGHT,
     style: {
       fill: 'blue',
+      'stroke-width': 24
+    }
+  })
+)
+
+test(
+  'resolveIconData() with style string and default type',
+  () => expect(
+    resolveIconData('wam', iconData)
+  ).toEqual({
+    name:   'wam',
+    path:   'wam path',
+    width:  DEFAULT_ICON_WIDTH,
+    height: DEFAULT_ICON_HEIGHT,
+    style: {
+      fill: 'currentColor',
+      'stroke-width': '24'
+    }
+  })
+)
+
+test(
+  'resolveIconData() with style object and default type',
+  () => expect(
+    resolveIconData('bam', iconData)
+  ).toEqual({
+    name:   'bam',
+    path:   'bam path',
+    width:  DEFAULT_ICON_WIDTH,
+    height: DEFAULT_ICON_HEIGHT,
+    style: {
+      fill: 'currentColor',
       'stroke-width': 24
     }
   })
@@ -239,6 +302,9 @@ test(
     path:   'nested path',
     width:  DEFAULT_ICON_WIDTH,
     height: DEFAULT_ICON_HEIGHT,
+    style: {
+      fill: 'currentColor'
+    },
     transform: {
       ...nullTransform,
       x: 4
@@ -255,6 +321,9 @@ test(
     path:   'nested path',
     width:  DEFAULT_ICON_WIDTH,
     height: DEFAULT_ICON_HEIGHT,
+    style: {
+      fill: 'currentColor'
+    },
     transform: {
       ...nullTransform,
       rotate: 90
@@ -271,6 +340,9 @@ test(
     path:   'nested path',
     width:  DEFAULT_ICON_WIDTH,
     height: DEFAULT_ICON_HEIGHT,
+    style: {
+      fill: 'currentColor'
+    },
     transform: {
       ...nullTransform,
       x: 4,
