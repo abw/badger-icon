@@ -6,7 +6,9 @@ import { useResolvedPath } from 'react-router-dom'
 
 const Menu = ({title, path, items, tocs}) => {
   const resolved = useResolvedPath()
-  const open = path && resolved.pathname.slice(0, path.length) === path
+  const open = path &&
+    ( resolved.pathname === path ||
+      resolved.pathname.slice(0, path.length + 1) === `${path}/` )
 
   return (
     <details className="menu" open={open}>

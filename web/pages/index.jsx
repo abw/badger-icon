@@ -1,9 +1,43 @@
-import React from 'react'
-import Icons from '../examples/Icons.jsx'
+import React      from 'react'
+import CodeBlock  from '@/site/CodeBlock.jsx'
+import Img        from './_examples/img.html?raw'
+import Inline     from './_examples/inline.html?raw'
 
 const Home = () =>
-  <div className="prose flow">
+  <div className="container-mobile flow">
     <h1>React Icon</h1>
+    <h2>SVG Icons are Great!</h2>
+    <p className="mar-b-none">
+      You can reference them as the <code>src</code>{' '}
+      in an <code>img</code> tag.
+    </p>
+    <CodeBlock
+      code={Img}
+      language="html"
+      className=""
+      expand
+    />
+    <p className="mar-b-none">
+      You can also embed them directly into an html page in an <code>svg</code>{' '}
+      tag.
+    </p>
+    <CodeBlock
+      code={Inline}
+      language="html"
+      className=""
+      expand
+    />
+    <p>
+      The only slight downside to the first approach is that it creates an
+      extra http request for each icon.  If you&apos;ve got a lot on a page
+      then it can slow down the loading of the page.
+    </p>
+    <p>
+      The second approach avoids the extra request but the tradeoff is an
+      increase in the page size, which also means the page will take longer
+      to load.
+    </p>
+    {/*
     <p>
       This is a work in progress for rendering SVG icons in React.
     </p>
@@ -103,38 +137,7 @@ const Home = () =>
     <Icons
       names="arrow.blue.fgc-30 arrow.blue.fgc-50 arrow.blue.fgc-70"
     />
-
-    {/*
-    <div className="flex gap-2 x4 mar-b-4">
-      <Icon name="angle"/>
-      <Icon name="angle-up"/>
-      <Icon name="angle-right-thick"/>
-      <Icon name="angle-down-thick-square"/>
-      <Icon name="angle-left-thick-square-stroke=red"/>
-      <Icon name="angles"/>
-      <Icon name="arrow"/>
-      <Icon name="arrows"/>
-      <Icon name="arrows-right-light"/>
-      <Icon name="arrows-right-heavy"/>
-      <Icon name="caret-outline-thin-fill=red"/>
-    </div>
-    <div className="flex gap-2 x4 mar-b-4">
-      <Icon name="square-outline"/>
-      <Icon name="square10-outline"/>
-      <Icon name="square20-outline"/>
-      <Icon name="square30-outline"/>
-      <Icon name="square40-outline"/>
-      <Icon name="square-solid"/>
-      <Icon name="square-solid-medium-round-stroke=red"/>
-      <Icon name="square-outline-fill=#ff7f00"/>
-      <Icon name="square-outline-fill=rgb(0,127,255)"/>
-    </div>
-    <div className="flex gap-2 x4">
-      <Icon name="circle-outline"/>
-      <Icon name="circle-solid"/>
-      <Icon name="check"/>
-    </div>
     */}
-
   </div>
+
 export default Home

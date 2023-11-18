@@ -1,0 +1,9 @@
+{
+  "icons": {
+    "example1": {
+      "path": "M448,320L256,127L63,320",
+      "type": "line-thicker"
+    },
+    "example2": "line-thicker:M448,320L256,127L63,320"
+  }
+}

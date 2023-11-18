@@ -25,6 +25,7 @@ const IconName = () =>
       expand
     />
 
+
     <h2>Modifiers</h2>
     <div className="cols-2">
       <p>
@@ -138,7 +139,7 @@ const IconName = () =>
         Everything before that point is then split on hyphens, excluding
         any that come immediately before a number.  So the hyphen in
         the <code>-45</code> value for <code>rotate</code> is treated as a
-        minus sign rather than a delimited.  The result is that this part is
+        minus sign rather than a delimiter.  The result is that this part is
         split into three tokens: <code>arrow</code>, <code>rotate=-45</code>{' '}
         and <code>opacity=0.4</code>.
       </p>
@@ -171,7 +172,7 @@ const IconName = () =>
         modifier to rotate it to point to the right.
       </p>
     </div>
-    <Icons names={Object.keys(IconData)}/>
+    <Icons names={Object.keys(IconData.icons)}/>
   </div>
 
 export default IconName

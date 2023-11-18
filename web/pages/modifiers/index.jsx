@@ -36,20 +36,6 @@ const Index = () =>
     <Icons
       names="arrow-rotate=45 arrow-opacity=0.4 arrow-shrink=6 arrow-shrink=6-down=4 arrow-rotate=-45"
     />
-    <div className="border pad-2 surface-5">
-      <div className="smaller">
-        Icon name
-      </div>
-      <div className="larger font-mono mar-b-4">
-        arrow-rotate=-45-opacity=0.4<br/>
-      </div>
-      <div className="smaller">
-        Parsed as:
-      </div>
-      <div className="larger font-mono">
-        [&apos;arrow&apos;, &apos;rotate=-45&apos;, &apos;opacity=0.4&apos;]
-      </div>
-    </div>
   </div>
 
 export default Index

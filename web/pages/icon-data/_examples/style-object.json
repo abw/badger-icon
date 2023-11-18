@@ -1,0 +1,12 @@
+{
+  "icons": {
+    "example": {
+      "path": "M448,320L256,127L63,320",
+      "style": {
+        "fill": "none",
+        "stroke": "currentColor",
+        "stroke-width": "6%"
+      }
+    }
+  }
+}

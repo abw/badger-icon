@@ -93,3 +93,15 @@ export const ModifiersMenu = {
     }
   ]
 }
+
+export const IconDataMenu = {
+  title:  'Icon Data',
+  path: '/icon-data',
+  items: [
+    {
+      to: '/icon-data',
+      text: 'Introduction',
+      exact: true
+    },
+  ]
+}
