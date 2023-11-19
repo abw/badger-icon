@@ -1,12 +1,309 @@
 import React      from 'react'
 import CodeBlock  from '@/site/CodeBlock.jsx'
-import Img        from './_examples/img.html?raw'
-import Inline     from './_examples/inline.html?raw'
+import Render     from './_examples/render-icon?raw'
+import ImportIcon from './_examples/import-icon?raw'
+// import Img        from './_examples/img.html?raw'
+// import Inline     from './_examples/inline.html?raw'
+import CheckData  from './_examples/check-data?raw'
+import IconTiles  from '@/examples/Icons.jsx'
+import { Icon, Icons } from '@/lib/index.js'
+import { useState } from 'react'
+import { now } from '@abw/badger-timestamp'
+import { useEffect } from 'react'
+import Link from '@/ui/Link.jsx'
 
 const Home = () =>
   <div className="container-mobile flow">
     <h1>React Icon</h1>
+    <h2 className="mar-t-none large font-mono">NPM: @abw/react-icon</h2>
+    <p className="large">
+      This is a work in progress for rendering SVG icons in React.
+      It has an emphasis on flexibility, while reducing the size of the
+      data you need to define for icons.
+    </p>
+    <p>
+      Here are some of the icons that it can generate from a very small
+      data set of primitives.
+    </p>
+    <div className="flex space">
+      <Icons
+        names="square.fill-50.stroke-30 check-thick-shrink=6.stroke-100"
+        className="violet x6"
+      />
+      <Icons
+        names="circle.fill-50.stroke-40 cog-thin-shrink=7.stroke-80.fill-40.spin.slow"
+        className="green x6"
+      />
+      <Icons
+        names="square20.fill-60.stroke-40 heart-thin-shrink=7.stroke-80.fill-50.beat"
+        className="red x6"
+      />
+      <Time className="x6 orange"/>
+      {/*
+      <Icons
+        names="circle.fill-60.stroke-30 hour.shrink=2.stroke-40.spin.slow hour.stroke-45.spin.fast "
+        className="orange x5"
+      />
+      */}
+    </div>
+
+    <h2 className="mar-t-12">Minimal Icon Data</h2>
+    <p>
+      What makes this interesting is that a single icon can be defined in a
+      library and then rendered in many different styles.
+    </p>
+    <p>
+      For example, the icon data for a check mark (aka &quot;tick&quot;) is
+      about as simple as it can be:
+    </p>
+    <CodeBlock
+      code={CheckData}
+      language="js"
+      className=""
+      expand
+    />
+    <p>
+      For those that aren&apos;t familiar with SVG path data, this is an
+      instruction to move to coordinates 48,248 (<code>M48,248</code>), draw
+      a line to 192, 392 (<code>L192,392</code>) and then a line to 464,120
+      (<code>L464,120</code>).
+    </p>
+    <p>
+      The default coordinate size for an icon is 512
+      x 512, which is large enough to allow us to use only integer coordinates
+      without any noticeable loss of precision.
+      You can define a different size as the default for all icons, or set
+      specific sizes for individual icons.
+    </p>
+    <p>
+      To render this icon you need to{' '}
+      <Link to="/getting-started/installation" text="install the library"/> and
+      then import the <code>Icon</code> component
+      from <code>@abw/react-icon</code>.
+    </p>
+    <CodeBlock
+      code={ImportIcon}
+      language="jsx"
+      expand
+    />
+    <p>
+      Then insert the <code>Icon</code> component wherever you need
+      an icon, specifying the icon by the <code>name</code> property.
+    </p>
+    <CodeBlock
+      code={Render}
+      language="jsx"
+      expand
+    />
+    <p>
+      This is what it looks like: <Icon name="check"/>
+    </p>
+    <p>
+      Here&apos;s the big version that we&apos;ll be using in these examples
+      so you don&apos;t have to squint to see it.
+    </p>
+    <IconTiles
+      names="check"
+    />
+    <p className="mar-t-8">
+      You can add any number of modifiers to the end of the name to change the
+      appearance.  These should be separated by hyphens.  You can also add
+      CSS classes to the end of the name, separated by periods.
+    </p>
+    <IconTiles
+      names="check-thick check-thicker-square check-thickest-square.green.fgc-50"
+    />
+
+    <h2 className="mar-t-12">Stroke Width</h2>
+    <p>
+      An icon can be rendered in any of six additional pre-defined line
+      thicknesses.  All you need to do
+      is add one of the stroke width modifiers to the name, e.g.{' '}
+      <code>-thin</code>, <code>-thick</code>, etc.
+    </p>
+    <IconTiles
+      names="check-thinnest check-thinner check-thin check-thick check-thicker check-thickest"
+    />
+    <p className="mar-t-8">
+      Or you can set any other stroke width using the <code>-strokewidth</code>{' '}
+      modifier with a value.  This can be specified in pixel, points or as a
+      percentage. Or you can use unitless numbers, as shown here, which are
+      proportional to the icon size.  The benefit of this approach is that
+      they don&apos;t depend on you knowing the coordinate size for the icon
+      data.
+    </p>
+    <IconTiles
+      names="check-strokewidth=2 check-strokewidth=3.5 check-strokewidth=5"
+    />
+
+    <h2 className="mar-t-12">Rounded or Square</h2>
+    <p>
+      You can change the line endings and corners from the default (rounded)
+      to square by adding the <code>-square</code> modifier.
+    </p>
+    <IconTiles
+      names="check check-square"
+    />
+
+    <h2 className="mar-t-12">Orientation</h2>
+    <p>
+      You can rotate an icon through 90&deg;, 180&deg; and 270&deg; by adding
+      the <code>-right</code>, <code>-down</code> and <code>-left</code> modifiers,
+      respectively.  The <code>-up</code> modifier is also provided for
+      completeness, although it does&apos;t have any effect.  For example, we
+      only need to define the data for one <code>arrow</code> icon, but we
+      get the other three directions icons thrown in for free.
+    </p>
+    <IconTiles
+      names="arrow arrow-up"
+    />
+    <IconTiles
+      names="arrow-left arrow-down arrow-right"
+    />
+
+    <h2 className="mar-t-12">Rotation</h2>
+    <p>
+      If the four cardinal directions aren&apos;t enough then you can use the{' '}
+      <code>-rotate</code> modifier to rotate an icon to any angle.
+    </p>
+    <IconTiles
+      names="arrow-rotate=240 arrow arrow-rotate=120"
+    />
+
+    <h2 className="mar-t-12">Flipping</h2>
+    <p>
+      You can use the <code>-flipx</code> and <code>-flipy</code> modifiers
+      to flip the icon horizontally and vertically.  Or both!
+    </p>
+    <IconTiles
+      names="thumb thumb-flipx thumb-flipy"
+    />
+
+    <h2 className="mar-t-12">Sizing</h2>
+    <p>
+      You can change the size of the icon within the viewbox using the {' '}
+      <code>-shrink</code> and <code>-grow</code> modifiers.  These work in a
+      similar way to the Font Awesome modifiers which inspired them.  The
+      units are 1/16th of the icon size, equating to 1px when an icon is
+      displayed at 1em.
+    </p>
+    <IconTiles
+      names="check check-shrink=4 check-shrink=8 check check-grow=4 check-grow=8"
+    />
+
+    <h2 className="mar-t-12">Styling by CSS</h2>
+    <p>
+      You can style icons with CSS classes.  Add them to the end of the name
+      separated by periods.  These examples use color utilities provided by{' '}
+      <a href="https://abw.github.io/badger-css/">Badger CSS</a> to set the
+      stroke and fill colors.
+    </p>
+    <IconTiles
+      names={[
+        'square.red.stroke-30.fill-70', 'square.red.stroke-50.fill-80', 'square.red.stroke-70.fill-90',
+        'square.green.stroke-30.fill-70', 'square.green.stroke-50.fill-80', 'square.green.stroke-70.fill-90',
+        'square.blue.stroke-30.fill-70', 'square.blue.stroke-50.fill-80', 'square.blue.stroke-70.fill-90',
+      ]}
+    />
+    <p className="mar-t-8">
+      You can also use CSS classes to apply animations.
+    </p>
+    <IconTiles
+      names={[
+        'cog.spin', 'heart.beat', 'rotate.spin.slow'
+      ]}
+    />
+
+    <h2 className="mar-t-12">Composability</h2>
+    <p>
+      The icons are designed to be composed to make more complex icons.
+      For example, you don&apos;t need a dedicated icon for a checkbox when
+      you can compose it from a square and a check mark.
+    </p>
+    <div className="popout pad-v-8 border bgc-70 bdc-60 bgd-30 bdd-40 shadow-2">
+      <div className="flex space wrap x5">
+        <Icon name="square"/>
+        <Icon name="plus"/>
+        <Icon name="check"/>
+        <Icon name="equals"/>
+        <Icons names="square check-shrink=6-thicker" />
+      </div>
+    </div>
+    <p className="mar-t-8">
+      Or if you want icons to represent an ascending or descending sort,
+      using either alpha or numerical sorting, then you can compose
+      it from primitives.
+    </p>
+    <div className="popout pad-v-8 border bgc-70 bdc-60 bgd-30 bdd-40 shadow-2">
+      <div className="flex space wrap x5">
+        <Icon name="sort-up"/>
+        <Icon name="plus"/>
+        <Icon name="alpha"/>
+        <Icon name="equals"/>
+        <Icons names="sort-up alpha-shrink=10-thicker" />
+      </div>
+    </div>
+    <div className="popout pad-v-8 border bgc-70 bdc-60 bgd-30 bdd-40 shadow-2">
+      <div className="flex space wrap x5">
+        <Icon name="sort-down"/>
+        <Icon name="plus"/>
+        <Icon name="number"/>
+        <Icon name="equals"/>
+        <Icons names="sort-down number-shrink=10-thicker" />
+      </div>
+    </div>
+
+    <p className="mar-t-8">
+      Put it all together and you can make all sorts of interesting icons.
+    </p>
+    <div className="popout pad-v-8 border bgc-70 bdc-60 bgd-30 bdd-40 shadow-2">
+      <div className="flex space wrap x5">
+        <Icon name="square.fill-50.stroke-30.violet.x5"/>
+        <Icon name="plus"/>
+        <Icon name="check-thick-shrink=6.stroke-100.violet"/>
+        <Icon name="equals"/>
+        <Icons
+          names="square.fill-50.stroke-30 check-thick-shrink=6.stroke-100"
+          className="violet x5"
+        />
+      </div>
+    </div>
+    <div className="popout pad-v-8 border bgc-70 bdc-60 bgd-30 bdd-40 shadow-2">
+      <div className="flex space wrap x5">
+        <Icon name="circle.fill-50.stroke-40.green.x5"/>
+        <Icon name="plus"/>
+        <Icon name="cog-thin-shrink=7.stroke-80.fill-40.spin.slow.green.x5"/>
+        <Icon name="equals"/>
+        <Icons
+          names="circle.fill-50.stroke-40 cog-thin-shrink=7.stroke-80.fill-40.spin.slow"
+          className="green x5"
+        />
+      </div>
+    </div>
+    <div className="popout pad-v-8 border bgc-70 bdc-60 bgd-30 bdd-40 shadow-2">
+      <div className="flex space wrap x5">
+        <Icon name="square20.fill-60.stroke-40.red.x5"/>
+        <Icon name="plus"/>
+        <Icon name="heart-thin-shrink=7.stroke-80.fill-50.beat.red.x5"/>
+        <Icon name="equals"/>
+        <Icons
+          names="square20.fill-60.stroke-40 heart-thin-shrink=7.stroke-80.fill-50.beat"
+          className="red x5"
+        />
+      </div>
+    </div>
+
+    {/*
+      <Icons
+        names="circle.fill-60.stroke-30 hour.shrink=2.stroke-40.spin.slow hour.stroke-45.spin.fast "
+        className="orange x5"
+      />
+      */}
+
+
+    {/*
     <h2>SVG Icons are Great!</h2>
+    <h2>What Makes Them Great?</h2>
     <p className="mar-b-none">
       You can reference them as the <code>src</code>{' '}
       in an <code>img</code> tag.
@@ -17,6 +314,22 @@ const Home = () =>
       className=""
       expand
     />
+    <div className="popout brand bgc-30 fgc-90 hdc-100 grid-2 gap-4 pad-v-6">
+      <div>
+        <h3>Pros</h3>
+        <ul className="pad-l-4">
+          <li>Quick and easy!</li>
+          <li>No duplication of SVG data</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Cons</h3>
+        <ul className="pad-l-4">
+          <li>Extra network request</li>
+          <li>Cannot style with CSS</li>
+        </ul>
+      </div>
+    </div>
     <p className="mar-b-none">
       You can also embed them directly into an html page in an <code>svg</code>{' '}
       tag.
@@ -27,34 +340,23 @@ const Home = () =>
       className=""
       expand
     />
-    <p>
-      The only slight downside to the first approach is that it creates an
-      extra http request for each icon.  If you&apos;ve got a lot on a page
-      then it can slow down the loading of the page.
-    </p>
-    <p>
-      The second approach avoids the extra request but the tradeoff is an
-      increase in the page size, which also means the page will take longer
-      to load.
-    </p>
-    {/*
-    <p>
-      This is a work in progress for rendering SVG icons in React.
-    </p>
-    <p>
-      What makes this unique is that a single icon can be defined in a library,
-      e.g. <code>angle</code>, and then rendered in many different styles,
-      e.g. <code>angle-right</code>, <code>angle-light</code>, <code>angle-heavy</code>,
-      and so on.
-    </p>
+    <div className="popout brand bgc-30 fgc-90 hdc-100 grid-2 gap-4 pad-v-6">
+      <div>
+        <h3>Pros</h3>
+        <ul className="pad-l-4">
+          <li>No additional network request</li>
+          <li>Stylable via CSS</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Cons</h3>
+        <ul className="pad-l-4">
+          <li>Page bloat</li>
+          <li>Duplication of SVG data</li>
+        </ul>
+      </div>
+    </div>
 
-    <h2>Stroke Weight</h2>
-    <p>
-      The <code>-thinner</code>, <code>-thin</code>, <code>-light</code>,{' '}
-      <code>-medium</code>, <code>-heavy</code>, <code>-thick</code> and{' '}
-      <code>-thicker</code> suffixes can be used to set the stroke weight.
-    </p>
-    <Icons names="angle-thinner angle-thin angle-light angle-medium angle-heavy angle-thick angle-thicker"/>
 
     <h2>Stroke Width</h2>
     <p>
@@ -139,5 +441,45 @@ const Home = () =>
     />
     */}
   </div>
+
+const getTime = () => {
+  const time = now()
+  const hour = time.hours()
+  const mins = time.minutes()
+  const secs = time.seconds()
+  const hrot = (30 * (hour % 12)) + mins / 2
+  const mrot = 6 * mins
+  const srot = 6 * secs
+  return {
+    hour, mins, secs, hrot, mrot, srot
+  }
+}
+
+const Time = ({ className }) => {
+  const [time, setTime] = useState(getTime())
+  useEffect(
+    () => {
+      const interval = setInterval(
+        () => setTime(getTime()),
+        1000
+      )
+      return () => clearInterval(interval)
+    },
+    []
+  )
+  const { hrot, mrot, srot } = time
+
+  return (
+    <Icons
+      names={[
+        `circle.fill-80.stroke-40`,
+        `hour-thinner-grow=4-rotate=${mrot}-opacity=0.7.stroke-30`,
+        `hour-thin-shrink=4-rotate=${hrot}.stroke-30`,
+        `hour-strokeWidth=0.5-grow=7-rotate=${srot}-opacity=0.6.stroke-45`,
+      ]}
+      className={className}
+    />
+  )
+}
 
 export default Home

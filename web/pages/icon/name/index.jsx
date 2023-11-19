@@ -5,8 +5,6 @@ import Mods       from './_examples/Mods.jsx'
 import ModsSrc    from './_examples/Mods.jsx?raw'
 import Classes    from './_examples/Classes.jsx'
 import ClassesSrc from './_examples/Classes.jsx?raw'
-import Icons      from '@/examples/Icons.jsx'
-import IconData   from '@/lib/IconData.js'
 import Example    from '@/site/Example.jsx'
 import Link from '@/web/ui/Link.jsx'
 
@@ -21,10 +19,9 @@ const IconName = () =>
     <Example
       Component={Name}
       code={NameSrc}
-      undent={4}
-      expand
+      undent={2}
+      // expand
     />
-
 
     <h2>Modifiers</h2>
     <div className="cols-2">
@@ -156,23 +153,6 @@ const IconName = () =>
         <code>rotate=-45</code> and <code>opacity=0.4</code>.
       </p>
     </div>
-
-    <h2>Default Icons</h2>
-    <div className="cols-2">
-      <p>
-        In most cases you&apos;ll want to define your own icon library
-        including only the icons that you want to use in a project.
-        However, some basic icons are included as a starting point.
-      </p>
-      <p>
-        Note that there&apos;s only one of each basic icon.  There isn&apos;t
-        an explicit <code>arrow-right</code> icon defined, for example,
-        because specifying <code>arrow-right</code> as an icon name will
-        use the <code>arrow</code> icon and apply the <code>right</code>{' '}
-        modifier to rotate it to point to the right.
-      </p>
-    </div>
-    <Icons names={Object.keys(IconData.icons)}/>
   </div>
 
 export default IconName

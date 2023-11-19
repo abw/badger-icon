@@ -2,14 +2,16 @@ import React from 'react'
 import { Icon } from '@/lib/index.js'
 
 const Component = () =>
+  /* START */
   <div className="flex gap-4 wrap x2">
-    {/* START */}
-    <Icon name="bars"/>
-    <Icon name="list"/>
     <Icon name="check"/>
     <Icon name="cross"/>
     <Icon name="minus"/>
     <Icon name="plus"/>
+    <Icon name="ban"/>
+    <Icon name="bars"/>
+    <Icon name="list"/>
+    <Icon name="drag"/>
     <Icon name="pen"/>
     <Icon name="search"/>
     <Icon name="rotate"/>
@@ -17,7 +19,8 @@ const Component = () =>
     <Icon name="cog"/>
     <Icon name="envelope"/>
     <Icon name="clipboard"/>
-    {/* END */}
+    <Icon name="trash"/>
   </div>
+  /* END */
 
 export default Component
