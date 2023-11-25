@@ -2,7 +2,10 @@ import { defineConfig } from 'vite'
 import jsconfigPaths    from 'vite-jsconfig-paths'
 import svgr             from 'vite-plugin-svgr'
 import react            from '@vitejs/plugin-react'
-import define from  './vite.defs.js'
+import define           from  './vite.defs.js'
+
+const NAME   = `react-icon`
+const MODULE = `abw/${NAME}`
 
 export default defineConfig({
   plugins: [
@@ -23,8 +26,8 @@ export default defineConfig({
     sourcemap: false,
     lib: {
       entry: 'lib/index.js',
-      name: '@abw/react-icon',
-      fileName: 'react-icon',
+      name: MODULE,
+      fileName: NAME,
     },
     rollupOptions: {
       external: [

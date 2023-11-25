@@ -22,6 +22,10 @@ export const IconMenu = {
       code: 'name',
     },
     {
+      to: '/icon/icons',
+      code: 'icons',
+    },
+    {
       to: '/icon/className',
       code: 'className',
     },
@@ -96,13 +100,73 @@ export const ModifiersMenu = {
   ]
 }
 
-export const IconDataMenu = {
-  title:  'Icon Data',
-  path: '/icon-data',
+export const PrimitivesMenu = {
+  title:  'Primitives',
+  path: '/primitives',
   items: [
     {
-      to: '/icon-data',
+      to: '/primitives',
       text: 'Introduction',
+      exact: true
+    },
+    {
+      to: '/primitives/circle',
+      code: 'circle',
+    },
+    {
+      to: '/primitives/ellipse',
+      code: 'ellipse',
+    },
+    {
+      to: '/primitives/line',
+      code: 'line',
+    },
+    {
+      to: '/primitives/path',
+      code: 'path',
+    },
+    {
+      to: '/primitives/polygon',
+      code: 'polygon',
+    },
+    {
+      to: '/primitives/polyline',
+      code: 'polyline',
+    },
+    {
+      to: '/primitives/rect',
+      code: 'rect',
+    },
+  ]
+}
+
+export const LibraryMenu = {
+  title:  'Icon Library',
+  path: '/library',
+  items: [
+    {
+      to: '/library',
+      text: 'Introduction',
+      exact: true
+    },
+    {
+      to: '/library/utilities',
+      text: 'Utility Functions',
+      exact: true
+    },
+    {
+      to: '/library/data-format',
+      text: 'Data Format',
+      exact: true
+    },
+    {
+      to: '/library/badger-icon-tools',
+      text: 'Badger Icon Tools',
+      exact: true
+    },
+    {
+      to: '/library/integration',
+      text: 'integration',
       exact: true
     },
   ]

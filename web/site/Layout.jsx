@@ -9,7 +9,6 @@ import Context from './Context.jsx'
 
 const Layout = ({ contentRef }) => {
   const { theme, variant } = useTheme()
-  // const className = `${theme} ${variant}`
   return (
     <div id="site" className={variant} data-theme={theme}>
       <Header/>

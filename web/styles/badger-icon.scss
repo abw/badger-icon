@@ -25,19 +25,30 @@ $brand-colors: (
 @import "config/all.scss";
 @import "modules/all.scss";
 
-
-
 .bi-logo {
   --badger: var(--brand-30);
-  --icon: var(--brand-60);
+  --icon: var(--brand-50);
+  .white {
+    fill:white;
+  }
+  .black {
+    fill: black
+  }
   .badger {
     fill: var(--badger);
   }
   .icon {
-    fill: var(--react-ui);
+    fill: var(--icon);
   }
 }
 
+#{$dark-theme} {
+  color-scheme: dark;
+  .bi-logo {
+    --badger: var(--brand-40);
+    --icon: var(--brand-60);
+  }
+}
 
 // NOTE: moving upstream
 @each $stop in $color-stops {

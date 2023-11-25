@@ -1,6 +1,6 @@
-import React    from 'react'
-import IconData from '../IconData.js'
-import SVGIcon  from '../SVG/Icon.jsx'
+import React        from 'react'
+import DefaultIcons from '../IconData.js'
+import SVGIcon      from '../SVG/Icon.jsx'
 import { resolveIconData, prepareIconProps } from '../utils/index.js'
 
 // TODO: fixedWidth
@@ -10,11 +10,11 @@ export const Icon = ({
   // style,
   // transform,
   // className
-  iconData=IconData,
+  icons=DefaultIcons,
   ...props
 }) =>
   name
-    ? <SVGIcon {...props} {...resolveIconData(name, iconData, props)}/>
+    ? <SVGIcon {...props} {...resolveIconData(name, icons, props)}/>
     : <SVGIcon {...prepareIconProps(props)} />
 
 export default Icon

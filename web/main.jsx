@@ -4,7 +4,7 @@ import Router             from './site/Router.jsx'
 import SiteContext        from '@/site/Context.jsx'
 import { RouterProvider } from 'react-router-dom'
 import { ThemeProvider }  from '@abw/react-night-and-day'
-import './styles/react-icon.scss'
+import './styles/badger-icon.scss'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

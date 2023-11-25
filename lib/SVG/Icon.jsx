@@ -1,11 +1,11 @@
 import React from 'react'
 import { DEFAULT_ICON_HEIGHT, DEFAULT_ICON_WIDTH } from '../constants.js'
 import Transform from './Transform.jsx'
-import { Path } from './Path.jsx'
+import Body from './Body.jsx'
+// import { Path } from './Path.jsx'
 import { reactifty } from '../utils/reactify.js'
 
 export const SVGIcon = ({
-  path,
   onClick,
   minx=0,
   miny=0,
@@ -14,6 +14,7 @@ export const SVGIcon = ({
   style,
   transform,
   className='',
+  ...props
   // fill='currentColor'
 }) =>
   <svg
@@ -30,9 +31,11 @@ export const SVGIcon = ({
           height={height}
           transform={transform}
         >
-          <Path d={path}/>
+          {/* <Path d={path}/> */}
+          <Body {...props}/>
         </Transform>
-      : <Path d={path}/>
+      // : <Path d={path}/>
+      : <Body {...props}/>
     }
   </svg>
 

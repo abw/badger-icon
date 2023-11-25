@@ -9,13 +9,15 @@ import CodeBlock    from '@/site/CodeBlock.jsx'
 import Link         from '@/ui/Link.jsx'
 
 
-const Index = () =>
+// import CodeBlock    from '@/site/CodeBlock.jsx'
+// import Link         from '@/ui/Link.jsx'
+
+const DataFormat = () =>
   <div className="flow">
-    <h1>Icon Data Format</h1>
+    <h1>Icon Library</h1>
+    <h2>Data Format</h2>
+
     <div className="cols-2">
-      <p>
-        TODO: You can create your own icon library...
-      </p>
       <p>
         The icon data format is designed to keep the library as small as
         possible, wherever possible.
@@ -148,6 +150,11 @@ const Index = () =>
       className="mar-b-8"
       expand
     />
+    <div className="cols-2">
+      <p>
+        TODO
+      </p>
+    </div>
   </div>
 
-export default Index
+export default DataFormat

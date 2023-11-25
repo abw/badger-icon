@@ -10,17 +10,25 @@ import { Icon, Icons } from '@/lib/index.js'
 import { useState } from 'react'
 import { now } from '@abw/badger-timestamp'
 import { useEffect } from 'react'
+import Badger from '@/svg/badger-icon.svg?react'
 import Link from '@/ui/Link.jsx'
 
 const Home = () =>
   <div className="container-mobile flow">
-    <h1>React Icon</h1>
-    <h2 className="mar-t-none large font-mono">NPM: @abw/react-icon</h2>
+    <Badger className="bi-logo mar-t-4"/>
+    <h2 className="medium font-mono mar-t-8">NPM: @abw/badger-icon</h2>
     <p className="large">
       This is a work in progress for rendering SVG icons in React.
       It has an emphasis on flexibility, while reducing the size of the
       data you need to define for icons.
     </p>
+    <div className="warning alert border shadow-2">
+      <h3>Note</h3>
+      <p>
+        This module is in the process of changing name from{' '}
+        <code>react-icon</code> to <code>badger-icon</code>.
+      </p>
+    </div>
     <p>
       Here are some of the icons that it can generate from a very small
       data set of primitives.
