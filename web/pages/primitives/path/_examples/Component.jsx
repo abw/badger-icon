@@ -2,7 +2,7 @@ import React from 'react'
 import { Icon, addIcon } from '@/lib/index.js'
 
 {/* START */}
-// PRETEND: import { Icon, addIcon } from '@abw/badger-react-ui'
+// PRETEND: import { Icon, addIcon } from '@abw/badger-icon'
 
 const PathExample = () => {
   addIcon(
