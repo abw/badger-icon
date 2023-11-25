@@ -7,6 +7,7 @@ specifiers:
   '@abw/badger-utils': ^1.0.21
   '@abw/react-context': ^2.0.3
   '@abw/react-night-and-day': ^0.0.6
+  '@abw/react-one-louder': ^0.0.6
   '@abw/svg-icon-librarian': ^1.0.9
   '@testing-library/jest-dom': ^6.1.4
   '@testing-library/react': ^14.1.0
@@ -30,6 +31,7 @@ specifiers:
 
 dependencies:
   '@abw/badger-utils': 1.0.21
+  '@abw/react-one-louder': 0.0.6
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
 
@@ -159,7 +161,6 @@ packages:
     dependencies:
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
-    dev: true
 
   /@abw/svg-icon-librarian/1.0.9:
     resolution: {integrity: sha512-mUMvuEbD0EncLQgatgB8DUGKuTp3iPF3WHTdqzGyFC6UlH84H8k/p0jbqO8VzGtdZQxyZI3s59eY+s0KynJkKA==}

@@ -38,6 +38,7 @@
   },
   "dependencies": {
     "@abw/badger-utils": "^1.0.21",
+    "@abw/react-one-louder": "^0.0.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

@@ -166,7 +166,7 @@ export const LibraryMenu = {
     },
     {
       to: '/library/integration',
-      text: 'integration',
+      text: 'Integration',
       exact: true
     },
   ]

@@ -244,20 +244,20 @@ const Home = () =>
     </p>
     <div className="popout pad-v-8 border bgc-70 bdc-60 bgd-30 bdd-40 shadow-2">
       <div className="flex space wrap x5">
-        <Icon name="sort-up"/>
+        <Icon name="point-up"/>
         <Icon name="plus"/>
         <Icon name="alpha"/>
         <Icon name="equals"/>
-        <Icons names="sort-up alpha-shrink=10-thicker" />
+        <Icons names="point-up alpha-shrink=10-thicker" />
       </div>
     </div>
     <div className="popout pad-v-8 border bgc-70 bdc-60 bgd-30 bdd-40 shadow-2">
       <div className="flex space wrap x5">
-        <Icon name="sort-down"/>
+        <Icon name="point-down"/>
         <Icon name="plus"/>
         <Icon name="number"/>
         <Icon name="equals"/>
-        <Icons names="sort-down number-shrink=10-thicker" />
+        <Icons names="point-down number-shrink=10-thicker" />
       </div>
     </div>
 

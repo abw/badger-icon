@@ -1,6 +1,8 @@
 import React        from 'react'
 import AddIcon      from './_examples/AddIcon.jsx'
 import AddIconSrc   from './_examples/AddIcon.jsx?raw'
+import AddIcons     from './_examples/AddIcons.jsx'
+import AddIconsSrc  from './_examples/AddIcons.jsx?raw'
 // import CodeBlock    from '@/site/CodeBlock.jsx'
 import Link         from '@/ui/Link.jsx'
 import Example from '@/site/Example.jsx'
@@ -25,7 +27,7 @@ const Utilities = () =>
       </p>
     </div>
 
-    <h2 className="font-mono">addIcon</h2>
+    <h2 className="font-mono">addIcon()</h2>
     <div className="cols-2">
       <p>
         The <code>addIcon()</code> function can be used to add a single
@@ -42,6 +44,21 @@ const Utilities = () =>
     <Example
       Component={AddIcon}
       code={AddIconSrc}
+      expand
+    />
+
+    <h2 className="font-mono">addIcons()</h2>
+    <div className="cols-2">
+      <p>
+        The <code>addIcons()</code> function can be used to add multiple
+        icons to the default library.  The only argument is an object in which
+        the keys are the icon names and the corresponding values are the icon
+        definitions.
+      </p>
+    </div>
+    <Example
+      Component={AddIcons}
+      code={AddIconsSrc}
       expand
     />
   </div>
