@@ -20,7 +20,7 @@ const Header = () => {
           <span className="small mar-l-2">v{VERSION}</span>
         </div>
         <div className="flex middle">
-          <a href="https://github.com/abw/react-icon">
+          <a href="https://github.com/abw/badger-icon">
             <Icon name="github" className="mar-r-4"/>
           </a>
           <Toggle/>

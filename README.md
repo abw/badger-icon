@@ -1,4 +1,4 @@
-# react-icon
+# badger-icon
 
 This module implements a React component for rendering SVG icons.
 
@@ -10,29 +10,29 @@ as `arrow-right` will rotate it through 90 degrees to point to the right.
 Similarly, `arrow-thick` will increase the stroke width and `arrow-thin` will
 reduce it.
 
-See the [website](https://abw.github.io/react-icon) for full documentation
+See the [website](https://abw.github.io/badger-icon) for full documentation
 and examples.
 
 ## Getting Started
 
-Add the `@abw/react-icon` module to your project using your favourite
+Add the `@abw/badger-icon` module to your project using your favourite
 package manager.
 
 ```bash
 ## using npm
-$ npm add @abw/react-icon
+$ npm add @abw/badger-icon
 
 ## using yarn
-$ yarn add @abw/react-icon
+$ yarn add @abw/badger-icon
 
 ## using pnpm
-$ pnpm add @abw/react-icon
+$ pnpm add @abw/badger-icon
 ```
 
 You can then import the modules and start using them.
 
 ```jsx
-import { Icon } from '@abw/react-icon'
+import { Icon } from '@abw/badger-icon'
 
 const YourComponent = () =>
   <Icon name="arrow-right"/>
@@ -45,8 +45,8 @@ export default YourComponent
 Check out the repository.
 
 ```bash
-$ git clone https://github.com/abw/react-icon.git
-$ cd react-icon
+$ git clone https://github.com/abw/badger-icon.git
+$ cd badger-icon
 ```
 
 Install the dependencies.

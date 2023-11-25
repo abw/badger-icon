@@ -1,8 +1,8 @@
 ## using npm
-$ npm add @abw/react-icon
+$ npm add @abw/badger-icon
 
 ## using yarn
-$ yarn add @abw/react-icon
+$ yarn add @abw/badger-icon
 
 ## using pnpm
-$ pnpm add @abw/react-icon
+$ pnpm add @abw/badger-icon

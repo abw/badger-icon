@@ -6,8 +6,8 @@ import define           from  './vite.defs.js'
 import fs               from 'node:fs'
 
 const https = {
-  key:  fs.readFileSync('etc/certs/react-icon.local.wardley.org.key'),
-  cert: fs.readFileSync('etc/certs/react-icon.local.wardley.org.crt'),
+  key:  fs.readFileSync('etc/certs/badger-icon.local.wardley.org.key'),
+  cert: fs.readFileSync('etc/certs/badger-icon.local.wardley.org.crt'),
 }
 
 export default defineConfig({
@@ -18,14 +18,14 @@ export default defineConfig({
   ],
   define,
   root: 'web',
-  base: '/react-icon/',
+  base: '/badger-icon/',
   envDir: '../',
   build: {
     emptyOutDir: true,
     outDir: '../docs'
   },
   server: {
-    host: 'react-icon.local.wardley.org',
+    host: 'badger-icon.local.wardley.org',
     port: 3013,
     https
   }

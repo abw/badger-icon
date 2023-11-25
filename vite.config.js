@@ -4,7 +4,7 @@ import svgr             from 'vite-plugin-svgr'
 import react            from '@vitejs/plugin-react'
 import define           from  './vite.defs.js'
 
-const NAME   = `react-icon`
+const NAME   = `badger-icon`
 const MODULE = `abw/${NAME}`
 
 export default defineConfig({

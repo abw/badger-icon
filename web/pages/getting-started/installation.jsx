@@ -1,8 +1,8 @@
 import React          from 'react'
 import CodeBlock      from '@/site/CodeBlock.jsx'
 import add            from './_examples/add?raw'
-import importCSS      from './_examples/react-icon-css?raw'
-import importSCSS     from './_examples/react-icon-scss?raw'
+import importCSS      from './_examples/badger-icon-css?raw'
+import importSCSS     from './_examples/badger-icon-scss?raw'
 import Split          from '@/site/Split.jsx'
 
 const Installation = () =>
@@ -11,7 +11,7 @@ const Installation = () =>
 
     <h2>Adding to a Javascript Project</h2>
     <p>
-      Add <code>@abw/react-icon</code> to your Javascript project
+      Add <code>@abw/badger-icon</code> to your Javascript project
       using your favourite package manager.
     </p>
     <CodeBlock

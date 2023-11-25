@@ -2,16 +2,14 @@ import React      from 'react'
 import CodeBlock  from '@/site/CodeBlock.jsx'
 import Render     from './_examples/render-icon?raw'
 import ImportIcon from './_examples/import-icon?raw'
-// import Img        from './_examples/img.html?raw'
-// import Inline     from './_examples/inline.html?raw'
 import CheckData  from './_examples/check-data?raw'
 import IconTiles  from '@/examples/Icons.jsx'
-import { Icon, Icons } from '@/lib/index.js'
+import Badger     from '@/svg/badger-icon.svg?react'
+import Link       from '@/ui/Link.jsx'
+import { now }    from '@abw/badger-timestamp'
 import { useState } from 'react'
-import { now } from '@abw/badger-timestamp'
 import { useEffect } from 'react'
-import Badger from '@/svg/badger-icon.svg?react'
-import Link from '@/ui/Link.jsx'
+import { Icon, Icons } from '@/lib/index.js'
 
 const Home = () =>
   <div className="container-mobile flow">
@@ -22,13 +20,6 @@ const Home = () =>
       It has an emphasis on flexibility, while reducing the size of the
       data you need to define for icons.
     </p>
-    <div className="warning alert border shadow-2">
-      <h3>Note</h3>
-      <p>
-        This module is in the process of changing name from{' '}
-        <code>react-icon</code> to <code>badger-icon</code>.
-      </p>
-    </div>
     <p>
       Here are some of the icons that it can generate from a very small
       data set of primitives.
@@ -87,7 +78,7 @@ const Home = () =>
       To render this icon you need to{' '}
       <Link to="/getting-started/installation" text="install the library"/> and
       then import the <code>Icon</code> component
-      from <code>@abw/react-icon</code>.
+      from <code>@abw/badger-icon</code>.
     </p>
     <CodeBlock
       code={ImportIcon}

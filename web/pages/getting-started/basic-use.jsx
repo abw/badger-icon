@@ -11,7 +11,7 @@ const BasicUse = () =>
     <h2>Import</h2>
     <Split>
       <p>
-        Import the <code>Icon</code> component from <code>@abw/react-icon</code>.
+        Import the <code>Icon</code> component from <code>@abw/badger-icon</code>.
       </p>
       <CodeBlock
         code={ImportIcon}

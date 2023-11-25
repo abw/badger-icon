@@ -1,17 +1,17 @@
 {
-  "name": "@abw/react-icon",
-  "version": "0.0.3",
-  "description": "A description for react-icon",
+  "name": "@abw/badger-icon",
+  "version": "0.0.4",
+  "description": "SVG Icon rendering for React",
   "type": "module",
   "files": [
     "dist"
   ],
-  "main": "./dist/react-icon.umd.cjs",
-  "module": "./dist/react-icon.js",
+  "main": "./dist/badger-icon.umd.cjs",
+  "module": "./dist/badger-icon.js",
   "exports": {
     ".": {
-      "import": "./dist/react-icon.js",
-      "require": "./dist/react-icon.umd.cjs"
+      "import": "./dist/badger-icon.js",
+      "require": "./dist/badger-icon.umd.cjs"
     }
   },
   "author": "Andy Wardley",
@@ -31,10 +31,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/abw/react-icon.git"
+    "url": "git+https://github.com/abw/badger-icon.git"
   },
   "bugs": {
-    "url": "https://github.com/abw/react-icon/issues"
+    "url": "https://github.com/abw/badger-icon/issues"
   },
   "dependencies": {
     "@abw/badger-utils": "^1.0.21",
