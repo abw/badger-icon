@@ -10,10 +10,10 @@ const Component = () => {
   }
   return (
     <div className="flex gap-2 x3">
-      <Icon name="angle"        icons={MyIcons}/>
-      <Icon name="angle-right"  icons={MyIcons}/>
-      <Icon name="angle-down"   icons={MyIcons}/>
-      <Icon name="angle-up"     icons={MyIcons}/>
+      <Icon name="angle"        library={MyIcons}/>
+      <Icon name="angle-right"  library={MyIcons}/>
+      <Icon name="angle-down"   library={MyIcons}/>
+      <Icon name="angle-up"     library={MyIcons}/>
     </div>
   )
 }

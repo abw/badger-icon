@@ -1,5 +1,5 @@
 import React from 'react'
-import { Icon, addIcon } from '@/lib/index.js'
+import { Icon, addIcon } from '@/web/lib/index.js'
 
 {/* START */}
 // PRETEND: import { Icon, addIcon } from '@abw/badger-icon'

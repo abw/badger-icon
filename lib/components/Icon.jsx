@@ -1,5 +1,5 @@
 import React        from 'react'
-import DefaultIcons from '../IconData.js'
+import Library      from '../Library.js'
 import SVGIcon      from '../SVG/Icon.jsx'
 import { Themed }   from '../Theme.js'
 import { resolveIconData, prepareIconProps } from '../utils/index.js'
@@ -11,11 +11,11 @@ export const Icon = ({
   // style,
   // transform,
   // className
-  icons=DefaultIcons,
+  library=Library,
   ...props
 }) =>
   name
-    ? <SVGIcon {...props} {...resolveIconData(name, icons, props)}/>
+    ? <SVGIcon {...props} {...resolveIconData(name, library, props)}/>
     : <SVGIcon {...prepareIconProps(props)} />
 
 export default Themed(Icon, 'Icon')

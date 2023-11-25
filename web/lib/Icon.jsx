@@ -2,9 +2,9 @@
 // the web site.
 import React    from 'react'
 import RealIcon from '@/lib/components/Icon.jsx'
-import IconData from './IconData.jsx'
+import Library  from './Library.jsx'
 
 export const Icon = props =>
-  <RealIcon icons={IconData} {...props}/>
+  <RealIcon library={Library} {...props}/>
 
 export default Icon

@@ -1,7 +1,7 @@
 import React from 'react'
 import { it, expect } from 'vitest'
 import { render } from '@testing-library/react'
-import { Icon, IconData } from '@/lib/index.js'
+import { Icon, Library } from '@/lib/index.js'
 
 it(
   'icon with dashed type',
@@ -19,7 +19,7 @@ it(
     )
     expect(path).toHaveAttribute(
       'd',
-      expect.stringMatching(IconData.icons.angle.replace(/^line:/, ''))
+      expect.stringMatching(Library.icons.angle.replace(/^line:/, ''))
     )
     expect(icon).toHaveAttribute(
       'style',
@@ -43,7 +43,7 @@ it(
     )
     expect(path).toHaveAttribute(
       'd',
-      expect.stringMatching(IconData.icons.angle.replace(/^line:/, ''))
+      expect.stringMatching(Library.icons.angle.replace(/^line:/, ''))
     )
     expect(icon).toHaveAttribute(
       'style',

@@ -1,3 +1,3 @@
 export * from './Icon.jsx'
-export * from './IconData.jsx'
+export * from './Library.jsx'
 export * from './MyIconLibrary.jsx'

@@ -1,6 +1,6 @@
-import React      from 'react'
-import Icons      from '@/examples/Icons.jsx'
-import IconData   from '@/lib/IconData.js'
+import React    from 'react'
+import Icons    from '@/examples/Icons.jsx'
+import Library  from '@/lib/Library.js'
 
 const IconsPage = () =>
   <div className="flow">
@@ -19,7 +19,7 @@ const IconsPage = () =>
         modifier to rotate it to point to the right.
       </p>
     </div>
-    <Icons names={Object.keys(IconData.icons)}/>
+    <Icons names={Object.keys(Library.icons)}/>
   </div>
 
 export default IconsPage

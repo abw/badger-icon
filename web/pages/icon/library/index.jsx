@@ -7,10 +7,10 @@ import Link       from '@/ui/Link.jsx'
 const IconIcons = () =>
   <div className="flow">
     <h1>Icon</h1>
-    <h2 className="font-mono">icons</h2>
+    <h2 className="font-mono">library</h2>
 
     <p className="cols-2">
-      The <code>icons</code> property can be used to define an alternate
+      The <code>library</code> property can be used to define an alternate
       icon library for the component.
     </p>
     <p>
@@ -20,8 +20,6 @@ const IconIcons = () =>
     <Example
       Component={Icons}
       code={IconsSrc}
-      // undent={2}
-      // expand
     />
 
   </div>

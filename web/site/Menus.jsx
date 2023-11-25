@@ -22,8 +22,8 @@ export const IconMenu = {
       code: 'name',
     },
     {
-      to: '/icon/icons',
-      code: 'icons',
+      to: '/icon/library',
+      code: 'library',
     },
     {
       to: '/icon/className',

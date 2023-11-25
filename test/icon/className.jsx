@@ -1,9 +1,9 @@
 import React from 'react'
 import { it, expect } from 'vitest'
 import { render } from '@testing-library/react'
-import { Icon, IconData } from '@/lib/index.js'
+import { Icon, Library } from '@/lib/index.js'
 
-const CustomIconData = {
+const CustomLibrary = {
   icons: {
     foo: 'M1,1L23,23',
     bar: {
@@ -33,7 +33,7 @@ it(
     )
     expect(path).toHaveAttribute(
       'd',
-      expect.stringMatching(IconData.icons.angle.replace(/^line:/, ''))
+      expect.stringMatching(Library.icons.angle.replace(/^line:/, ''))
     )
   }
 )
@@ -54,7 +54,7 @@ it(
     )
     expect(path).toHaveAttribute(
       'd',
-      expect.stringMatching(IconData.icons.angle.replace(/^line:/, ''))
+      expect.stringMatching(Library.icons.angle.replace(/^line:/, ''))
     )
   }
 )
@@ -76,7 +76,7 @@ it(
     )
     expect(path).toHaveAttribute(
       'd',
-      expect.stringMatching(IconData.icons.angle.replace(/^line:/, ''))
+      expect.stringMatching(Library.icons.angle.replace(/^line:/, ''))
     )
   }
 )
@@ -85,7 +85,7 @@ it(
   'renders an icon with className in icon data',
   () => {
     const { container } = render(
-      <Icon name="bar" iconData={CustomIconData}/>
+      <Icon name="bar" library={CustomLibrary}/>
     )
     // screen.debug()
     const icon = container.querySelector('svg.icon')
@@ -102,7 +102,7 @@ it(
     )
     expect(path).toHaveAttribute(
       'd',
-      expect.stringMatching(CustomIconData.icons.bar.path)
+      expect.stringMatching(CustomLibrary.icons.bar.path)
     )
   }
 )

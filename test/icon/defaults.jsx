@@ -3,7 +3,7 @@ import { it, expect } from 'vitest'
 import { render } from '@testing-library/react'
 import { Icon } from '@/lib/index.js'
 
-const IconData = {
+const Library = {
   defaults: {
     width: 24,
     height: 24,
@@ -18,7 +18,7 @@ const IconData = {
   }
 }
 
-const NoDefaultsIconData = {
+const NoDefaultsLibrary = {
   icons: {
     foo: 'M1,2L3,4',
   }
@@ -28,7 +28,7 @@ it(
   'renders icon with default width/height',
   () => {
     const { container } = render(
-      <Icon name="foo" iconData={IconData}/>
+      <Icon name="foo" library={Library}/>
     )
     // screen.debug()
     const icon = container.querySelector('svg.icon')
@@ -40,7 +40,7 @@ it(
     )
     expect(path).toHaveAttribute(
       'd',
-      expect.stringMatching(IconData.icons.foo)
+      expect.stringMatching(Library.icons.foo)
     )
   }
 )
@@ -49,7 +49,7 @@ it(
   'renders icon with custom width/height',
   () => {
     const { container } = render(
-      <Icon name="bar" iconData={IconData}/>
+      <Icon name="bar" library={Library}/>
     )
     // screen.debug()
     const icon = container.querySelector('svg.icon')
@@ -61,7 +61,7 @@ it(
     )
     expect(path).toHaveAttribute(
       'd',
-      expect.stringMatching(IconData.icons.bar.path)
+      expect.stringMatching(Library.icons.bar.path)
     )
   }
 )
@@ -70,7 +70,7 @@ it(
   'renders icon with implicit defaults',
   () => {
     const { container } = render(
-      <Icon name="foo" iconData={NoDefaultsIconData}/>
+      <Icon name="foo" library={NoDefaultsLibrary}/>
     )
     // screen.debug()
     const icon = container.querySelector('svg.icon')
@@ -86,7 +86,7 @@ it(
     )
     expect(path).toHaveAttribute(
       'd',
-      expect.stringMatching(NoDefaultsIconData.icons.foo)
+      expect.stringMatching(NoDefaultsLibrary.icons.foo)
     )
   }
 )
