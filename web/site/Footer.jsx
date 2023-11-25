@@ -5,7 +5,7 @@ const Footer = () =>
   <footer>
     <div className="flex space middle">
       <div className="large">
-        React Icon
+        Badger Icon
       </div>
       <div className="text-center">
         by <a href="https://github.com/abw">Andy Wardley</a>

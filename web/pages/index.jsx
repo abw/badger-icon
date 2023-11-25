@@ -105,7 +105,12 @@ const Home = () =>
       names="check"
     />
     <p className="mar-t-8">
-      You can add any number of modifiers to the end of the name to change the
+      A number of basic icons, including this one, are provided in the{' '}
+      <Link to="getting-started/icons" text="default library"/>.
+    </p>
+    <p>
+      You can add any number of{' '}
+      <Link to="/modifiers" text="modifiers"/> to the end of the name to change the
       appearance.  These should be separated by hyphens.  You can also add
       CSS classes to the end of the name, separated by periods.
     </p>

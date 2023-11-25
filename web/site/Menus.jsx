@@ -63,9 +63,14 @@ export const ModifiersMenu = {
       exact: true
     },
     {
-      to: '/modifiers/direction',
-      text: 'Direction',
-      tocName: 'direction',
+      to: '/modifiers/orientation',
+      text: 'Orientation',
+      tocName: 'orientation',
+    },
+    {
+      to: '/modifiers/move',
+      text: 'Move',
+      tocName: 'move',
     },
     {
       to: '/modifiers/rotate',

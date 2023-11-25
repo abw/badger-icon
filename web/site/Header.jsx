@@ -16,7 +16,7 @@ const Header = () => {
             className="toggle-sidebar action"
             onClick={() => setVariant(variant === NO_SIDEBAR ? SIDEBAR : NO_SIDEBAR)}
           />
-          <Link to="/" className="home mar-l-2" text="React Icon"/>
+          <Link to="/" className="home mar-l-2" text="Badger Icon"/>
           <span className="small mar-l-2">v{VERSION}</span>
         </div>
         <div className="flex middle">
