@@ -6,7 +6,7 @@ import { Icon as BadgerIcon, MyIconLibrary } from '@/web/lib/index.js'
 // PRETEND: import MyIconLibrary from './path/to/MyIconLibrary.js'
 
 const Icon = props =>
-  <BadgerIcon icons={MyIconLibrary} {...props}/>
+  <BadgerIcon library={MyIconLibrary} {...props}/>
 
 const IconExample = () =>
   <div className="flex gap-4 wrap x6">

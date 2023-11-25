@@ -9,7 +9,7 @@ import { Icon, Theme } from '@/lib/index.js'
 const ThemeExample = () => {
   const MyTheme = {
     Icon: {
-      icons: MyIconLibrary,
+      library: MyIconLibrary,
     }
   }
   return (

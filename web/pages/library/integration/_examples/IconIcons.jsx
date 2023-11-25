@@ -9,15 +9,15 @@ const LightningExample = () =>
   <div className="flex gap-4 wrap x6">
     <Icon
       name="lightning"
-      icons={MyIconLibrary}
+      library={MyIconLibrary}
     />
     <Icon
       name="lightning-thinner"
-      icons={MyIconLibrary}
+      library={MyIconLibrary}
     />
     <Icon
       name="lightning-thinnest"
-      icons={MyIconLibrary}
+      library={MyIconLibrary}
     />
   </div>
 

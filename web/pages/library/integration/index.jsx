@@ -26,7 +26,7 @@ const Integration = () =>
     <div className="cols-2">
       <p>
         The quick and simple approach is to pass your icon library data to
-        the component via the <code>icons</code> property.
+        the component via the <code>library</code> property.
       </p>
     </div>
     <Example
