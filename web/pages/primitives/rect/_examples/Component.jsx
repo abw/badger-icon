@@ -11,10 +11,10 @@ const RectExample = () => {
       element: 'rect',
       x: 16,
       y: 16,
-      rx: 32,
-      ry: 32,
       width: 480,
       height: 480,
+      rx: 32,
+      ry: 32,
     }
   )
   return (

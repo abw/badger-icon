@@ -8,7 +8,8 @@ const PolygonExample = () => {
   addIcon(
     'flash',
     {
-      'polygon': '64,448 224,160 288,224 448,64 288,352 224,288'
+      element: 'polygon',
+      points: '64,448 224,160 288,224 448,64 288,352 224,288'
     }
   )
   return (

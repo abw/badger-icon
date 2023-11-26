@@ -1,12 +1,12 @@
 import React          from 'react'
 import Component      from './_examples/Component.jsx'
 import Source         from './_examples/Component.jsx?raw'
-import short          from './_examples/short.js?raw'
-import long           from './_examples/long.js?raw'
+import Short          from './_examples/Short.jsx'
+import ShortSrc       from './_examples/Short.jsx?raw'
+import String         from './_examples/String.jsx'
+import StringSrc      from './_examples/String.jsx?raw'
 import Example        from '@/site/Example.jsx'
 import MDNElementLink from '@/site/MDNElementLink.jsx'
-import Split from '@/site/Split.jsx'
-import CodeBlock from '@/site/CodeBlock.jsx'
 
 const Path = () =>
   <div className="flow">
@@ -16,6 +16,13 @@ const Path = () =>
       <p>
         The <code>path</code> element is the generic element to define a shape.
       </p>
+      <p>
+        The explicit form is to define the icon as an object with the{' '}
+        <code>element</code> property set to <code>path</code>.  The{' '}
+        <code>d</code> property should define the data points.
+        Any other properties can be
+        included as attributes for the generated SVG <code>path</code> element.
+      </p>
       <MDNElementLink element="path"/>
     </div>
     <Example
@@ -23,31 +30,30 @@ const Path = () =>
       code={Source}
       expand
     />
-    <div className="cols-2">
-      <p>
-        The short form shown here has <code>path</code> as a key
-        with the data as the corresponding value.  This is short-hand for
-        the longer form shown below where <code>element</code> is set to{' '}
-        <code>path</code> and the <code>d</code> data points are listed separately.
-        Both formats are valid.
-      </p>
-    </div>
-    <Split>
-      <CodeBlock
-        code={short}
-        caption="Short Form"
-        language="js"
-        className="mar-b-8"
-        expand
-      />
-      <CodeBlock
-        code={long}
-        caption="Long Form"
-        language="js"
-        className="mar-b-8"
-        expand
-      />
-    </Split>
+
+    <p className="cols-2">
+      The short form of this is an object with a <code>path</code> property
+      which is a string containing the <code>d</code> path data.
+    </p>
+    <Example
+      Component={Short}
+      code={ShortSrc}
+      expand
+      undent={2}
+    />
+
+
+    <p className="cols-2">
+      The even shorter form is to define the icon as a string with the{' '}
+      <code>path</code> prefix, a colon, and then the path data.
+    </p>
+    <Example
+      Component={String}
+      code={StringSrc}
+      expand
+      undent={2}
+    />
+
   </div>
 
 export default Path

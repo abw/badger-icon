@@ -8,7 +8,8 @@ const PolylineExample = () => {
   addIcon(
     'polyline',
     {
-      'polyline': '192,384 128,448 64,384 256,64 448,384 384,448 320,384'
+      element: 'polyline',
+      points: '192,384 128,448 64,384 256,64 448,384 384,448 320,384'
     }
   )
   return (
