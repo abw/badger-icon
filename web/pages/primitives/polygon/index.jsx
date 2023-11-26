@@ -18,6 +18,14 @@ const Polygon = () =>
         of a set of connected straight line segments. The last point is
         connected to the first point.
       </p>
+      <p>
+        The explicit form is to define the icon as an object with the{' '}
+        <code>element</code> property set to <code>polygon</code> and an
+        additional property for the <code>points</code>. Any other properties
+        can be included as attributes for the generated SVG{' '}
+        <code>polygone</code> element.
+      </p>
+
       <MDNElementLink element="polygon"/>
     </div>
     <Example

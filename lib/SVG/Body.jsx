@@ -28,17 +28,13 @@ export const Body = ({
   ...props
 }) => {
   if (path) {
-    console.log(`rendering path: `, path)
     return <Path d={path} {...props}/>
   }
-  // console.log(`rendering body: `, body)
 
   if (isString(body)) {
-    console.log(`SVG string`)
     return <g dangerouslySetInnerHTML={{ __html: body }}/>
   }
   if (isObject(body)) {
-    console.log(`an object: `, body)
     const { element, ...rest } = body
     const Element = elements[element]
       || fail(`Invalid element type: ${element} => `, JSON.stringify(body))

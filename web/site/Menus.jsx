@@ -68,11 +68,6 @@ export const ModifiersMenu = {
       tocName: 'orientation',
     },
     {
-      to: '/modifiers/move',
-      text: 'Move',
-      tocName: 'move',
-    },
-    {
       to: '/modifiers/rotate',
       text: 'Rotate',
       tocName: 'rotate',
@@ -81,6 +76,11 @@ export const ModifiersMenu = {
       to: '/modifiers/flip',
       text: 'Flip',
       tocName: 'flip',
+    },
+    {
+      to: '/modifiers/move',
+      text: 'Move',
+      tocName: 'move',
     },
     {
       to: '/modifiers/grow',
