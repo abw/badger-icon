@@ -6,21 +6,19 @@ import { Icon, addIcon } from '@/web/lib/index.js'
 
 const LineExample = () => {
   addIcon(
-    'line',
+    'slash',
     {
-      body: {
-        element: 'line',
-        x1: 16,
-        y1: 16,
-        x2: 496,
-        y2: 496,
-      },
+      element: 'line',
+      x1: 16,
+      y1: 496,
+      x2: 496,
+      y2: 16,
     }
   )
   return (
     <div className="flex gap-4 wrap x6">
-      <Icon name="line"/>
-      <Icon name="line.orange.stroke-40"/>
+      <Icon name="slash"/>
+      <Icon name="slash.orange.stroke-40"/>
     </div>
   )
 }

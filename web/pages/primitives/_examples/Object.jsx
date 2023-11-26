@@ -6,18 +6,16 @@ import { Icon, addIcon } from '@/web/lib/index.js'
 
 const BodyObjectExample = () => {
   addIcon(
-    'body-object',
+    'circle-icon',
     {
-      body: {
-        element: 'circle',
-        cx: 256,
-        cy: 256,
-        r: 240
-      }
+      element: 'circle',
+      cx: 256,
+      cy: 256,
+      r: 240
     }
   )
   return (
-    <Icon name="body-object.x6"/>
+    <Icon name="circle-icon.x6"/>
   )
 }
 

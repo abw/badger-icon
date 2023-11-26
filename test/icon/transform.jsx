@@ -1,6 +1,6 @@
 import React from 'react'
 import { it, expect } from 'vitest'
-import { render, screen } from '@testing-library/react'
+import { render } from '@testing-library/react'
 import { Icon } from '@/lib/index.js'
 
 it(
@@ -9,7 +9,7 @@ it(
     const { container } = render(
       <Icon name="angle" transform="flip-x"/>
     )
-    screen.debug()
+    // screen.debug()
     const icon  = container.querySelector('svg.icon')
     const g1 = icon.querySelector('g')
     expect(g1).toHaveAttribute(

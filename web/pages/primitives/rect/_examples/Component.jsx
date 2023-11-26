@@ -8,15 +8,13 @@ const RectExample = () => {
   addIcon(
     'rect',
     {
-      body: {
-        element: 'rect',
-        x: 16,
-        y: 16,
-        rx: 32,
-        ry: 32,
-        width: 480,
-        height: 480,
-      },
+      element: 'rect',
+      x: 16,
+      y: 16,
+      rx: 32,
+      ry: 32,
+      width: 480,
+      height: 480,
     }
   )
   return (

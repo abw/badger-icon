@@ -25,9 +25,12 @@ test(
     resolveIconData('foo-bar-baz', iconData)
   ).toEqual({
     name:   'foo-bar-baz',
-    path:   'simple path',
     width:  DEFAULT_ICON_WIDTH,
     height: DEFAULT_ICON_HEIGHT,
+    body: {
+      element: 'path',
+      d: 'simple path',
+    },
     style: {
       fill: 'currentColor'
     }
@@ -40,9 +43,12 @@ test(
     resolveIconData('foo-bar-baz-flipx', iconData)
   ).toEqual({
     name:   'foo-bar-baz',
-    path:   'simple path',
     width:  DEFAULT_ICON_WIDTH,
     height: DEFAULT_ICON_HEIGHT,
+    body: {
+      element: 'path',
+      d: 'simple path'
+    },
     transform: {
       ...nullTransform,
       flipX: true
@@ -59,10 +65,13 @@ test(
     resolveIconData('foo-bar-baz-right=4.wibble.frusset.pouch', iconData)
   ).toEqual({
     name:   'foo-bar-baz',
-    path:   'simple path',
     width:  DEFAULT_ICON_WIDTH,
     height: DEFAULT_ICON_HEIGHT,
     className: 'wibble frusset pouch',
+    body: {
+      element: 'path',
+      d: 'simple path'
+    },
     transform: {
       ...nullTransform,
       x: 4
@@ -79,9 +88,12 @@ test(
     resolveIconData('foo-bar', iconData)
   ).toEqual({
     name:   'foo-bar',
-    path:   'nested path',
     width:  DEFAULT_ICON_WIDTH,
     height: DEFAULT_ICON_HEIGHT,
+    body: {
+      element: 'path',
+      d: 'nested path',
+    },
     style: {
       fill: 'currentColor'
     }
@@ -94,10 +106,13 @@ test(
     resolveIconData('foo-bar.wig.wam', iconData)
   ).toEqual({
     name:       'foo-bar',
-    path:       'nested path',
     width:      DEFAULT_ICON_WIDTH,
     height:     DEFAULT_ICON_HEIGHT,
     className:  'wig wam',
+    body: {
+      element: 'path',
+      d: 'nested path',
+    },
     style: {
       fill: 'currentColor'
     }
@@ -110,9 +125,12 @@ test(
     resolveIconData('foo', iconData)
   ).toEqual({
     name:   'foo',
-    path:   'another path',
     width:  524,
     height: DEFAULT_ICON_HEIGHT,
+    body: {
+      element: 'path',
+      d: 'another path',
+    },
     style: {
       fill: 'currentColor'
     }
@@ -125,9 +143,12 @@ test(
     resolveIconData('wiz', iconData)
   ).toEqual({
     name:   'wiz',
-    path:   'yet another path',
     width:  32,
     height: 24,
+    body: {
+      element: 'path',
+      d: 'yet another path',
+    },
     style: {
       fill: 'currentColor'
     }
@@ -140,9 +161,12 @@ test(
     resolveIconData('woz', iconData)
   ).toEqual({
     name:   'woz',
-    path:   'transformed path',
     width:  DEFAULT_ICON_WIDTH,
     height: DEFAULT_ICON_HEIGHT,
+    body: {
+      element: 'path',
+      d: 'transformed path',
+    },
     style: {
       fill: 'currentColor'
     },
@@ -163,9 +187,12 @@ test(
     resolveIconData('waz', iconData)
   ).toEqual({
     name:   'waz',
-    path:   'waz path',
     width:  DEFAULT_ICON_WIDTH,
     height: DEFAULT_ICON_HEIGHT,
+    body: {
+      element: 'path',
+      d: 'waz path',
+    },
     style: {
       fill: 'currentColor'
     },
@@ -186,9 +213,12 @@ test(
     resolveIconData('flim', iconData)
   ).toEqual({
     name:   'flim',
-    path:   'flim path',
     width:  DEFAULT_ICON_WIDTH,
     height: DEFAULT_ICON_HEIGHT,
+    body: {
+      element: 'path',
+      d: 'flim path',
+    },
     style: {
       fill: 'red',
       'stroke-width': '99'
@@ -202,9 +232,12 @@ test(
     resolveIconData('flam', iconData)
   ).toEqual({
     name:   'flam',
-    path:   'flam path',
     width:  DEFAULT_ICON_WIDTH,
     height: DEFAULT_ICON_HEIGHT,
+    body: {
+      element: 'path',
+      d: 'flam path',
+    },
     style: {
       fill: 'blue',
       'stroke-width': 24
@@ -218,9 +251,12 @@ test(
     resolveIconData('wam', iconData)
   ).toEqual({
     name:   'wam',
-    path:   'wam path',
     width:  DEFAULT_ICON_WIDTH,
     height: DEFAULT_ICON_HEIGHT,
+    body: {
+      element: 'path',
+      d: 'wam path',
+    },
     style: {
       fill: 'currentColor',
       'stroke-width': '24'
@@ -234,9 +270,12 @@ test(
     resolveIconData('bam', iconData)
   ).toEqual({
     name:   'bam',
-    path:   'bam path',
     width:  DEFAULT_ICON_WIDTH,
     height: DEFAULT_ICON_HEIGHT,
+    body: {
+      element: 'path',
+      d: 'bam path',
+    },
     style: {
       fill: 'currentColor',
       'stroke-width': 24
@@ -250,9 +289,12 @@ test(
     resolveIconData('flam?fill=orange&stroke-linecap=butt', iconData)
   ).toEqual({
     name:   'flam',
-    path:   'flam path',
     width:  DEFAULT_ICON_WIDTH,
     height: DEFAULT_ICON_HEIGHT,
+    body: {
+      element: 'path',
+      d: 'flam path',
+    },
     style: {
       fill: 'orange',
       'stroke-width': 24,
@@ -267,9 +309,12 @@ test(
     resolveIconData('flam', iconData)
   ).toEqual({
     name:   'flam',
-    path:   'flam path',
     width:  DEFAULT_ICON_WIDTH,
     height: DEFAULT_ICON_HEIGHT,
+    body: {
+      element: 'path',
+      d: 'flam path',
+    },
     style: {
       fill: 'blue',
       'stroke-width': 24,
@@ -283,9 +328,12 @@ test(
     resolveIconData('foo-bar-baz?fill=red;stroke-width=4', iconData)
   ).toEqual({
     name:   'foo-bar-baz',
-    path:   'simple path',
     width:  DEFAULT_ICON_WIDTH,
     height: DEFAULT_ICON_HEIGHT,
+    body: {
+      element: 'path',
+      d: 'simple path',
+    },
     style: {
       fill: 'red',
       'stroke-width': '4'
@@ -299,9 +347,12 @@ test(
     resolveIconData('foo-bar-right=4', iconData)
   ).toEqual({
     name:   'foo-bar',
-    path:   'nested path',
     width:  DEFAULT_ICON_WIDTH,
     height: DEFAULT_ICON_HEIGHT,
+    body: {
+      element: 'path',
+      d: 'nested path',
+    },
     style: {
       fill: 'currentColor'
     },
@@ -318,9 +369,12 @@ test(
     resolveIconData('foo-bar-right', iconData)
   ).toEqual({
     name:   'foo-bar',
-    path:   'nested path',
     width:  DEFAULT_ICON_WIDTH,
     height: DEFAULT_ICON_HEIGHT,
+    body: {
+      element: 'path',
+      d: 'nested path',
+    },
     style: {
       fill: 'currentColor'
     },
@@ -337,9 +391,12 @@ test(
     resolveIconData('foo-bar-right-right:4', iconData)
   ).toEqual({
     name:   'foo-bar',
-    path:   'nested path',
     width:  DEFAULT_ICON_WIDTH,
     height: DEFAULT_ICON_HEIGHT,
+    body: {
+      element: 'path',
+      d: 'nested path',
+    },
     style: {
       fill: 'currentColor'
     },

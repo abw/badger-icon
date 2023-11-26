@@ -1,9 +1,6 @@
 import { test, expect } from 'vitest'
 import { Library, addIcon, addIcons } from '@/lib/index.js'
 
-console.log(`Library: `, Library)
-
-
 test(
   'addIcon() should add an icon',
   () => {

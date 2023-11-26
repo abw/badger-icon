@@ -22,7 +22,7 @@ const Integration = () =>
       </p>
     </div>
 
-    <h2>The <span className="font-mono">icons</span> Property</h2>
+    <h2>The <span className="font-mono">library</span> Property</h2>
     <div className="cols-2">
       <p>
         The quick and simple approach is to pass your icon library data to
@@ -38,10 +38,10 @@ const Integration = () =>
     <h2>A Custom Component</h2>
     <div className="cols-2">
       <p>
-        It can get a bit tedious having to add the <code>icons</code> property
+        It can get a bit tedious having to add the <code>library</code> property
         every time you use the <code>Icon</code> component.  Another approach
         is to define your own icon component that is a wrapper around it and
-        injects the <code>icons</code> property for you.
+        injects the <code>library</code> property for you.
       </p>
       <p>
         You can call it anything you like.  In this example, we create a
@@ -61,7 +61,7 @@ const Integration = () =>
     <div className="cols-2">
       <p>
         Another approach is to use the theme provider to automatically
-        inject the <code>icons</code> property into the <code>Icon</code>{' '}
+        inject the <code>library</code> property into the <code>Icon</code>{' '}
         component.  This uses{' '}
         <a href="https://abw.github.io/react-one-louder/">react-one-louder</a> as
         the theming engine.
@@ -79,13 +79,13 @@ const Integration = () =>
         The properties added to the <code>Theme.Provider</code> should include
         an <code>Icon</code> object including any properties that you want
         to automatically inject into the <code>Icon</code> component.  In this
-        case, we want to set the <code>icons</code> to reference our custom
+        case, we want to set the <code>library</code> to reference our custom
         library.
       </p>
       <p>
         That&apos;s all you need to do.  Now you can use the standard{' '}
         <code>Icon</code> component anywhere in your app and it will
-        automatically receive the <code>icons</code> property for your custom
+        automatically receive the <code>library</code> property for your custom
         icon library.
       </p>
       <p>

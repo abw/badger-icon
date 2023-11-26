@@ -13,7 +13,7 @@ const Library = {
     bar: {
       width:  48,
       height: 32,
-      path: 'M1,1L31,47',
+      path:   'M1,1L31,47',
     }
   }
 }

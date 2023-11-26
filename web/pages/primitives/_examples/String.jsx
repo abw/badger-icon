@@ -11,7 +11,7 @@ const BodyStringExample = () => {
       type: null,
       width: 24,
       height: 24,
-      body: `
+      svg: `
         <mask id="lineMdBeerAltTwotoneLoop0">
           <g transform="translate(0 14)">
             <path

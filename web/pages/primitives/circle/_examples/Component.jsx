@@ -6,21 +6,19 @@ import { Icon, addIcon } from '@/web/lib/index.js'
 
 const CircleExample = () => {
   addIcon(
-    'circle',
+    'moon',
     {
-      body: {
-        element: 'circle',
-        cx: 256,
-        cy: 256,
-        r: 240
-      }
+      element: 'circle',
+      cx: 256,
+      cy: 256,
+      r: 240
     }
   )
   return (
     <div className="flex gap-4 wrap x6">
-      <Icon name="circle"/>
-      <Icon name="circle-fill"/>
-      <Icon name="circle-fill.orange.fill-50.stroke-40"/>
+      <Icon name="moon"/>
+      <Icon name="moon-fill"/>
+      <Icon name="moon-fill.orange.fill-50.stroke-40"/>
     </div>
   )
 }

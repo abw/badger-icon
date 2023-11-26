@@ -6,17 +6,13 @@ import { Icon, addIcon } from '@/web/lib/index.js'
 
 const PathExample = () => {
   addIcon(
-    'flag',
+    'flash',
     {
       path: 'M64,64L64,448C64,448 191,385 256,448C321,511 448,448 448,448L448,64C448,64 320,128 256,64C205,13 64,64 64,64Z',
     }
   )
   return (
-    <div className="flex gap-4 wrap x6">
-      <Icon name="flag"/>
-      <Icon name="flag-fill"/>
-      <Icon name="flag-fill.orange.fill-50.stroke-40"/>
-    </div>
+    <Icon name="flash.x6"/>
   )
 }
 

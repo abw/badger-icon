@@ -6,19 +6,16 @@ import { Icon, addIcon } from '@/web/lib/index.js'
 
 const PolygonExample = () => {
   addIcon(
-    'polygon',
+    'flash',
     {
-      body: {
-        element: 'polygon',
-        points: '64,448 224,160 288,224 448,64 288,352 224,288'
-      },
+      'polygon': '64,448 224,160 288,224 448,64 288,352 224,288'
     }
   )
   return (
     <div className="flex gap-4 wrap x6">
-      <Icon name="polygon-thinner"/>
-      <Icon name="polygon-thinner-fill"/>
-      <Icon name="polygon-thinner-fill.orange.fill-50.stroke-40"/>
+      <Icon name="flash-thinner"/>
+      <Icon name="flash-thinner-fill"/>
+      <Icon name="flash-thinner-fill.orange.fill-50.stroke-40"/>
     </div>
   )
 }
