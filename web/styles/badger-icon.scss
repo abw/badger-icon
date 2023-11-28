@@ -18,8 +18,8 @@ $brand-colors: (
 // See https://abw.github.io/react-night-and-day/
 @import '@abw/react-night-and-day/styles/night-and-day.css';
 
-// Load the additional badger-react-ui styles
-// @import '@abw/badger-react-ui/styles/badger-react-ui.scss';
+// Load the additional badger-icon styles
+@import '../../styles/badger-icon.scss';
 
 // Load the site-specific styles
 @import "config/all.scss";

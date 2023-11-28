@@ -14,6 +14,7 @@ export const SVGIcon = ({
   style,
   transform,
   className='',
+  debug,
   ...props
   // fill='currentColor'
 }) =>
@@ -25,6 +26,7 @@ export const SVGIcon = ({
     style={reactifty(style)}
     onClick={onClick}
   >
+    { Boolean(debug) && console.log(`style: `, style) }
     { transform
       ? <Transform
           width={width}

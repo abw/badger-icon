@@ -26,7 +26,7 @@ const Home = () =>
     </p>
     <div className="flex space">
       <Icons
-        names="square.fill-50.stroke-30 check-thick-shrink=6.stroke-100"
+        names="square.fill-50.stroke-30 check-thick-shrink=6-drawlength=600-drawtime=500ms.stroke-100.draw"
         className="violet x6"
       />
       <Icons
