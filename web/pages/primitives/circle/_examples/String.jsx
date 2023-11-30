@@ -12,7 +12,7 @@ const CircleExample = () => {
     <div className="flex gap-4 wrap x6">
       <Icon name="moon3"/>
       <Icon name="moon3-fill"/>
-      <Icon name="moon3-fill.orange.fill-50.stroke-40"/>
+      <Icon name="moon3-fill.orange.flc-50.stc-40"/>
     </div>
   )
 }

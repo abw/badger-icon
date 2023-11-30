@@ -14,7 +14,7 @@ const RectExample = () => {
     <div className="flex gap-4 wrap x6">
       <Icon name="rect2"/>
       <Icon name="rect2-fill"/>
-      <Icon name="rect2-fill.orange.fill-50.stroke-40"/>
+      <Icon name="rect2-fill.orange.flc-50.stc-40"/>
     </div>
   )
 }

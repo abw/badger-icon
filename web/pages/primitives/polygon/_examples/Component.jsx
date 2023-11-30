@@ -16,7 +16,7 @@ const PolygonExample = () => {
     <div className="flex gap-4 wrap x6">
       <Icon name="flash-thinner"/>
       <Icon name="flash-thinner-fill"/>
-      <Icon name="flash-thinner-fill.orange.fill-50.stroke-40"/>
+      <Icon name="flash-thinner-fill.orange.flc-50.stc-40"/>
     </div>
   )
 }

@@ -16,7 +16,7 @@ const PathExample = () => {
     <div className="flex gap-4 wrap x6">
       <Icon name="flag"/>
       <Icon name="flag-fill"/>
-      <Icon name="flag-fill.orange.fill-50.stroke-40"/>
+      <Icon name="flag-fill.orange.flc-50.stc-40"/>
     </div>
   )
 }

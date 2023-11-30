@@ -15,8 +15,8 @@ const AddIconExample = () => {
       <Icon name="pyramid-thinner"/>
       <Icon name="pyramid-thicker"/>
       <Icon name="pyramid-down"/>
-      <Icon name="pyramid-fill.red.fill-50.stroke-40"/>
-      <Icon name="pyramid-fill.orange.fill-50.stroke-40"/>
+      <Icon name="pyramid-fill.red.flc-50.stc-40"/>
+      <Icon name="pyramid-fill.orange.flc-50.stc-40"/>
     </div>
   )
 }

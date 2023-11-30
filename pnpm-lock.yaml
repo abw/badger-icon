@@ -1,7 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@abw/badger-css': ^0.2.8
+  '@abw/badger-css': ^0.2.9
   '@abw/badger-react-ui': ^0.0.1
   '@abw/badger-timestamp': ^1.0.4
   '@abw/badger-utils': ^1.0.21
@@ -36,8 +36,8 @@ dependencies:
   react-dom: 18.2.0_react@18.2.0
 
 devDependencies:
-  '@abw/badger-css': 0.2.8
-  '@abw/badger-react-ui': 0.0.1_cygsvyin26s6kq5lzwuetp24oa
+  '@abw/badger-css': 0.2.9
+  '@abw/badger-react-ui': 0.0.1_orlc2wglignoys3kjzuf4rm2be
   '@abw/badger-timestamp': 1.0.4
   '@abw/react-context': 2.0.3
   '@abw/react-night-and-day': 0.0.6_biqbaboplfbrettd7655fr4n2y
@@ -74,8 +74,8 @@ packages:
       js-yaml: 4.1.0
     dev: true
 
-  /@abw/badger-css/0.2.8:
-    resolution: {integrity: sha512-PwHt3u8akddNTrZ2u1EnCvxQxzC0pQfJAkjrU8gxdn4Qp0mb2igaAnwmnPigBqJrvSi5NBua6wst+4fJn33k4A==}
+  /@abw/badger-css/0.2.9:
+    resolution: {integrity: sha512-f7xEtYBr+SOdMurTIEvgFSUJ44XID9WY943TDXeLNJTEIxKcapbT4DuqNFE1IylA5v/eeKyY+FI4iX4vYzI28A==}
     hasBin: true
     dependencies:
       '@abw/badger': 1.2.1
@@ -88,14 +88,14 @@ packages:
       '@abw/badger-utils': 1.0.21
     dev: true
 
-  /@abw/badger-react-ui/0.0.1_cygsvyin26s6kq5lzwuetp24oa:
+  /@abw/badger-react-ui/0.0.1_orlc2wglignoys3kjzuf4rm2be:
     resolution: {integrity: sha512-mBeKGv7s2gK7/CLbnEv0JRaNYGyomoWVPjDVQPjpyIet2hDbSqjTYLzrV7YFityzKjOBEDANX8y2QQtBkDZStg==}
     peerDependencies:
       '@abw/badger-css': ^0.2.5
       react: ^18.2.0
       react-dom: ^18.2.0
     dependencies:
-      '@abw/badger-css': 0.2.8
+      '@abw/badger-css': 0.2.9
       '@abw/badger-utils': 1.0.21
       '@abw/react-one-louder': 0.0.6
       react: 18.2.0

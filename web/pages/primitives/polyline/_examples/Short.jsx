@@ -14,7 +14,7 @@ const PolylineExample = () => {
     <div className="flex gap-4 wrap x6">
       <Icon name="polyline2-thinner"/>
       <Icon name="polyline2-thinner-fill"/>
-      <Icon name="polyline2-thinner-fill.orange.fill-50.stroke-40"/>
+      <Icon name="polyline2-thinner-fill.orange.flc-50.stc-40"/>
     </div>
   )
 }

@@ -50,12 +50,3 @@ $brand-colors: (
   }
 }
 
-// NOTE: moving upstream
-@each $stop in $color-stops {
-  .fill-#{$stop} {
-    fill: var(--color-#{$stop}) !important;
-  }
-  .stroke-#{$stop} {
-    stroke: var(--color-#{$stop}) !important;
-  }
-}

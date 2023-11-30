@@ -11,7 +11,7 @@ const LineExample = () => {
   return (
     <div className="flex gap-4 wrap x6">
       <Icon name="slash3"/>
-      <Icon name="slash3.orange.stroke-40"/>
+      <Icon name="slash3.orange.stc-40"/>
     </div>
   )
 }

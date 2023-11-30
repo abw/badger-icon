@@ -12,7 +12,7 @@ const EllipseExample = () => {
     <div className="flex gap-4 wrap x6">
       <Icon name="lens3"/>
       <Icon name="lens3-fill"/>
-      <Icon name="lens3-fill.orange.fill-50.stroke-40"/>
+      <Icon name="lens3-fill.orange.flc-50.stc-40"/>
     </div>
   )
 }

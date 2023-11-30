@@ -26,21 +26,21 @@ const Home = () =>
     </p>
     <div className="flex space">
       <Icons
-        names="square.fill-50.stroke-30 check-thick-shrink=6-drawlength=600-drawtime=500ms.stroke-100.draw"
+        names="square.flc-50.stc-30 check-thick-shrink=6-drawlength=600-drawtime=500ms.stc-100.draw"
         className="violet x6"
       />
       <Icons
-        names="circle.fill-50.stroke-40 cog-thin-shrink=7.stroke-80.fill-40.spin.slow"
+        names="circle.flc-50.stc-40 cog-thin-shrink=7.stc-80.flc-40.spin.slow"
         className="green x6"
       />
       <Icons
-        names="square20.fill-60.stroke-40 heart-thin-shrink=7.stroke-80.fill-50.beat"
+        names="square20.flc-60.stc-40 heart-thin-shrink=7.stc-80.flc-50.beat"
         className="red x6"
       />
       <Time className="x6 orange"/>
       {/*
       <Icons
-        names="circle.fill-60.stroke-30 hour.shrink=2.stroke-40.spin.slow hour.stroke-45.spin.fast "
+        names="circle.flc-60.stc-30 hour.shrink=2.stc-40.spin.slow hour.stc-45.spin.fast "
         className="orange x5"
       />
       */}
@@ -204,9 +204,9 @@ const Home = () =>
     </p>
     <IconTiles
       names={[
-        'square.red.stroke-30.fill-70', 'square.red.stroke-50.fill-80', 'square.red.stroke-70.fill-90',
-        'square.green.stroke-30.fill-70', 'square.green.stroke-50.fill-80', 'square.green.stroke-70.fill-90',
-        'square.blue.stroke-30.fill-70', 'square.blue.stroke-50.fill-80', 'square.blue.stroke-70.fill-90',
+        'square.red.stc-30.flc-70', 'square.red.stc-50.flc-80', 'square.red.stc-70.flc-90',
+        'square.green.stc-30.flc-70', 'square.green.stc-50.flc-80', 'square.green.stc-70.flc-90',
+        'square.blue.stc-30.flc-70', 'square.blue.stc-50.flc-80', 'square.blue.stc-70.flc-90',
       ]}
     />
     <p className="mar-t-8">
@@ -262,36 +262,36 @@ const Home = () =>
     </p>
     <div className="popout pad-v-8 border bgc-70 bdc-60 bgd-30 bdd-40 shadow-2">
       <div className="flex space wrap x5">
-        <Icon name="square.fill-50.stroke-30.violet.x5"/>
+        <Icon name="square.flc-50.stc-30.violet.x5"/>
         <Icon name="plus"/>
-        <Icon name="check-thick-shrink=6.stroke-100.violet"/>
+        <Icon name="check-thick-shrink=6.stc-100.violet"/>
         <Icon name="equals"/>
         <Icons
-          names="square.fill-50.stroke-30 check-thick-shrink=6.stroke-100"
+          names="square.flc-50.stc-30 check-thick-shrink=6.stc-100"
           className="violet x5"
         />
       </div>
     </div>
     <div className="popout pad-v-8 border bgc-70 bdc-60 bgd-30 bdd-40 shadow-2">
       <div className="flex space wrap x5">
-        <Icon name="circle.fill-50.stroke-40.green.x5"/>
+        <Icon name="circle.flc-50.stc-40.green.x5"/>
         <Icon name="plus"/>
-        <Icon name="cog-thin-shrink=7.stroke-80.fill-40.spin.slow.green.x5"/>
+        <Icon name="cog-thin-shrink=7.stc-80.flc-40.spin.slow.green.x5"/>
         <Icon name="equals"/>
         <Icons
-          names="circle.fill-50.stroke-40 cog-thin-shrink=7.stroke-80.fill-40.spin.slow"
+          names="circle.flc-50.stc-40 cog-thin-shrink=7.stc-80.flc-40.spin.slow"
           className="green x5"
         />
       </div>
     </div>
     <div className="popout pad-v-8 border bgc-70 bdc-60 bgd-30 bdd-40 shadow-2">
       <div className="flex space wrap x5">
-        <Icon name="square20.fill-60.stroke-40.red.x5"/>
+        <Icon name="square20.flc-60.stc-40.red.x5"/>
         <Icon name="plus"/>
-        <Icon name="heart-thin-shrink=7.stroke-80.fill-50.beat.red.x5"/>
+        <Icon name="heart-thin-shrink=7.stc-80.flc-50.beat.red.x5"/>
         <Icon name="equals"/>
         <Icons
-          names="square20.fill-60.stroke-40 heart-thin-shrink=7.stroke-80.fill-50.beat"
+          names="square20.flc-60.stc-40 heart-thin-shrink=7.stc-80.flc-50.beat"
           className="red x5"
         />
       </div>
@@ -299,7 +299,7 @@ const Home = () =>
 
     {/*
       <Icons
-        names="circle.fill-60.stroke-30 hour.shrink=2.stroke-40.spin.slow hour.stroke-45.spin.fast "
+        names="circle.flc-60.stc-30 hour.shrink=2.stc-40.spin.slow hour.stc-45.spin.fast "
         className="orange x5"
       />
       */}
@@ -369,7 +369,7 @@ const Home = () =>
       that these depends on the original view box size of the icon.
     </p>
     <p>
-      A percentage value for stroke-width is always computed as a
+      A percentage value for stc-width is always computed as a
       percentage of the normalized viewBox diagonal length.
     </p>
     <p>
@@ -433,7 +433,7 @@ const Home = () =>
       The stroke and fill opacity can be set separately with{' '}
       <code>-strokeopacity=NN</code> and <code>-fillopacity=NN</code>.
     </p>
-    <Icons names="square-fill-opacity=50% square-fill-strokeopacity=0.5 square-fill-fillopacity=50%" />
+    <Icons names="square-flc-opacity=50% square-flc-strokeopacity=0.5 square-flc-fillopacity=50%" />
 
     <h2>CSS Classes</h2>
     <p>
@@ -476,10 +476,10 @@ const Time = ({ className }) => {
   return (
     <Icons
       names={[
-        `circle.fill-80.stroke-40`,
-        `prime-thinner-grow=4-rotate=${mrot}-opacity=0.7.stroke-30`,
-        `prime-thin-shrink=4-rotate=${hrot}.stroke-30`,
-        `prime-strokeWidth=0.5-grow=7-rotate=${srot}-opacity=0.6.stroke-45`,
+        `circle.flc-80.stc-40`,
+        `prime-thinner-grow=4-rotate=${mrot}-opacity=0.7.stc-30`,
+        `prime-thin-shrink=4-rotate=${hrot}.stc-30`,
+        `prime-strokeWidth=0.5-grow=7-rotate=${srot}-opacity=0.6.stc-45`,
       ]}
       className={className}
     />
