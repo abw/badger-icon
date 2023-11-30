@@ -477,9 +477,9 @@ const Time = ({ className }) => {
     <Icons
       names={[
         `circle.fill-80.stroke-40`,
-        `hour-thinner-grow=4-rotate=${mrot}-opacity=0.7.stroke-30`,
-        `hour-thin-shrink=4-rotate=${hrot}.stroke-30`,
-        `hour-strokeWidth=0.5-grow=7-rotate=${srot}-opacity=0.6.stroke-45`,
+        `prime-thinner-grow=4-rotate=${mrot}-opacity=0.7.stroke-30`,
+        `prime-thin-shrink=4-rotate=${hrot}.stroke-30`,
+        `prime-strokeWidth=0.5-grow=7-rotate=${srot}-opacity=0.6.stroke-45`,
       ]}
       className={className}
     />
