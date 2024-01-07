@@ -2,20 +2,36 @@ import React        from 'react'
 import Library      from '../Library.js'
 import SVGIcon      from '../SVG/Icon.jsx'
 import { Themed }   from '../Theme.js'
-import { resolveIconData, prepareIconProps } from '../utils/index.js'
+import { resolveIconData, prepareIconProps, classes } from '../utils/index.js'
+import { splitList } from '@abw/badger-utils'
 
 // TODO: fixedWidth
 
 export const Icon = ({
   name,
-  // style,
-  // transform,
-  // className
+  iconsClass='icons',
   library=Library,
   ...props
-}) =>
-  name
-    ? <SVGIcon {...props} {...resolveIconData(name, library, props)}/>
-    : <SVGIcon {...prepareIconProps(props)} />
+}) => {
+  if (! name) {
+    return <SVGIcon {...prepareIconProps(props)} />
+  }
+  const names = splitList(name)
+  return names.length === 1
+    ? <SVGIcon
+        {...props}
+        {...resolveIconData(name, library, props)}
+      />
+    : <div className={classes(iconsClass, props.className)}>
+        { names.map(
+          name =>
+            <SVGIcon
+              key={name}
+              {...props}
+              {...resolveIconData(name, library, props)}
+            />
+        )}
+      </div>
+}
 
 export default Themed(Icon, 'Icon')

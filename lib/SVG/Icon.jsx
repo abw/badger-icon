@@ -1,9 +1,8 @@
 import React from 'react'
-import { DEFAULT_ICON_HEIGHT, DEFAULT_ICON_WIDTH } from '../constants.js'
-import Transform from './Transform.jsx'
 import Body from './Body.jsx'
-// import { Path } from './Path.jsx'
+import Transform from './Transform.jsx'
 import { reactifty } from '../utils/reactify.js'
+import { DEFAULT_ICON_HEIGHT, DEFAULT_ICON_WIDTH } from '../constants.js'
 
 export const SVGIcon = ({
   onClick,
@@ -33,32 +32,10 @@ export const SVGIcon = ({
           height={height}
           transform={transform}
         >
-          {/* <Path d={path}/> */}
           <Body {...props}/>
         </Transform>
-      // : <Path d={path}/>
       : <Body {...props}/>
     }
   </svg>
-
-/*
-
-  return (
-    <svg
-      // style={style && ReactStyle(style)}
-      onClick={props.onClick}
-    >
-      { specs.map(
-        ({name, icon, className, style, transform}, n) => transform
-          ? <Transform key={n} icon={icon} transform={transform} className={className}>
-              <IconPaths name={name} icon={icon} style={style} className={className}/>
-            </Transform>
-          : <IconPaths key={n} name={name} icon={icon} style={style} className={className}/>
-      )
-      }
-    </svg>
-  )
-}
-*/
 
 export default SVGIcon

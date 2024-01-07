@@ -1,6 +1,8 @@
 import React      from 'react'
 import Name       from './_examples/Name.jsx'
 import NameSrc    from './_examples/Name.jsx?raw'
+import Names      from './_examples/Names.jsx'
+import NamesSrc   from './_examples/Names.jsx?raw'
 import Mods       from './_examples/Mods.jsx'
 import ModsSrc    from './_examples/Mods.jsx?raw'
 import Classes    from './_examples/Classes.jsx'
@@ -69,6 +71,25 @@ const IconName = () =>
       undent={4}
       expand
     />
+
+    <h2>Icon Composition</h2>
+    <div className="cols-2">
+      <p>
+        The <code>name</code> property can contain a number of different
+        icon names, including modifiers and/or CSS classes.  Each should
+        be separated by one or more whitespace characters.
+      </p>
+      <p>
+        The icons will be composed into a single stacked icon.
+      </p>
+    </div>
+    <Example
+      Component={Names}
+      code={NamesSrc}
+      undent={4}
+      expand
+    />
+
     <h2>Name Tokenisation Example</h2>
     <div className="cols-2">
       <p>

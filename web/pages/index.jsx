@@ -9,7 +9,7 @@ import Link       from '@/ui/Link.jsx'
 import { now }    from '@abw/badger-timestamp'
 import { useState } from 'react'
 import { useEffect } from 'react'
-import { Icon, Icons } from '@/lib/index.js'
+import { Icon } from '@/lib/index.js'
 
 const Home = () =>
   <div className="container-mobile flow">
@@ -25,16 +25,16 @@ const Home = () =>
       data set of primitives.
     </p>
     <div className="flex space">
-      <Icons
-        names="square.flc-50.stc-30 check-thick-shrink=6-drawlength=600-drawtime=500ms.stc-100.draw"
+      <Icon
+        name="square.flc-50.stc-30 check-thick-shrink=6-drawlength=600-drawtime=500ms.stc-100.draw"
         className="violet x6"
       />
-      <Icons
-        names="circle.flc-50.stc-40 cog-thin-shrink=7.stc-80.flc-40.spin.slow"
+      <Icon
+        name="circle.flc-50.stc-40 cog-thin-shrink=7.stc-80.flc-40.spin.slow"
         className="green x6"
       />
-      <Icons
-        names="square20.flc-60.stc-40 heart-thin-shrink=7.stc-80.flc-50.beat"
+      <Icon
+        name="square20.flc-60.stc-40 heart-thin-shrink=7.stc-80.flc-50.beat"
         className="red x6"
       />
       <Time className="x6 orange"/>
@@ -230,7 +230,7 @@ const Home = () =>
         <Icon name="plus"/>
         <Icon name="check"/>
         <Icon name="equals"/>
-        <Icons names="square check-shrink=6-thicker" />
+        <Icon name="square check-shrink=6-thicker" />
       </div>
     </div>
     <p className="mar-t-8">
@@ -244,7 +244,7 @@ const Home = () =>
         <Icon name="plus"/>
         <Icon name="alpha"/>
         <Icon name="equals"/>
-        <Icons names="point-up alpha-shrink=10-thicker" />
+        <Icon name="point-up alpha-shrink=10-thicker" />
       </div>
     </div>
     <div className="popout pad-v-8 border bgc-70 bdc-60 bgd-30 bdd-40 shadow-2">
@@ -253,7 +253,7 @@ const Home = () =>
         <Icon name="plus"/>
         <Icon name="number"/>
         <Icon name="equals"/>
-        <Icons names="point-down number-shrink=10-thicker" />
+        <Icon name="point-down number-shrink=10-thicker" />
       </div>
     </div>
 
@@ -266,8 +266,8 @@ const Home = () =>
         <Icon name="plus"/>
         <Icon name="check-thick-shrink=6.stc-100.violet"/>
         <Icon name="equals"/>
-        <Icons
-          names="square.flc-50.stc-30 check-thick-shrink=6.stc-100"
+        <Icon
+          name="square.flc-50.stc-30 check-thick-shrink=6.stc-100"
           className="violet x5"
         />
       </div>
@@ -278,8 +278,8 @@ const Home = () =>
         <Icon name="plus"/>
         <Icon name="cog-thin-shrink=7.stc-80.flc-40.spin.slow.green.x5"/>
         <Icon name="equals"/>
-        <Icons
-          names="circle.flc-50.stc-40 cog-thin-shrink=7.stc-80.flc-40.spin.slow"
+        <Icon
+          name="circle.flc-50.stc-40 cog-thin-shrink=7.stc-80.flc-40.spin.slow"
           className="green x5"
         />
       </div>
@@ -290,8 +290,8 @@ const Home = () =>
         <Icon name="plus"/>
         <Icon name="heart-thin-shrink=7.stc-80.flc-50.beat.red.x5"/>
         <Icon name="equals"/>
-        <Icons
-          names="square20.flc-60.stc-40 heart-thin-shrink=7.stc-80.flc-50.beat"
+        <Icon
+          name="square20.flc-60.stc-40 heart-thin-shrink=7.stc-80.flc-50.beat"
           className="red x5"
         />
       </div>
@@ -474,8 +474,8 @@ const Time = ({ className }) => {
   const { hrot, mrot, srot } = time
 
   return (
-    <Icons
-      names={[
+    <Icon
+      name={[
         `circle.flc-80.stc-40`,
         `prime-thinner-grow=4-rotate=${mrot}-opacity=0.7.stc-30`,
         `prime-thin-shrink=4-rotate=${hrot}.stc-30`,
