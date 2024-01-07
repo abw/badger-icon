@@ -224,6 +224,11 @@ const Home = () =>
       For example, you don&apos;t need a dedicated icon for a checkbox when
       you can compose it from a square and a check mark.
     </p>
+    <p>
+      The icon <code>name</code> property can include multiple icon
+      specifications, each separate by one or more whitespace characters.
+      Each of the icon components will be displayed stacked together.
+    </p>
     <div className="popout pad-v-8 border bgc-70 bdc-60 bgd-30 bdd-40 shadow-2">
       <div className="flex space wrap x5">
         <Icon name="square"/>
