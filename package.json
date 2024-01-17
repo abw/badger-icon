@@ -12,7 +12,8 @@
     ".": {
       "import": "./dist/badger-icon.js",
       "require": "./dist/badger-icon.umd.cjs"
-    }
+    },
+    "./styles/*": "./dist/styles/*"
   },
   "author": "Andy Wardley",
   "licence": "ISC",
@@ -22,7 +23,8 @@
   "scripts": {
     "dev": "vite --config vite.docs.js",
     "test": "vitest --ui --coverage",
-    "build": "$npm_execpath build:lib && $npm_execpath build:docs",
+    "build": "$npm_execpath build:css && $npm_execpath build:lib && $npm_execpath build:docs",
+    "build:css": "bin/build-css.sh",
     "build:lib": "vite build",
     "build:docs": "vite build --config vite.docs.js",
     "preview": "vite preview --config vite.docs.js",
@@ -61,6 +63,7 @@
     "jsdom": "^22.1.0",
     "react-router-dom": "^6.18.0",
     "react-syntax-highlighter": "^15.5.0",
+    "rollup-plugin-copy": "^3.5.0",
     "sass": "^1.69.5",
     "vite": "^4.5.0",
     "vite-jsconfig-paths": "^2.0.1",

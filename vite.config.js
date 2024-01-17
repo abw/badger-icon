@@ -3,6 +3,7 @@ import jsconfigPaths    from 'vite-jsconfig-paths'
 import svgr             from 'vite-plugin-svgr'
 import react            from '@vitejs/plugin-react'
 import define           from  './vite.defs.js'
+import copy             from 'rollup-plugin-copy'
 
 const NAME   = `badger-icon`
 const MODULE = `abw/${NAME}`
@@ -42,6 +43,17 @@ export default defineConfig({
           'react/jsx-runtime': 'react/jsx-runtime'
         },
       },
-    },
+      plugins: [
+        copy({
+          hook: 'writeBundle',
+          targets: [
+            {
+              src: 'styles/*',
+              dest: 'dist/styles',
+            }
+          ]
+        })
+      ]
+    }
   },
 })

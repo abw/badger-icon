@@ -23,7 +23,7 @@ svg.icon {
   }
 }
 .icons {
-  display: grid;
+  display: inline-grid;
   & > * {
     grid-area: 1/1;
   }
