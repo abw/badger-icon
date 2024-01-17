@@ -22,7 +22,7 @@ svg.icon.fill-in {
 }
 
 .icons {
-  display: grid;
+  display: inline-grid;
 }
 .icons > * {
   grid-area: 1/1;
