@@ -5,6 +5,7 @@ export const GettingStartedMenu = {
     { to: '/getting-started/installation',     text: 'Installation' },
     { to: '/getting-started/basic-use',        text: 'Basic Use' },
     { to: '/getting-started/icons',            text: 'Default Icons' },
+    { to: '/getting-started/compound',         text: 'Compounds Icons' },
   ]
 }
 
