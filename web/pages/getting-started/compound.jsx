@@ -16,7 +16,7 @@ const IconsPage = () =>
     <Icons
       names={[
         'square vertical',
-        'square',
+        'square slash',
         'square plus',
         'square minus',
         'circle plus',
