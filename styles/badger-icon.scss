@@ -24,6 +24,13 @@ svg.icon {
 }
 .icons {
   display: inline-grid;
+  overflow: visible;
+  box-sizing: content-box;
+  height: 1em;
+  font-size: 1em;
+  line-height: 1;
+  vertical-align: -.125em;
+  text-align: center;
   & > * {
     grid-area: 1/1;
   }
