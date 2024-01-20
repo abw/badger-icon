@@ -29,21 +29,24 @@ const IconsPage = () =>
         'circle circle-shrink=7-solid',
         'square20 square10-shrink=7-solid',
         'square angles-down-shrink=6-thicker',
-        'eye slash-thickest.stc-100.std-0 slash-thin',
-        'mobile slash-thickest.stc-100.std-0 slash-thin',
-        'cloud arrow-shrink=6-down=3-thick',
-        'cloud arrow-down-shrink=6-down=6-thick',
-        'ban-thin trash-shrink=8-thick',
-        'clipboard-thin pen-shrink=10-down=1-thicker',
+        'eye slash-strokewidth=4-nostroke.stroke-bg slash-thin-stroke=firebrick',
+        'mobile slash-strokewidth=4-nostroke.stroke-bg slash-thin-stroke=firebrick',
+        'cloud arrow-shrink=6-down=3-thick-stroke=green',
+        'cloud arrow-down-shrink=6-down=6-thick-stroke=green',
+        'trash-shrink=8-thick ban-stroke=firebrick-opacity=0.6',
+        'clipboard-thin pen-shrink=10-down=1-thicker-stroke=dodgerblue',
       ]}
     />
     <div className="cols-2 mar-v-8">
       <p>
         You can also apply &quot;dotted&quot; CSS classes to each component
         part, allowing you to define stroke and fill colors or animations.
+        You can, of course, define your own CSS classes to customise how
+        icons are rendered.
       </p>
       <p>
-        These examples use color classes (e.g. <code>.green</code>) with
+        These examples use color classes (e.g. <code>.green</code>) from{' '}
+        <a href="https://abw.github.io/badger-css/">Badger CSS</a> along with
         additional <code>flc-NN</code> and <code>stc-NNN</code> classes to
         set the color stop for fill and stroke, respectively.
       </p>

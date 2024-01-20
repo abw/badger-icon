@@ -102,6 +102,11 @@ export const ModifiersMenu = {
       to: '/modifiers/strokewidth',
       text: 'Stroke Width',
       tocName: 'strokewidth',
+    },
+    {
+      to: '/modifiers/colors',
+      text: 'Stroke and Fill Colors',
+      tocName: 'colors',
     }
   ]
 }

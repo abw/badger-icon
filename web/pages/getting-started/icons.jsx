@@ -7,9 +7,11 @@ const IconsPage = () =>
     <h1>Default Icons</h1>
     <div className="cols-2 mar-b-8">
       <p>
+        This module provides a flexible mechanism for rendering icons but
+        it isn&apos;t really intended to be a fully-fledged icon library.
+        Some basic icons are included as a starting point.
         In most cases you&apos;ll want to define your own icon library
         including only the icons that you want to use in a project.
-        However, some basic icons are included as a starting point.
       </p>
       <p>
         Note that there&apos;s only one of each basic icon.  There isn&apos;t

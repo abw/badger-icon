@@ -50,3 +50,18 @@ $brand-colors: (
   }
 }
 
+// Moving up to badger-css
+svg {
+  &.fill-fg {
+    fill: var(--color);
+  }
+  &.fill-bg {
+    fill: var(--background-color);
+  }
+  &.stroke-fg {
+    stroke: var(--color);
+  }
+  &.stroke-bg {
+    stroke: var(--background-color);
+  }
+}

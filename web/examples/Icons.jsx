@@ -1,5 +1,4 @@
-import { Icon } from '@/lib/index.js'
-import { splitList } from '@abw/badger-utils'
+import { Icon, splitSpace } from '@/lib/index.js'
 import React from 'react'
 
 export const Icons = ({
@@ -9,7 +8,7 @@ export const Icons = ({
   minWidth='8rem'
 }) =>
   <div className={className} style={{ '--min-width': minWidth }}>
-    { splitList(names).map(
+    { splitSpace(names).map(
       name =>
         <div
           key={name}

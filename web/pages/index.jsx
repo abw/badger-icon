@@ -192,7 +192,10 @@ const Home = () =>
       displayed at 1em.
     </p>
     <IconTiles
-      names="check check-shrink=4 check-shrink=8 check check-grow=4 check-grow=8"
+      names="check check-shrink=4 check-shrink=8"
+    />
+    <IconTiles
+      names="check check-grow=4 check-grow=8"
     />
 
     <h2 className="mar-t-12">Styling by CSS</h2>
