@@ -25,7 +25,7 @@ const IconsPage = () =>
         'circle time',
         'square20 time',
         'folder plus-shrink=8-down=1-thickest',
-        'page cross-shrink=8-down=1.5-thickest',
+        'page cross-shrink=8-down=2-thickest',
         'circle circle-shrink=7-solid',
         'square20 square10-shrink=7-solid',
         'square angles-down-shrink=6-thicker',
