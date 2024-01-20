@@ -23,6 +23,13 @@ svg.icon.fill-in {
 
 .icons {
   display: inline-grid;
+  overflow: visible;
+  box-sizing: content-box;
+  height: 1em;
+  font-size: 1em;
+  line-height: 1;
+  vertical-align: -0.125em;
+  text-align: center;
 }
 .icons > * {
   grid-area: 1/1;
