@@ -1,13 +1,13 @@
 import React from 'react'
 import Icon  from './Icon.jsx'
-import { splitList } from '@abw/badger-utils'
+import { splitSpace } from '../utils/functions.js'
 
 export const Icons = ({
   names,
   className
 }) =>
   <div className={`grid overlap ${className}`}>
-    { splitList(names)
+    { splitSpace(names)
       .map(
         name => <Icon name={name} key={name}/>
       )

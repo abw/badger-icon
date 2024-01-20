@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@abw/badger-utils':
-    specifier: ^1.0.21
-    version: 1.0.21
+    specifier: ^1.0.22
+    version: 1.0.22
   '@abw/react-one-louder':
     specifier: ^0.0.6
     version: 0.0.6
@@ -20,11 +20,11 @@ dependencies:
 
 devDependencies:
   '@abw/badger-css':
-    specifier: ^0.2.17
-    version: 0.2.17
+    specifier: ^0.2.18
+    version: 0.2.18
   '@abw/badger-react-ui':
     specifier: ^0.0.1
-    version: 0.0.1(@abw/badger-css@0.2.17)(react-dom@18.2.0)(react@18.2.0)
+    version: 0.0.1(@abw/badger-css@0.2.18)(react-dom@18.2.0)(react@18.2.0)
   '@abw/badger-timestamp':
     specifier: ^1.0.4
     version: 1.0.4
@@ -102,33 +102,33 @@ packages:
   /@abw/badger-codecs@1.0.3:
     resolution: {integrity: sha512-baUQcCcYcnEkTq+LEJotDluwVX2uBA332/u2fPaZrQwp7UhmqxOV7hIJ4sZel6JpaXtp9VWXU9LvZlhOB59+Gw==}
     dependencies:
-      '@abw/badger-utils': 1.0.21
+      '@abw/badger-utils': 1.0.22
       js-yaml: 4.1.0
     dev: true
 
-  /@abw/badger-css@0.2.17:
-    resolution: {integrity: sha512-YHI2YAkC3u5LaVdQeXRF2yLXOY45BcB0kkD5sVsT4GW//x2tyKgUWrYHEZT25yrRoeXkfJVf4hmD4hXI1BYNsw==}
+  /@abw/badger-css@0.2.18:
+    resolution: {integrity: sha512-wCOZSaLEdS5bUVx9f2jO/eBY0l/EzOi6XTewQRml+hqJWycVIL7zv6SVwHodb/mVg8CfIe1rVtag0hoDKo6zuw==}
     hasBin: true
     dependencies:
-      '@abw/badger': 1.2.1
+      '@abw/badger': 1.2.2
     dev: true
 
   /@abw/badger-filesystem@1.0.5:
     resolution: {integrity: sha512-EXQvMJhGEbsGzBltfc6tQJEA/hsZfKrqFdHDoMWCdp2ZmZWadJ6dXvdcW0szpAsszBNO3HlF5F0KApOdU3vD9w==}
     dependencies:
       '@abw/badger-codecs': 1.0.3
-      '@abw/badger-utils': 1.0.21
+      '@abw/badger-utils': 1.0.22
     dev: true
 
-  /@abw/badger-react-ui@0.0.1(@abw/badger-css@0.2.17)(react-dom@18.2.0)(react@18.2.0):
+  /@abw/badger-react-ui@0.0.1(@abw/badger-css@0.2.18)(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-mBeKGv7s2gK7/CLbnEv0JRaNYGyomoWVPjDVQPjpyIet2hDbSqjTYLzrV7YFityzKjOBEDANX8y2QQtBkDZStg==}
     peerDependencies:
       '@abw/badger-css': ^0.2.5
       react: ^18.2.0
       react-dom: ^18.2.0
     dependencies:
-      '@abw/badger-css': 0.2.17
-      '@abw/badger-utils': 1.0.21
+      '@abw/badger-css': 0.2.18
+      '@abw/badger-utils': 1.0.22
       '@abw/react-one-louder': 0.0.6
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
@@ -137,11 +137,11 @@ packages:
   /@abw/badger-timestamp@1.0.4:
     resolution: {integrity: sha512-7JBcF9rxwihiiEG1UQlv1/jdntg8BJmzTADAj5psTWbRNvDh4XHkdeoVnbf0nRCq08q5472mx8wbpgNzrwb2RQ==}
     dependencies:
-      '@abw/badger-utils': 1.0.21
+      '@abw/badger-utils': 1.0.22
     dev: true
 
-  /@abw/badger-utils@1.0.21:
-    resolution: {integrity: sha512-MsfT1UdDeHyTLVdtx/i02YEj/8N1PRQjuw/k5WBSJ08177nGbvrTNgjgtok6QJeJVTiWCyucOQQeqDnG0fHsZQ==}
+  /@abw/badger-utils@1.0.22:
+    resolution: {integrity: sha512-22tKCE7YL5K7ib8XOKVyfRrNonfbF7UjqIV7oL9MD8LgUWDOo/n3KTaUBIUQYU3ly67ZgSfu73JMPmctYcUZsA==}
 
   /@abw/badger@1.1.18:
     resolution: {integrity: sha512-Cs65G3Hw01u/B5lMyqrXXOxXZirBMz9DKuyK2IjTLByprsw/LviIzqXb+AjrqNoBFWRwIyYkMkjbUOvHNoApuA==}
@@ -149,24 +149,24 @@ packages:
       '@abw/badger-codecs': 1.0.3
       '@abw/badger-filesystem': 1.0.5
       '@abw/badger-timestamp': 1.0.4
-      '@abw/badger-utils': 1.0.21
+      '@abw/badger-utils': 1.0.22
       commander: 10.0.1
       dotenv: 16.3.1
       js-yaml: 4.1.0
       prompts: 2.4.2
     dev: true
 
-  /@abw/badger@1.2.1:
-    resolution: {integrity: sha512-QPc4dgKArn2vr2mU6hSBU3FsfVwOGH/fiWLrs5lFGUsPpeZlp5RoJQdMDfuQrpixqcKkV65Gfs6F3NNaLHWuZQ==}
+  /@abw/badger@1.2.2:
+    resolution: {integrity: sha512-Xp8/jPxzskdaR2Jmmo+uZTCulD73FXjIq70KhQ5V5rGo2cfrBzAj1JBkaUPd3roBlWOwfirKmyJmf+ZP9AdXIQ==}
     hasBin: true
     dependencies:
       '@abw/badger-codecs': 1.0.3
       '@abw/badger-filesystem': 1.0.5
       '@abw/badger-timestamp': 1.0.4
-      '@abw/badger-utils': 1.0.21
+      '@abw/badger-utils': 1.0.22
       chokidar: 3.5.3
-      commander: 10.0.1
-      dotenv: 16.3.1
+      commander: 11.1.0
+      dotenv: 16.3.2
       js-yaml: 4.1.0
       prompts: 2.4.2
     dev: true
@@ -200,7 +200,7 @@ packages:
     dependencies:
       '@abw/badger': 1.1.18
       '@abw/badger-filesystem': 1.0.5
-      '@abw/badger-utils': 1.0.21
+      '@abw/badger-utils': 1.0.22
       '@fortawesome/free-brands-svg-icons': 6.4.2
       '@fortawesome/free-regular-svg-icons': 6.4.2
       '@fortawesome/free-solid-svg-icons': 6.4.2
@@ -1567,6 +1567,11 @@ packages:
     engines: {node: '>=14'}
     dev: true
 
+  /commander@11.1.0:
+    resolution: {integrity: sha512-yPVavfyCcRhmorC7rWlkHn15b4wDVgVmBA7kV4QVBsF7kv/9TKJAbAXVTxvTnwP8HHKjRCJDClKbciiYS7p0DQ==}
+    engines: {node: '>=16'}
+    dev: true
+
   /commander@4.1.1:
     resolution: {integrity: sha512-NOKm8xhkzAjzFx8B2v5OAHT+u5pRQc2UCa2Vq9jYL/31o2wi9mxBA7LIFs3sV5VSC49z6pEhfbMULvShKj26WA==}
     engines: {node: '>= 6'}
@@ -1753,6 +1758,11 @@ packages:
 
   /dotenv@16.3.1:
     resolution: {integrity: sha512-IPzF4w4/Rd94bA9imS68tZBaYyBWSCE47V1RGuMrB94iyTOIEwRmVL2x/4An+6mETpLrKJ5hQkB8W4kFAadeIQ==}
+    engines: {node: '>=12'}
+    dev: true
+
+  /dotenv@16.3.2:
+    resolution: {integrity: sha512-HTlk5nmhkm8F6JcdXvHIzaorzCoziNQT9mGxLPVXW8wJF1TiGSL60ZGB4gHWabHOaMmWmhvk2/lPHfnBiT78AQ==}
     engines: {node: '>=12'}
     dev: true
 

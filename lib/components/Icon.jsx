@@ -2,8 +2,7 @@ import React        from 'react'
 import Library      from '../Library.js'
 import SVGIcon      from '../SVG/Icon.jsx'
 import { Themed }   from '../Theme.js'
-import { resolveIconData, prepareIconProps, classes } from '../utils/index.js'
-import { splitList } from '@abw/badger-utils'
+import { resolveIconData, prepareIconProps, classes, splitSpace } from '../utils/index.js'
 
 // TODO: fixedWidth
 
@@ -16,7 +15,7 @@ export const Icon = ({
   if (! name) {
     return <SVGIcon {...prepareIconProps(props)} />
   }
-  const names = splitList(name)
+  const names = splitSpace(name)
   return names.length === 1
     ? <SVGIcon
         {...props}
