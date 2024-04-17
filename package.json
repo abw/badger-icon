@@ -1,6 +1,6 @@
 {
   "name": "@abw/badger-icon",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "description": "SVG Icon rendering for React",
   "type": "module",
   "files": [
