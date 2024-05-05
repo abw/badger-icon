@@ -182,3 +182,25 @@ export const LibraryMenu = {
     },
   ]
 }
+
+export const TestingMenu = {
+  title:  'Testing',
+  path: '/testing',
+  items: [
+    {
+      to: '/testing/errors',
+      text: 'Error handling',
+      exact: true
+    },
+    {
+      to: '/testing/alignment',
+      text: 'Alignment',
+      exact: true
+    },
+    {
+      to: '/testing/scale',
+      text: 'Scaling',
+      exact: true
+    },
+  ]
+}

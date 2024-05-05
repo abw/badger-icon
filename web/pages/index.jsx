@@ -12,7 +12,7 @@ import { useEffect } from 'react'
 import { Icon } from '@/lib/index.js'
 
 const Home = () =>
-  <div className="container-mobile flow">
+  <div className="conform-mobile flow">
     <Badger className="bi-logo mar-t-4"/>
     <h2 className="medium font-mono mar-t-8">NPM: @abw/badger-icon</h2>
     <p className="large">

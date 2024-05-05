@@ -31,8 +31,8 @@ const IconsPage = () =>
         'square angles-down-shrink=6-thicker',
         'eye slash-strokewidth=4-nostroke.stroke-bg slash-thin-stroke=firebrick',
         'mobile slash-strokewidth=4-nostroke.stroke-bg slash-thin-stroke=firebrick',
-        'cloud arrow-shrink=6-down=3-thick-stroke=green',
-        'cloud arrow-down-shrink=6-down=6-thick-stroke=green',
+        'cloud arrow-shrink=6-down=3-strokeWidth=6.stc-100.std-0 arrow-shrink=6-down=3-thick-stroke=green',
+        'cloud arrow-down-shrink=6-down=6-strokeWidth=6.stc-100.std-0 arrow-down-shrink=6-down=6-thick-stroke=green',
         'trash-shrink=8-thick ban-stroke=firebrick-opacity=0.6',
         'clipboard-thin pen-shrink=10-down=1-thicker-stroke=dodgerblue',
       ]}
