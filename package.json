@@ -45,7 +45,7 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@abw/badger-css": "^0.2.18",
+    "@abw/badger-css": "^1.1.4",
     "@abw/badger-react-ui": "^0.0.1",
     "@abw/badger-timestamp": "^1.0.4",
     "@abw/react-context": "^2.0.3",
