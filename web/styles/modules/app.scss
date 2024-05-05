@@ -77,10 +77,16 @@
         transition: all 0.2s;
         color: var(--menu-hover-text);
         background-color: var(--menu-hover-back);
+        * {
+          color: var(--menu-hover-text);
+        }
       }
       &.active {
         color: var(--menu-active-text);
         background-color: var(--menu-active-back);
+        * {
+          color: var(--menu-active-text);
+        }
       }
     }
     .menu {

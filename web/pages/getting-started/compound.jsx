@@ -24,17 +24,17 @@ const IconsPage = () =>
         'circle cross',
         'circle time',
         'square20 time',
-        'folder plus-shrink=8-down=1-thickest',
-        'page cross-shrink=8-down=2-thickest',
-        'circle circle-shrink=7-solid',
-        'square20 square10-shrink=7-solid',
-        'square angles-down-shrink=6-thicker',
+        'folder plus-shrink=8-down=1-thickest.green.stc-50',
+        'page cross-shrink=8-down=2-thickest.red.stc-50',
+        'circle circle-shrink=7-solid.orange.flc-50',
+        'square20 square10-shrink=7-solid.blue.flc-50',
+        'square angles-down-shrink=6-thicker.green.stc-50',
         'eye slash-strokewidth=4-nostroke.stroke-bg slash-thin-stroke=firebrick',
         'mobile slash-strokewidth=4-nostroke.stroke-bg slash-thin-stroke=firebrick',
         'cloud arrow-shrink=6-down=3-strokeWidth=6.stc-100.std-0 arrow-shrink=6-down=3-thick-stroke=green',
         'cloud arrow-down-shrink=6-down=6-strokeWidth=6.stc-100.std-0 arrow-down-shrink=6-down=6-thick-stroke=green',
         'trash-shrink=8-thick ban-stroke=firebrick-opacity=0.6',
-        'clipboard-thin pen-shrink=10-down=1-thicker-stroke=dodgerblue',
+        'clipboard-thin pen-shrink=8-down=1-thick-stroke=dodgerblue',
       ]}
     />
     <div className="cols-2 mar-v-8">
@@ -53,10 +53,10 @@ const IconsPage = () =>
     </div>
     <Icons
       names={[
-        'user.flc-80.fld-20 plus-shrink=8-up=2-right=6-thick.green.stc-50',
+        'user.flc-80.fld-20 plus-shrink=8-up=1-right=7-thickest.green.stc-50',
         'square.green.stc-30.flc-40 check-shrink=6-thick.grey.stc-100',
         'circle.red.stc-30.flc-40 cross-shrink=6-thick.grey.stc-100',
-        'triangle-thinner.orange.flc-50.stc-40 exclamation-shrink=8-down=1.5.orange.stc-90',
+        'triangle-thin-grow=4.orange.flc-50.stc-40 exclamation-thicker-shrink=6-down=1.5.orange.stc-90',
         'heart.red.stc-30.flc-50.beat', 'cog.violet.stc-40.flc-60.spin'
       ]}
     />

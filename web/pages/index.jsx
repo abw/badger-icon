@@ -252,7 +252,7 @@ const Home = () =>
         <Icon name="plus"/>
         <Icon name="alpha"/>
         <Icon name="equals"/>
-        <Icon name="point-up alpha-shrink=10-thicker" />
+        <Icon name="point-up-thin alpha-shrink=11-down=1-thicker" />
       </div>
     </div>
     <div className="popout pad-v-8 border bgc-70 bdc-60 bgd-30 bdd-40 shadow-2">
@@ -261,7 +261,7 @@ const Home = () =>
         <Icon name="plus"/>
         <Icon name="number"/>
         <Icon name="equals"/>
-        <Icon name="point-down number-shrink=10-thicker" />
+        <Icon name="point-down-thin number-shrink=11-up=1-thicker" />
       </div>
     </div>
 
