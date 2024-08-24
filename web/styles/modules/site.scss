@@ -35,6 +35,9 @@
         color: var(--header-hover);
       }
     }
+    svg.badgerpower {
+      height: 1.25rem;
+    }
   }
   & > footer {
     color: var(--footer-text);
@@ -46,6 +49,16 @@
       color: var(--footer-link);
       &:hover {
         color: var(--footer-hover);
+      }
+      &.badgerpower {
+        display: flex;
+        gap: 0.75rem;
+        align-items: center;
+        font-size: 1.25rem;
+        white-space: nowrap;
+        svg {
+          height: 2.5rem;
+        }
       }
     }
   }
