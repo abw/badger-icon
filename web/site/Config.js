@@ -5,3 +5,7 @@
 /* eslint-disable no-undef */
 export const VERSION = SITE_VERSION
 export const DATE    = SITE_DATE
+
+export const start = '2022'
+export const year  = DATE.match(/^(\d+)/)[1]
+export const years = year === start ? year : `${start} - ${year}`
