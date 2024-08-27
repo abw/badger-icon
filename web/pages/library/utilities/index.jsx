@@ -3,9 +3,7 @@ import AddIcon      from './_examples/AddIcon.jsx'
 import AddIconSrc   from './_examples/AddIcon.jsx?raw'
 import AddIcons     from './_examples/AddIcons.jsx'
 import AddIconsSrc  from './_examples/AddIcons.jsx?raw'
-// import CodeBlock    from '@/site/CodeBlock.jsx'
-import Link         from '@/ui/Link.jsx'
-import Example from '@/site/Example.jsx'
+import { Example, Link }    from '@abw/badger-website'
 
 const Utilities = () =>
   <div className="flow">

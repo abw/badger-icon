@@ -5,8 +5,7 @@ import Custom       from './_examples/CustomIcon.jsx'
 import CustomSrc    from './_examples/CustomIcon.jsx?raw'
 import Theme        from './_examples/Theme.jsx'
 import ThemeSrc     from './_examples/Theme.jsx?raw'
-import Example      from '@/site/Example.jsx'
-import Link         from '@/ui/Link.jsx'
+import { Example, Link } from '@abw/badger-website'
 
 
 const Integration = () =>

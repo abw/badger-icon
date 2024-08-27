@@ -5,12 +5,7 @@ import Type         from './_examples/type.json?raw'
 import TypePrefix   from './_examples/type-prefix.json?raw'
 import MultiType    from './_examples/multi-type.json?raw'
 import Style        from './_examples/style.json?raw'
-import CodeBlock    from '@/site/CodeBlock.jsx'
-import Link         from '@/ui/Link.jsx'
-
-
-// import CodeBlock    from '@/site/CodeBlock.jsx'
-// import Link         from '@/ui/Link.jsx'
+import { Source, Link } from '@abw/badger-website'
 
 const DataFormat = () =>
   <div className="flow">
@@ -33,9 +28,8 @@ const DataFormat = () =>
       For simple icons that are composed from a single filled path
       you can define an icon to be a string containing the path data.
     </p>
-    <CodeBlock
+    <Source
       code={Minimal}
-      // caption="Installing"
       language="json"
       className="mar-b-8"
       expand
@@ -75,7 +69,7 @@ const DataFormat = () =>
         The path data can be set using the <code>path</code> property.
       </p>
     </div>
-    <CodeBlock
+    <Source
       code={WidthHeight}
       language="json"
       className="mar-b-8"
@@ -95,7 +89,7 @@ const DataFormat = () =>
         to <code>currentColor</code>.
       </p>
     </div>
-    <CodeBlock
+    <Source
       code={Type}
       language="json"
       className="mar-b-8"
@@ -105,7 +99,7 @@ const DataFormat = () =>
       As a shortcut you can prefix the path data with the type, separated
       by a colon.
     </p>
-    <CodeBlock
+    <Source
       code={TypePrefix}
       language="json"
       className="mar-b-8"
@@ -125,7 +119,7 @@ const DataFormat = () =>
         path.
       </p>
     </div>
-    <CodeBlock
+    <Source
       code={MultiType}
       language="json"
       className="mar-b-8"
@@ -144,7 +138,7 @@ const DataFormat = () =>
         It can be provided as a string or object.
       </p>
     </div>
-    <CodeBlock
+    <Source
       code={Style}
       language="json"
       className="mar-b-8"

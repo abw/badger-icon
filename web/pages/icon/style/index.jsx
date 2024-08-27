@@ -3,7 +3,7 @@ import StyleObj     from './_examples/StyleObj.jsx'
 import StyleObjSrc  from './_examples/StyleObj.jsx?raw'
 import StyleStr     from './_examples/StyleStr.jsx'
 import StyleStrSrc  from './_examples/StyleStr.jsx?raw'
-import Example      from '@/site/Example.jsx'
+import { Example }  from '@abw/badger-website'
 
 const StyleExamples = () =>
   <div className="flow">

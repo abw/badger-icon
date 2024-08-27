@@ -3,8 +3,7 @@ import Component  from './_examples/ClassName.jsx'
 import Source     from './_examples/ClassName.jsx?raw'
 import Name       from './_examples/Name.jsx'
 import NameSrc    from './_examples/Name.jsx?raw'
-import Example    from '@/site/Example.jsx'
-import Link       from '@/ui/Link.jsx'
+import { Example, Link } from '@abw/badger-website'
 
 const ClassName = () =>
   <div className="flow">

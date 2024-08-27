@@ -9,12 +9,10 @@ import Thick        from './_examples/Thick.jsx'
 import ThickSource  from './_examples/Thick.jsx?raw'
 import Path         from './_examples/Path.jsx'
 import PathSource   from './_examples/Path.jsx?raw'
-import Example      from '@/site/Example.jsx'
-import Link         from '@/ui/Link.jsx'
-import { useTheme } from '@abw/react-night-and-day'
+import { Example, Link, useSite } from '@abw/badger-website'
 
 const Type = () => {
-  const { setLight, setDark } = useTheme()
+  const { setLight, setDark } = useSite()
 
   return (
     <div className="flow">

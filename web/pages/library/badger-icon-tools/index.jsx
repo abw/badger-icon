@@ -1,6 +1,5 @@
-import React        from 'react'
-// import CodeBlock    from '@/site/CodeBlock.jsx'
-import Link         from '@/ui/Link.jsx'
+import React    from 'react'
+import { Link } from '@abw/badger-website'
 
 const BadgerIconTools = () =>
   <div className="flow">

@@ -3,7 +3,7 @@ import TransObj     from './_examples/TransObj.jsx'
 import TransObjSrc  from './_examples/TransObj.jsx?raw'
 import TransStr     from './_examples/TransStr.jsx'
 import TransStrSrc  from './_examples/TransStr.jsx?raw'
-import Example      from '@/site/Example.jsx'
+import { Example }  from '@abw/badger-website'
 
 const TransExamples = () =>
   <div className="flow">

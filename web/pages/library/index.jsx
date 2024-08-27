@@ -1,5 +1,5 @@
-import React        from 'react'
-import Link         from '@/ui/Link.jsx'
+import React from 'react'
+import { Link } from '@abw/badger-website'
 
 
 const Index = () =>

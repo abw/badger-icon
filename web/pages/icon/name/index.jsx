@@ -7,8 +7,9 @@ import Mods       from './_examples/Mods.jsx'
 import ModsSrc    from './_examples/Mods.jsx?raw'
 import Classes    from './_examples/Classes.jsx'
 import ClassesSrc from './_examples/Classes.jsx?raw'
-import Example    from '@/site/Example.jsx'
-import Link from '@/web/ui/Link.jsx'
+import { Example, Link } from '@abw/badger-website'
+// import Example    from '@/site/Example.jsx'
+// import Link from '@/web/ui/Link.jsx'
 
 const IconName = () =>
   <div className="flow">

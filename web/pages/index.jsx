@@ -1,71 +1,90 @@
-import React      from 'react'
-import CodeBlock  from '@/site/CodeBlock.jsx'
+import React, { useState, useEffect } from 'react'
 import Render     from './_examples/render-icon?raw'
 import ImportIcon from './_examples/import-icon?raw'
 import CheckData  from './_examples/check-data?raw'
 import IconTiles  from '@/examples/Icons.jsx'
 import Badger     from '@/svg/badger-icon.svg?react'
-import Link       from '@/ui/Link.jsx'
 import { now }    from '@abw/badger-timestamp'
-import { useState } from 'react'
-import { useEffect } from 'react'
-import { Icon } from '@/lib/index.js'
+import { Icon }   from '@/lib/index.js'
+import { Source, Link } from '@abw/badger-website'
 
 const Home = () =>
-  <div className="conform-mobile flow">
-    <Badger className="bi-logo mar-t-4"/>
-    <h2 className="medium font-mono mar-t-8">NPM: @abw/badger-icon</h2>
+  <div className="flow">
+    <div className="grid-2 gap-12 start stack-laptop">
+      <div>
+        <Badger className="bi-logo XXXmar-t-4"/>
+      </div>
+      <div>
+        <h1 className="mar-t-4">
+          React SVG Icons
+        </h1>
+        <h2 className="mar-t-none small mar-b-2">
+          Powered by Badgers
+        </h2>
+        <p className="larger">
+          A React component for rendering SVG icons
+        </p>
+        <p className="large mar-t-2">
+          With an emphasis on flexibility, composability and minimal icon data size
+        </p>
+        {/* <h2 className="medium font-mono mar-t-8">NPM: @abw/badger-icon</h2> */}
+      </div>
+    </div>
     <p className="large">
-      This is a work in progress for rendering SVG icons in React.
-      It has an emphasis on flexibility, while reducing the size of the
-      data you need to define for icons.
+      Badger Icon is a small, lightweight React component for rendering SVG
+      icons.  It comes with a small set of basic icons but it&apos;s not
+      really intended to be an icon library in itself.  Rather, it provides
+      the mechanism for rendering icons and allows you to add in icons from
+      any other icon set or your own custom SVG files.
     </p>
     <p>
-      Here are some of the icons that it can generate from a very small
-      data set of primitives.
+      What makes it unique is that it allow base icons to be rendered in
+      countless different ways and composed to create more complex icons.
+      Here are some of the icons that it can generate from the set of basic
+      icon primitives.
     </p>
-    <div className="flex space">
-      <Icon
-        name="square.flc-50.stc-30 check-thick-shrink=6-drawlength=600-drawtime=500ms.stc-100.draw"
-        className="violet x6"
-      />
-      <Icon
-        name="circle.flc-50.stc-40 cog-thin-shrink=7.stc-80.flc-40.spin.slow"
-        className="green x6"
-      />
-      <Icon
-        name="square20.flc-60.stc-40 heart-thin-shrink=7.stc-80.flc-50.beat"
-        className="red x6"
-      />
-      <Time className="x6 orange"/>
-      {/*
-      <Icons
-        names="circle.flc-60.stc-30 hour.shrink=2.stc-40.spin.slow hour.stc-45.spin.fast "
-        className="orange x5"
-      />
-      */}
+    <div className="conform-mobile">
+      <div className="flex space">
+        <Icon
+          name="square.flc-50.stc-30 check-thick-shrink=6-drawlength=600-drawtime=500ms.stc-100.draw"
+          className="violet x6"
+        />
+        <Icon
+          name="circle.flc-50.stc-40 cog-thin-shrink=7.stc-80.flc-40.spin.slow"
+          className="green x6"
+        />
+        <Icon
+          name="square20.flc-60.stc-40 heart-thin-shrink=7.stc-80.flc-50.beat"
+          className="red x6"
+        />
+        <Time className="x6 orange"/>
+      </div>
     </div>
-
     <h2 className="mar-t-12">Minimal Icon Data</h2>
     <p>
-      What makes this interesting is that a single icon can be defined in a
-      library and then rendered in many different styles.
+      An icon can be defined in a library using a compact data format and then
+      rendered in many different styles.
     </p>
     <p>
       For example, the icon data for a check mark (aka &quot;tick&quot;) is
       about as simple as it can be:
     </p>
-    <CodeBlock
+    <Source
       code={CheckData}
       language="js"
-      className=""
+      caption="Check mark icon data"
       expand
     />
     <p>
       For those that aren&apos;t familiar with SVG path data, this is an
       instruction to move to coordinates 48,248 (<code>M48,248</code>), draw
       a line to 192, 392 (<code>L192,392</code>) and then a line to 464,120
-      (<code>L464,120</code>).
+      (<code>L464,120</code>).  The majority of icons are created using path
+      data so this is the default.  But you can also define icon components
+      using rectangles, circles, ellipses, lines, polygons and polylines,
+      or any combination of them.  Or you can define icons using raw SVG
+      text for those cases where you want to include more complicated icons
+      from other icon sets or your own designs.
     </p>
     <p>
       The default coordinate size for an icon is 512
@@ -75,12 +94,12 @@ const Home = () =>
       specific sizes for individual icons.
     </p>
     <p>
-      To render this icon you need to{' '}
+      To render an icon you need to{' '}
       <Link to="/getting-started/installation" text="install the library"/> and
       then import the <code>Icon</code> component
       from <code>@abw/badger-icon</code>.
     </p>
-    <CodeBlock
+    <Source
       code={ImportIcon}
       language="jsx"
       expand
@@ -89,7 +108,7 @@ const Home = () =>
       Then insert the <code>Icon</code> component wherever you need
       an icon, specifying the icon by the <code>name</code> property.
     </p>
-    <CodeBlock
+    <Source
       code={Render}
       language="jsx"
       expand
@@ -159,10 +178,7 @@ const Home = () =>
       get the other three directions icons thrown in for free.
     </p>
     <IconTiles
-      names="arrow arrow-up"
-    />
-    <IconTiles
-      names="arrow-left arrow-down arrow-right"
+      names="arrow arrow-up arrow-left arrow-down arrow-right"
     />
 
     <h2 className="mar-t-12">Rotation</h2>
@@ -192,17 +208,16 @@ const Home = () =>
       displayed at 1em.
     </p>
     <IconTiles
-      names="check check-shrink=4 check-shrink=8"
+      names="check-shrink=8 check-shrink=4 check check-grow=4 check-grow=8"
     />
     <IconTiles
-      names="check check-grow=4 check-grow=8"
     />
 
     <h2 className="mar-t-12">Styling by CSS</h2>
     <p>
       You can style icons with CSS classes.  Add them to the end of the name
       separated by periods.  These examples use color utilities provided by{' '}
-      <a href="https://abw.github.io/badger-css/">Badger CSS</a> to set the
+      <a href="https://badgerpower.com/badger-css/">Badger CSS</a> to set the
       stroke and fill colors.
     </p>
     <IconTiles
@@ -232,226 +247,57 @@ const Home = () =>
       specifications, each separate by one or more whitespace characters.
       Each of the icon components will be displayed stacked together.
     </p>
-    <div className="popout pad-v-8 border bgc-70 bdc-60 bgd-30 bdd-40 shadow-2">
-      <div className="flex space wrap x5">
-        <Icon name="square"/>
-        <Icon name="plus"/>
-        <Icon name="check"/>
-        <Icon name="equals"/>
-        <Icon name="square check-shrink=6-thicker" />
-      </div>
-    </div>
+    <Compose
+      icons={[
+        'square',
+        'check',
+        'square check-shrink=6-thicker'
+      ]}
+    />
     <p className="mar-t-8">
       Or if you want icons to represent an ascending or descending sort,
       using either alpha or numerical sorting, then you can compose
       it from primitives.
     </p>
-    <div className="popout pad-v-8 border bgc-70 bdc-60 bgd-30 bdd-40 shadow-2">
-      <div className="flex space wrap x5">
-        <Icon name="point-up"/>
-        <Icon name="plus"/>
-        <Icon name="alpha"/>
-        <Icon name="equals"/>
-        <Icon name="point-up-thin alpha-shrink=11-down=1-thicker" />
-      </div>
-    </div>
-    <div className="popout pad-v-8 border bgc-70 bdc-60 bgd-30 bdd-40 shadow-2">
-      <div className="flex space wrap x5">
-        <Icon name="point-down"/>
-        <Icon name="plus"/>
-        <Icon name="number"/>
-        <Icon name="equals"/>
-        <Icon name="point-down-thin number-shrink=11-up=1-thicker" />
-      </div>
-    </div>
+    <Compose
+      icons={[
+        'point-up',
+        'alpha',
+        'point-up-thin alpha-shrink=11-down=1-thicker'
+      ]}
+    />
+    <Compose
+      icons={[
+        'point-down',
+        'number',
+        'point-down-thin alpha-shrink=11-up=1-thicker'
+      ]}
+    />
 
     <p className="mar-t-8">
       Put it all together and you can make all sorts of interesting icons.
     </p>
-    <div className="popout pad-v-8 border bgc-70 bdc-60 bgd-30 bdd-40 shadow-2">
-      <div className="flex space wrap x5">
-        <Icon name="square.flc-50.stc-30.violet.x5"/>
-        <Icon name="plus"/>
-        <Icon name="check-thick-shrink=6.stc-100.violet"/>
-        <Icon name="equals"/>
-        <Icon
-          name="square.flc-50.stc-30 check-thick-shrink=6.stc-100"
-          className="violet x5"
-        />
-      </div>
-    </div>
-    <div className="popout pad-v-8 border bgc-70 bdc-60 bgd-30 bdd-40 shadow-2">
-      <div className="flex space wrap x5">
-        <Icon name="circle.flc-50.stc-40.green.x5"/>
-        <Icon name="plus"/>
-        <Icon name="cog-thin-shrink=7.stc-80.flc-40.spin.slow.green.x5"/>
-        <Icon name="equals"/>
-        <Icon
-          name="circle.flc-50.stc-40 cog-thin-shrink=7.stc-80.flc-40.spin.slow"
-          className="green x5"
-        />
-      </div>
-    </div>
-    <div className="popout pad-v-8 border bgc-70 bdc-60 bgd-30 bdd-40 shadow-2">
-      <div className="flex space wrap x5">
-        <Icon name="square20.flc-60.stc-40.red.x5"/>
-        <Icon name="plus"/>
-        <Icon name="heart-thin-shrink=7.stc-80.flc-50.beat.red.x5"/>
-        <Icon name="equals"/>
-        <Icon
-          name="square20.flc-60.stc-40 heart-thin-shrink=7.stc-80.flc-50.beat"
-          className="red x5"
-        />
-      </div>
-    </div>
-
-    {/*
-      <Icons
-        names="circle.flc-60.stc-30 hour.shrink=2.stc-40.spin.slow hour.stc-45.spin.fast "
-        className="orange x5"
-      />
-      */}
-
-
-    {/*
-    <h2>SVG Icons are Great!</h2>
-    <h2>What Makes Them Great?</h2>
-    <p className="mar-b-none">
-      You can reference them as the <code>src</code>{' '}
-      in an <code>img</code> tag.
-    </p>
-    <CodeBlock
-      code={Img}
-      language="html"
-      className=""
-      expand
+    <Compose
+      icons={[
+        'square.flc-50.stc-30.violet.x5',
+        'check-thick-shrink=6.stc-100.violet',
+        'square.flc-50.stc-30.violet.x5 check-thick-shrink=6.stc-100.violet'
+      ]}
     />
-    <div className="popout brand bgc-30 fgc-90 hdc-100 grid-2 gap-4 pad-v-6">
-      <div>
-        <h3>Pros</h3>
-        <ul className="pad-l-4">
-          <li>Quick and easy!</li>
-          <li>No duplication of SVG data</li>
-        </ul>
-      </div>
-      <div>
-        <h3>Cons</h3>
-        <ul className="pad-l-4">
-          <li>Extra network request</li>
-          <li>Cannot style with CSS</li>
-        </ul>
-      </div>
-    </div>
-    <p className="mar-b-none">
-      You can also embed them directly into an html page in an <code>svg</code>{' '}
-      tag.
-    </p>
-    <CodeBlock
-      code={Inline}
-      language="html"
-      className=""
-      expand
+    <Compose
+      icons={[
+        'circle.flc-50.stc-40.green.x5',
+        'cog-thin-shrink=7.stc-80.flc-40.spin.slow.green.x5',
+        'circle.flc-50.stc-40.green.x5 cog-thin-shrink=7.stc-80.flc-40.spin.slow.green'
+      ]}
     />
-    <div className="popout brand bgc-30 fgc-90 hdc-100 grid-2 gap-4 pad-v-6">
-      <div>
-        <h3>Pros</h3>
-        <ul className="pad-l-4">
-          <li>No additional network request</li>
-          <li>Stylable via CSS</li>
-        </ul>
-      </div>
-      <div>
-        <h3>Cons</h3>
-        <ul className="pad-l-4">
-          <li>Page bloat</li>
-          <li>Duplication of SVG data</li>
-        </ul>
-      </div>
-    </div>
-
-
-    <h2>Stroke Width</h2>
-    <p>
-      The <code>-strokewidth=N</code> suffix can be used to set the stroke width.
-      You can use <code>px</code> or <code>pt</code> as units, but be warned
-      that these depends on the original view box size of the icon.
-    </p>
-    <p>
-      A percentage value for stc-width is always computed as a
-      percentage of the normalized viewBox diagonal length.
-    </p>
-    <p>
-      If you specify a unitless value then it is assumed
-      to be in 16ths of the icon size.  For a 1em (16px) icon, this
-      corresponds to pixel units.  This is usually the best approach as it
-      doesn&apos;t depend on you knowing the view box size of the original
-      source icon SVG.
-    </p>
-    <Icons names="square-strokewidth=10px square-strokewidth=2 square-strokewidth=3 square-strokewidth=0.75"/>
-
-
-    <h2>Cap and Corner Style</h2>
-    <p>
-      Stroked icons have rounded ends and corners by default (equivalent to
-      explicitly adding the <code>-round</code> suffix).
-      The <code>-square</code> suffix makes them sqaure.
-    </p>
-    <Icons names="angle-thick angle-thick-square"/>
-
-    <h2>Direction</h2>
-    <p>
-      Icons are assumed to be pointing upwards by default.  Adding the{' '}
-      <code>-up</code> suffix makes no difference, but you might prefer to add
-      it to be explicit about which way the icon is supposed to be pointing.
-      Adding the {' '}
-      <code>-right</code> suffix rotates it 90&deg; to make it point right.
-      The <code>-down</code> suffix rotates it 180&deg; to make it point down
-      and <code>-left</code> rotates it 270&deg; to point left;
-
-    </p>
-    <Icons names="angle angle-up angle-right angle-down angle-left"/>
-
-    <h2>Rotation</h2>
-    <p>
-      The <code>rotate=N</code> (or <code>rotate:N</code>) suffix can be
-      used to rotate the icon through any angle.
-    </p>
-    <Icons names="angle-rotate=-60 angle-rotate=-30 angle angle-rotate=30 angle-rotate=60"/>
-
-    <h2>Outline and Fill</h2>
-    <p>
-      Simple icons like these can be defined using a stroked path.  They
-      have a default <code>outline</code> style.  You can explicitly add
-      the <code>-outline</code> suffix if you like - it makes no difference.
-      The <code>-fill</code> suffix will also fill the icon.  The{' '}
-      <code>-solid</code> suffix fills the icon path and removes the outline.
-    </p>
-    <Icons names="square square-outline square-fill square-solid"/>
-
-    <h2>Stroke and Fill Colors</h2>
-    <p>
-      The <code>-stroke=XXX</code> and <code>-fill=XXX</code> suffixes can
-      be used to set the stroke and fill colors.
-    </p>
-    <Icons names="square square-stroke=red square-fill=#007fff"/>
-
-    <h2>Opacity</h2>
-    <p>
-      The <code>-opacity=NN</code> suffix can be used to set the opacity.
-      The stroke and fill opacity can be set separately with{' '}
-      <code>-strokeopacity=NN</code> and <code>-fillopacity=NN</code>.
-    </p>
-    <Icons names="square-flc-opacity=50% square-flc-strokeopacity=0.5 square-flc-fillopacity=50%" />
-
-    <h2>CSS Classes</h2>
-    <p>
-      CSS classes can be added to the end of an icon name, separated by
-      periods.
-    </p>
-    <Icons
-      names="arrow.blue.fgc-30 arrow.blue.fgc-50 arrow.blue.fgc-70"
+    <Compose
+      icons={[
+        'square20.flc-60.stc-40.red.x5',
+        'heart-thin-shrink=7.stc-80.flc-50.beat.red.x5',
+        'square20.flc-60.stc-40.red.x5 heart-thin-shrink=7.stc-80.flc-50.beat.red'
+      ]}
     />
-    */}
   </div>
 
 const getTime = () => {
@@ -493,5 +339,16 @@ const Time = ({ className }) => {
     />
   )
 }
+
+const Compose = ({ icons }) =>
+  <div className="conform-mobile pad-v-8 surface-3">
+    <div className="flex space middle wrap">
+      <Icon name={icons[0]} className="x5"/>
+      <Icon name="plus" className="x3 stc-70 std-30"/>
+      <Icon name={icons[1]} className="x5"/>
+      <Icon name="equals" className="x3 stc-70 std-30"/>
+      <Icon name={icons[2]} className="x5"/>
+    </div>
+  </div>
 
 export default Home

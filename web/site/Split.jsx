@@ -2,7 +2,7 @@ import React from 'react'
 
 const Split = ({children, align='top'}) =>
   <div
-    className={`grid-2 gap-h-8 stack-desktop ${align}`}
+    className={`grid-2 gap-h-8 gap-v-4 stack-desktop ${align}`}
     style={{ '--prose-width': '100%' }}
   >
     {children}

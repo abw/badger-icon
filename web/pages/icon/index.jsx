@@ -1,7 +1,7 @@
 import React    from 'react'
 import Icon     from './_examples/Icon.jsx'
 import IconSrc  from './_examples/Icon.jsx?raw'
-import Example from '@/site/Example.jsx'
+import { Example } from '@abw/badger-website'
 
 const Index = () =>
   <div className="flow">
@@ -15,7 +15,7 @@ const Index = () =>
       Component={Icon}
       code={IconSrc}
       caption="Icon"
-      // undent={4}
+      highlightLines="4"
       expand
     />
   </div>

@@ -1,12 +1,12 @@
 import React from 'react'
 import Icons from '@/examples/Icons.jsx'
-import { useTheme } from '@abw/react-night-and-day'
+import { Link, useSite } from '@abw/badger-website'
 
 const LADToggle = () => {
   const {
     setDark,      // set theme to 'dark'
     setLight,     // set theme to 'light'
-  } = useTheme()
+  } = useSite()
   return <>
     <span onClick={setLight} className="hover">light</span> and{' '}
     <span onClick={setDark} className="hover">dark</span>
@@ -53,7 +53,7 @@ const Colors = () =>
       <p>
         You can also use CSS classes to set the fill and stroke colors.
         In these examples we use the CSS classes provided by{' '}
-        <a href="https://abw.github.io/badger-css/">Badger CSS</a> to select
+        <Link href="https://badgerpower.com/badger-css/" targetBlank text="Badger CSS"/> to select
         a color range (e.g. <code>orange</code>) and color stops for the
         stroke (<code>stc-NN</code>) and fill (<code>flc-NN</code>).  You
         can also specify different colors for dark mode (<code>std-NN</code>{' '}

@@ -11,7 +11,7 @@ import Badger       from './_examples/Badger.jsx'
 import BadgerSrc    from './_examples/Badger.jsx?raw'
 import String       from './_examples/String.jsx'
 import StringSrc    from './_examples/String.jsx?raw'
-import Example      from '@/site/Example.jsx'
+import { Example }  from '@abw/badger-website'
 
 const Primitives = () =>
   <div className="flow">

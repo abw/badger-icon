@@ -18,7 +18,7 @@ export default defineConfig({
   ],
   define,
   root: 'web',
-  base: '/badger-icon/',
+  base: '/badger-icon',
   envDir: '../',
   build: {
     emptyOutDir: true,

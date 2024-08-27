@@ -1,6 +1,6 @@
-import Icons from '@/examples/Icons.jsx'
-import Link from '@/ui/Link.jsx'
 import React from 'react'
+import Icons from '@/examples/Icons.jsx'
+import { Link } from '@abw/badger-website'
 
 const Index = () =>
   <div className="flow">

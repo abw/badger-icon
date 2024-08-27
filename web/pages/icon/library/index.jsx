@@ -1,8 +1,7 @@
 import React      from 'react'
 import Icons      from './_examples/Icons.jsx'
 import IconsSrc   from './_examples/Icons.jsx?raw'
-import Example    from '@/site/Example.jsx'
-import Link       from '@/ui/Link.jsx'
+import { Example, Link } from '@abw/badger-website'
 
 const IconIcons = () =>
   <div className="flow">

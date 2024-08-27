@@ -5,9 +5,8 @@ import Short          from './_examples/Short.jsx'
 import ShortSrc       from './_examples/Short.jsx?raw'
 import String         from './_examples/String.jsx'
 import StringSrc      from './_examples/String.jsx?raw'
-import Example        from '@/site/Example.jsx'
 import MDNElementLink from '@/site/MDNElementLink.jsx'
-import Link           from '@/ui/Link.jsx'
+import { Example, Link } from '@abw/badger-website'
 
 const Polyline = () =>
   <div className="flow">

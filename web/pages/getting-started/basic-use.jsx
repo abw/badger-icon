@@ -1,7 +1,7 @@
 import React      from 'react'
 import Render     from './_examples/render-icon?raw'
 import ImportIcon from './_examples/import-icon?raw'
-import CodeBlock from '@/site/CodeBlock.jsx'
+import { Source } from '@abw/badger-website'
 import Split from '@/site/Split.jsx'
 
 const BasicUse = () =>
@@ -13,7 +13,7 @@ const BasicUse = () =>
       <p>
         Import the <code>Icon</code> component from <code>@abw/badger-icon</code>.
       </p>
-      <CodeBlock
+      <Source
         code={ImportIcon}
         language="jsx"
         expand
@@ -28,7 +28,7 @@ const BasicUse = () =>
         icon set, an icon that you&apos;ve added to the default library, or
         is in a custom library you&apos;ve constructed yourself.
       </p>
-      <CodeBlock
+      <Source
         code={Render}
         language="jsx"
         expand

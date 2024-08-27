@@ -5,8 +5,8 @@ import Short          from './_examples/Short.jsx'
 import ShortSrc       from './_examples/Short.jsx?raw'
 import String         from './_examples/String.jsx'
 import StringSrc      from './_examples/String.jsx?raw'
-import Example        from '@/site/Example.jsx'
 import MDNElementLink from '@/site/MDNElementLink.jsx'
+import { Example }    from '@abw/badger-website'
 
 const Polygon = () =>
   <div className="flow">

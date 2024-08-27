@@ -5,7 +5,7 @@ import Library  from '@/lib/Library.js'
 const IconsPage = () =>
   <div className="flow">
     <h1>Default Icons</h1>
-    <div className="cols-2 mar-b-8">
+    <div className="mar-b-8">
       <p>
         This module provides a flexible mechanism for rendering icons but
         it isn&apos;t really intended to be a fully-fledged icon library.

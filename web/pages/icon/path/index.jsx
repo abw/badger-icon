@@ -1,8 +1,7 @@
-import React        from 'react'
-import Component    from './_examples/Path.jsx'
-import Source       from './_examples/Path.jsx?raw'
-import Example      from '@/site/Example.jsx'
-import Link from '@/ui/Link.jsx'
+import React     from 'react'
+import Component from './_examples/Path.jsx'
+import Source    from './_examples/Path.jsx?raw'
+import { Example, Link } from '@abw/badger-website'
 
 const Path = () =>
   <div className="flow">
@@ -16,7 +15,7 @@ const Path = () =>
       <p>
         In most, if not all cases, you would define
         this in your icon library and refer to it by {' '}
-        <Link to="icon/name" text="name"/>.  But this gives you an insight
+        <Link to="/icon/name" text="name"/>.  But this gives you an insight
         into how things work behind the scenes.
       </p>
       <p>

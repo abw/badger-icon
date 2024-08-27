@@ -3,7 +3,7 @@ import Component    from './_examples/Size.jsx'
 import Source       from './_examples/Size.jsx?raw'
 import WHComponent  from './_examples/WidthHeight.jsx'
 import WHSource     from './_examples/WidthHeight.jsx?raw'
-import Example      from '@/site/Example.jsx'
+import { Example } from '@abw/badger-website'
 
 const Size = () =>
   <div className="flow">
