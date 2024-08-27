@@ -2,11 +2,13 @@
 // root directory where they are defined.  They are included as the define
 // options in vite.config.js
 /* eslint-disable no-undef */
+import { version, date, copyright } from '@/site/Config.js'
+
 export const site = {
-  version:    SITE_VERSION,
-  date:       SITE_DATE,
+  version,
+  date,
+  copyright,
   title:      'Badger Icon',
-  copyright:  2024,
   author:     'Andy Wardley',
   authorLink: 'https://github.com/abw',
   repository: 'https://github.com/abw/badger-icon',
