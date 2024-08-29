@@ -1,5 +1,6 @@
 export const GettingStartedMenu = {
-  summary:  'Getting Started',
+  title:  'Getting Started',
+  revealable: true,
   openPath: '/getting-started',
   menu: [
     { to: '/getting-started/installation',     text: 'Installation' },
@@ -10,7 +11,8 @@ export const GettingStartedMenu = {
 }
 
 export const IconMenu = {
-  summary:  'Icon',
+  title:  'Icon',
+  revealable: true,
   openPath: '/icon',
   menu: [
     {
@@ -55,7 +57,8 @@ export const IconMenu = {
 
 
 export const ModifiersMenu = {
-  summary:  'Modifiers',
+  title:  'Modifiers',
+  revealable: true,
   openPath: '/modifiers',
   menu: [
     {
@@ -112,7 +115,8 @@ export const ModifiersMenu = {
 }
 
 export const PrimitivesMenu = {
-  summary:  'Primitives',
+  title:  'Primitives',
+  revealable: true,
   openPath: '/primitives',
   menu: [
     {
@@ -152,7 +156,8 @@ export const PrimitivesMenu = {
 }
 
 export const LibraryMenu = {
-  summary:  'Icon Library',
+  title:  'Icon Library',
+  revealable: true,
   openPath: '/library',
   menu: [
     {
@@ -184,7 +189,8 @@ export const LibraryMenu = {
 }
 
 export const TestingMenu = {
-  summary:  'Testing',
+  title:  'Testing',
+  revealable: true,
   openPath: '/testing',
   menu: [
     {
@@ -207,24 +213,14 @@ export const TestingMenu = {
 
 export const sidebar = {
   sections: [
-    {
-      details: GettingStartedMenu
-    },
-    {
-      details: IconMenu
-    },
-    {
-      details: ModifiersMenu
-    },
-    {
-      details: PrimitivesMenu
-    },
-    {
-      details: LibraryMenu
-    },
+    GettingStartedMenu,
+    IconMenu,
+    ModifiersMenu,
+    PrimitivesMenu,
+    LibraryMenu,
     ...(
       import.meta.env.DEV
-        ? [ { details: TestingMenu } ]
+        ? [ TestingMenu ]
         : [ ]
     )
   ]

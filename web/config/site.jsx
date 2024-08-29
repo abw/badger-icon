@@ -15,7 +15,8 @@ export const site = {
   // repoIcon:   'github',
   badgerpower: true,
   basename:    import.meta.env.BASE_URL,
-  debug:       true
+  debug:       true,
+  prevNextArrows: true
 }
 
 export default site

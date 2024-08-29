@@ -6,7 +6,7 @@ import IconTiles  from '@/examples/Icons.jsx'
 import Badger     from '@/svg/badger-icon.svg?react'
 import { now }    from '@abw/badger-timestamp'
 import { Icon }   from '@/lib/index.js'
-import { Source, Link } from '@abw/badger-website'
+import { Source, Link, PeopleWhoShare } from '@abw/badger-website'
 
 const Home = () =>
   <div className="flow">
@@ -298,6 +298,12 @@ const Home = () =>
         'square20.flc-60.stc-40.red.x5 heart-thin-shrink=7.stc-80.flc-50.beat.red'
       ]}
     />
+
+    <PeopleWhoShare>
+      <p className="bold mar-b-4">
+        This is a work in progress and liable to change at any time!
+      </p>
+    </PeopleWhoShare>
   </div>
 
 const getTime = () => {
