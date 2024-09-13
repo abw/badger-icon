@@ -1,0 +1,81 @@
+import Object       from './_examples/Object.jsx'
+import ObjectSrc    from './_examples/Object.jsx?raw'
+import Path         from './_examples/Path.jsx'
+import PathSrc      from './_examples/Path.jsx?raw'
+import Array        from './_examples/Array.jsx'
+import ArraySrc     from './_examples/Array.jsx?raw'
+import ObjArray     from './_examples/ObjectArray.jsx'
+import ObjArraySrc  from './_examples/ObjectArray.jsx?raw'
+import Badger       from './_examples/Badger.jsx'
+import BadgerSrc    from './_examples/Badger.jsx?raw'
+import String       from './_examples/String.jsx'
+import StringSrc    from './_examples/String.jsx?raw'
+import { Example }  from '@abw/badger-website'
+
+# Primitives
+
+Simple icons are usually defined using a `path` element, but any of the
+primitive SVG shape elements can be used.
+
+## SVG Markup
+
+An icon can define an `svg` property which contains the raw SVG markup.  This
+is typically the best choice for a complex icon that doesn't warrant being
+broken down into simpler components.
+
+<Example
+  Component={String}
+  code={StringSrc}
+/>
+
+## Element Name
+
+An icon can be an object with the `element` property indicating the primitive
+type. For example, here's an icon defined using the `circle` element.
+
+<Example
+  Component={Object}
+  code={ObjectSrc}
+  expand
+/>
+
+## Primitive Name
+
+The `path`, `polygon` and `polyline` elements have a short form.  They
+typically only have a single property (`d` for `path` and `points` for
+`polygon` and `polyline`).
+
+<Example
+  Component={Path}
+  code={PathSrc}
+  expand
+/>
+
+## Array
+
+The icon can be an array of multiple objects of different elements.
+
+<Example
+  Component={Array}
+  code={ArraySrc}
+  expand
+/>
+
+Each element in the array can define its own `style`, `class` or other
+attributes supported by the element.
+
+<Example
+  Component={Badger}
+  code={BadgerSrc}
+  expand
+/>
+
+## Object With Array
+
+An array of elements can also be defined as an `array` property of an object.
+
+<Example
+  Component={ObjArray}
+  code={ObjArraySrc}
+  expand
+/>

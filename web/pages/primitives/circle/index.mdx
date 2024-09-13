@@ -1,0 +1,47 @@
+import Component      from './_examples/Component.jsx'
+import Source         from './_examples/Component.jsx?raw'
+import Short          from './_examples/Short.jsx'
+import ShortSrc       from './_examples/Short.jsx?raw'
+import String         from './_examples/String.jsx'
+import StringSrc      from './_examples/String.jsx?raw'
+import MDNElementLink from '@/site/MDNElementLink.jsx'
+import { Example }    from '@abw/badger-website'
+
+# Primitives
+
+## `circle`
+
+The `circle` element can be used to draw circles.
+
+The explicit form is to define the icon as an object with the `element`
+property set to `circle`. Additional properties should be included for `cx`,
+`cy` and `r`. Any other properties can be included as attributes for the
+generated SVG `circle` element.
+
+<MDNElementLink element="circle"/>
+
+<Example
+  Component={Component}
+  code={Source}
+  expand
+/>
+
+The short form of this is an object with a `circle` property which is a string
+containing the parameters for `cx`, `cy` and `r`.
+
+<Example
+  Component={Short}
+  code={ShortSrc}
+  expand
+  undent={2}
+/>
+
+The even shorter form is to define the icon as a single string with the
+`circle` prefix, a colon, and then the parameters for `cx`, `cy` and `r`.
+
+<Example
+  Component={String}
+  code={StringSrc}
+  expand
+  undent={2}
+/>

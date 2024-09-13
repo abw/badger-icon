@@ -1,0 +1,48 @@
+import Component      from './_examples/Component.jsx'
+import Source         from './_examples/Component.jsx?raw'
+import Short          from './_examples/Short.jsx'
+import ShortSrc       from './_examples/Short.jsx?raw'
+import String         from './_examples/String.jsx'
+import StringSrc      from './_examples/String.jsx?raw'
+import MDNElementLink from '@/site/MDNElementLink.jsx'
+import { Example }    from '@abw/badger-website'
+
+# Primitives
+
+## `polygon`
+
+The `polygon` element defines a closed shape consisting of a set of connected
+straight line segments. The last point is connected to the first point.
+
+The explicit form is to define the icon as an object with the `element`
+property set to `polygon` and an additional property for the `points`. Any
+other properties can be included as attributes for the generated SVG
+`polygon` element.
+
+<MDNElementLink element="polygon"/>
+
+<Example
+  Component={Component}
+  code={Source}
+  expand
+/>
+
+The short form of this is an object with a `polygon` property which is a
+string containing the `points`.
+
+<Example
+  Component={Short}
+  code={ShortSrc}
+  expand
+  undent={2}
+/>
+
+The even shorter form is to define the icon as a string with the `polygon`
+prefix, a colon, and then the `points`.
+
+<Example
+  Component={String}
+  code={StringSrc}
+  expand
+  undent={2}
+/>
