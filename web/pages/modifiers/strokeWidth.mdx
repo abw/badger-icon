@@ -1,0 +1,37 @@
+import Icons from '@/examples/Icons.jsx'
+
+# Modifiers
+
+## Stroke Width
+
+The `strokeWidth=NN` modifier can be used to set the stroke width to any
+arbitrary amount.
+
+If you dont't specify a unit for the value then it is assumed to be in 16ths
+of the icon size.  For a 1em (16px) icon, this corresponds to pixel units.
+This is usually the best approach as it doesn't depend on you knowing the view
+box size of the original source icon SVG.
+
+<Icons names="arrow-strokeWidth=1 arrow-strokeWidth=2 arrow-strokeWidth=3"/>
+
+## Pixels and Points
+
+You can also specify the stroke width using `px` or `pt` units, although these
+will depend on the size of the view box for the original SVG source icon.  For
+example, if the icon was specified with a view box sized 24px by 24px then a
+stroke width of 1px will be 1/24th of the total size.  However if the view box
+was 64px by 64px then it will only be 1/64th.
+
+<Icons names="arrow-strokeWidth=12px arrow-strokeWidth=24px arrow-strokeWidth=48px"/>
+
+## Percentage
+
+The final option is to specify the stroke width as a percentage. According to
+the SVG specification: *"A percentage value for stroke width is always
+computed as a percentage of the normalized viewBox diagonal length"*.  For a
+square icon, a stroke width of 4.42% corresponds to 1/16th of the icon height,
+or 1px for an icon displayed at a size of 1em / 16px. This is the multiplying
+factor used when you specify a stroke width without any units (e.g.
+`strokeWidth=1` is the same as `strokeWidth=4.42%`).
+
+<Icons names="arrow-strokeWidth=4.42% arrow-strokeWidth=8.84% arrow-strokeWidth=13.26%"/>

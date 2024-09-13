@@ -14,3 +14,8 @@ export const SetDark = ({ text='dark' }) => {
     <span className="hover" onClick={setDark}>{text}</span>
   )
 }
+
+export const LightAndDarkToggle = () =>
+  <>
+    <SetLight/> and <SetDark/>
+  </>

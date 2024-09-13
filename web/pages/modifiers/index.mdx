@@ -1,0 +1,53 @@
+import Icons from '@/examples/Icons.jsx'
+import { Link } from '@abw/badger-website'
+
+# Modifiers
+
+Modifiers provide an easy way to alter the basic style of an icon or transform
+it to change the orientation, size or position.
+
+Multiple modifiers can be added to an icon
+<Link to="/icon/name" text="name"/>.  Each should be separated by a hyphen.
+Modifiers can also be specified using the <Link to="/icon/type" text="type"/>
+property.
+
+<Icons
+  names="arrow arrow-thin arrow-thick arrow-right arrow-down arrow-left-thick"
+/>
+
+## Parameters
+
+Some modifiers are simple words (e.g. `flipy`) and others can take parameters.
+These can be specified using `=` or `:` (e.g. `rotate=45` or `rotate:45`).
+Parameters can include periods (i.e. numerical values with a decimal point)
+and negative values.  As long as the minus sign follows immediately after `=`
+or `:` then it is interpreted as part of the value rather than a modifier
+separator.
+
+The `left`, `right`, `up` and `down` modifiers can be used without a parameter
+to change the orientation of the icon, or with a parameter to move it within
+the view box.  Or you can use both in the same icon name to both rotate the
+icon and move it.
+
+<Icons
+  names="arrow-rotate=45 arrow-opacity=0.4 arrow-shrink=6 arrow-shrink=6-down=4 arrow-rotate=-45"
+/>
+<Icons
+  names="arrow-right.border arrow-right-right=2.border arrow-right-right=4.border"
+/>
+
+## Case Sensitivity
+
+Icon names are case sensitive and by convention are usually lower kebab case
+(e.g. `foo-bar` rather than `foo_bar` snake case or `fooBar` camel case).
+But if you're defining your own icon library then you can name then any way
+you like, as long as you reference them using the same case.
+
+In contrast, modifier names are NOT case sensitive.  They are all defined in
+lower case but you can reference them in upper or mixed case and they will be
+converted to lower case for matching.  For example, `-flipy`, `-flipY` and
+`-FlipY` are all treated the same as `-flipy`.
+
+<Icons
+  names="arrow-flipy arrow-flipY arrow-FlipY"
+/>

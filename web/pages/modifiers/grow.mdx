@@ -1,0 +1,15 @@
+import Icons from '@/examples/Icons.jsx'
+
+# Modifiers
+
+## Grow
+
+The `grow=N` modifier can be used to increase the size of the icon content.
+Each number corresponds to 1/16th of the icon size, e.g `grow=8` will increase
+the size by 50%.
+
+Note that this scales the icon content inside the view box, but does not
+change the display size of the icon.  However, content may overflow and be
+visible outside the normal bounds of the icon.
+
+<Icons names="square square-grow=2 square-grow=4 square-grow=6 square-grow=8 arrow-grow=8.border"/>

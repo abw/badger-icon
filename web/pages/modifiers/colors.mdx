@@ -1,0 +1,42 @@
+import React from 'react'
+import Icons from '@/examples/Icons.jsx'
+import { Link, useSite } from '@abw/badger-website'
+import { LightAndDarkToggle } from '@/ui/ThemeToggle.jsx'
+import { BadgerCSSLink } from '@/site/Links.jsx'
+
+# Modifiers
+
+## Stroke and Fill Colors
+
+The `stroke=COLOR` modifier can be used to set the stroke to any color.
+You can use any valid SVG color, including CSS color names, hex colors,
+RGB colors and HSL colors, as shown in these examples.
+
+<Icons names="square-stroke=orangered square-stroke=#ff4500 square-stroke=rgb(255,69,0) square-stroke=hsl(16,100%,50%)"/>
+
+The `fill=COLOR` modifier can be used to set the fill to any color.
+
+<Icons names="square-fill=orangered square-fill=#ff4500 square-fill=rgb(255,69,0) square-fill=hsl(16,100%,50%)"/>
+
+Note that the default stroke color for outline icons (like the `square` icon
+in the examples above) is `currentColor`. This is the current color styled via
+CSS and on this site, the color is different in <LightAndDarkToggle/> modes.
+
+If this isn't what you want then you can set it to another color using the
+`stroke=COLOR` modifier (including `none` as a valid SVG color), set the
+stroke width to 0 using the `strokewidth=0` modifier, or disable the default
+stroke color using the `nostroke` modifier.
+
+<Icons names="square-fill=orangered-stroke=darkred square-fill=orangered-stroke=none square-fill=orangered-strokewidth=0 square-fill=orangered-nostroke"/>
+
+You can also use CSS classes to set the fill and stroke colors. In these
+examples we use the CSS classes provided by <BadgerCSSLink/> to select a color
+range (e.g. `orange`) and color stops for the stroke (`stc-NN`) and fill
+(`flc-NN`).
+
+You can also specify different colors for dark mode (`std-NN`
+and `fld-NN` respectively).  Toggle between <LightAndDarkToggle/> modes
+to see the effect.  The first icon below uses the same colors in both
+modes, whereas the second uses different colors.
+
+<Icons names="square.orange.stc-40.flc-60 square.orange.stc-70.flc-80.std-30.fld-20"/>
