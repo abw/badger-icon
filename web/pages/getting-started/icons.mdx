@@ -1,0 +1,16 @@
+import Icons from '@/examples/Icons.jsx'
+import Library from '@/lib/Library.js'
+
+# Default Icons
+
+This module provides a flexible mechanism for rendering icons but it isn't
+really intended to be a fully-fledged icon library. Some basic icons are
+included as a starting point. In most cases you'll want to define your own
+icon library including only the icons that you want to use in a project.
+
+Note that there's only one of each basic icon.  There isn't an explicit
+`arrow-right` icon defined, for example, because specifying `arrow-right`
+as an icon name will use the `arrow` icon and apply the `right` modifier to
+rotate it to point to the right.
+
+<Icons names={Object.keys(Library.icons)}/>

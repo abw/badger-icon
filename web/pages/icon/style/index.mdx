@@ -1,0 +1,35 @@
+import StyleObj     from './_examples/StyleObj.jsx'
+import StyleObjSrc  from './_examples/StyleObj.jsx?raw'
+import StyleStr     from './_examples/StyleStr.jsx'
+import StyleStrSrc  from './_examples/StyleStr.jsx?raw'
+import { Example }  from '@abw/badger-website'
+
+# Icon
+
+## `style`
+
+The `style` property can be used to apply custom styling to the icon.
+
+## Style String
+
+The `style` can be an SVG property string. Properties can be written in
+`camelCase` or `kebab-case`.
+
+<Example
+  Component={StyleStr}
+  code={StyleStrSrc}
+  undent={4}
+  expand
+/>
+
+## Style Object
+
+The `style` can also be an object.  Properties can be written in `camelCase`
+or `kebab-case`.
+
+<Example
+  Component={StyleObj}
+  code={StyleObjSrc}
+  undent={4}
+  expand
+/>

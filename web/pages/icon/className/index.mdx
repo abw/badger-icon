@@ -1,0 +1,30 @@
+import Component  from './_examples/ClassName.jsx'
+import Source     from './_examples/ClassName.jsx?raw'
+import Name       from './_examples/Name.jsx'
+import NameSrc    from './_examples/Name.jsx?raw'
+import { Example, Link } from '@abw/badger-website'
+
+# Icon
+
+## `className`
+
+The `className` property can be used to add a CSS class to the icon.  In this
+example, we use the `x3` class which sets the font size to 3em. The `icon`
+class is added automatically.
+
+<Example
+  Component={Component}
+  code={Source}
+  undent={4}
+  expand
+/>
+
+As a shortcut CSS classes can also be added to the end of the icon
+<Link to="/icon/name" text="name"/>, separated by periods.
+
+<Example
+  Component={Name}
+  code={NameSrc}
+  undent={4}
+  expand
+/>

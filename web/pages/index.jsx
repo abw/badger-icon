@@ -6,30 +6,17 @@ import IconTiles  from '@/examples/Icons.jsx'
 import Badger     from '@/svg/badger-icon.svg?react'
 import { now }    from '@abw/badger-timestamp'
 import { Icon }   from '@/lib/index.js'
-import { Source, Link, PeopleWhoShare } from '@abw/badger-website'
+import { Hero, Source, Link, PeopleWhoShare } from '@abw/badger-website'
 
 const Home = () =>
   <div className="flow">
-    <div className="grid-2 gap-12 start stack-laptop">
-      <div>
-        <Badger className="bi-logo XXXmar-t-4"/>
-      </div>
-      <div>
-        <h1 className="mar-t-4">
-          React SVG Icons
-        </h1>
-        <h2 className="mar-t-none small mar-b-2">
-          Powered by Badgers
-        </h2>
-        <p className="larger">
-          A React component for rendering SVG icons
-        </p>
-        <p className="large mar-t-2">
-          With an emphasis on flexibility, composability and minimal icon data size
-        </p>
-        {/* <h2 className="medium font-mono mar-t-8">NPM: @abw/badger-icon</h2> */}
-      </div>
-    </div>
+    <Hero
+      logo={<Badger className="bi-logo"/>}
+      title="React SVG Icons"
+      tagline="Built by Badgers"
+      overview="A React component for rendering SVG icons"
+      underview="With an emphasis on flexibility, composability and minimal icon data size"
+    />
     <p className="large">
       Badger Icon is a small, lightweight React component for rendering SVG
       icons.  It comes with a small set of basic icons but it&apos;s not

@@ -1,0 +1,154 @@
+import React      from 'react'
+import Name       from './_examples/Name.jsx'
+import NameSrc    from './_examples/Name.jsx?raw'
+import Names      from './_examples/Names.jsx'
+import NamesSrc   from './_examples/Names.jsx?raw'
+import Mods       from './_examples/Mods.jsx'
+import ModsSrc    from './_examples/Mods.jsx?raw'
+import Classes    from './_examples/Classes.jsx'
+import ClassesSrc from './_examples/Classes.jsx?raw'
+import { Example, Link } from '@abw/badger-website'
+
+# Icon
+
+## `name`
+
+The `name` property can be used to select an icon from the default icon
+library.
+
+<Example
+  Component={Name}
+  code={NameSrc}
+  undent={2}
+/>
+
+## Modifiers
+
+You can add <Link to="/modifiers">modifiers</Link> to the end of an icon name
+to change the style, size, orientation or position of an icon.  Each should be
+separated by a hyphen.
+
+For example, the `right` modifier rotates an icon through 90&deg; so that it's
+pointing to the right, the `thicker` modifier sets a thicker stroke width, and
+so on.
+
+<Example
+  Component={Mods}
+  code={ModsSrc}
+  undent={4}
+  expand
+/>
+
+## CSS Classes
+
+You can add CSS classes to the end of an icon name to have them added to the
+icon.  Each should be separated by a period. Classes should be added after any
+modifiers.
+
+Classes can contain hyphens (e.g. `shadow-2`) and modifier parameters can
+contain periods (e.g. `opacity=0.5`). The first period in an icon name is
+*usually* treated as the start of a list of classes *unless* it appears
+immediately before a number.  Thus, the period in `0.5` is treated as part of
+the number and does not indicate the start of the classes section.  Hyphens
+are used to separate modifiers *before* the first period marking the start of
+the classes section.  After that, periods are used to separate classes and
+hyphens can be safely included in class names.
+
+<Example
+  Component={Classes}
+  code={ClassesSrc}
+  undent={4}
+  expand
+/>
+
+## Icon Composition
+
+The `name` property can contain a number of different icon names, including
+modifiers and/or CSS classes.  Each should be separated by one or more
+whitespace characters.
+
+The icons will be composed into a single stacked icon.
+
+<Example
+  Component={Names}
+  code={NamesSrc}
+  undent={4}
+  expand
+/>
+
+## Name Tokenisation Example
+
+Here's an example to help clarify how a complex name is tokenised.
+
+<div>
+  <div className="smaller">Name</div>
+  <div className="flex">
+    <div className="large font-mono border pad-v-2 pad-h-4 surface-5 shadow-2">
+      <span className="red fgc-50">arrow</span>-<span className="orange fgc-50">rotate=-45-opacity=0.4</span>.<span className="yellow fgc-50">x2.shadow-2</span><br/>
+    </div>
+  </div>
+</div>
+
+<div className="flex start gap-4 stack-laptop mar-t-4">
+  <div>
+    <div className="smaller red fgc-50 fgd-60">Icon</div>
+    <div className="large font-mono border pad-v-2 pad-h-4 surface-5 red shadow-2 mar-b-4">
+      arrow
+    </div>
+  </div>
+  <div className="mar-b-4">
+    <div className="smaller orange fgc-50 fgd-60">Modifiers</div>
+    <div className="large font-mono border pad-v-2 pad-h-4 surface-5 orange shadow-2 mar-b-4">
+      rotate=-45-opacity=0.4
+    </div>
+    <div className="flex start gap-4 stack-tablet">
+      <div className="large font-mono border pad-v-2 pad-h-4 surface-3 orange shadow-2 mar-b-4">
+        rotate=-45
+      </div>
+      <div className="large font-mono border pad-v-2 pad-h-4 surface-3 orange shadow-2 mar-b-4">
+        opacity=0.4
+      </div>
+    </div>
+  </div>
+  <div>
+    <div className="smaller yellow fgc-50 fgd-60">Classes</div>
+    <div>
+      <div className="large font-mono border pad-v-2 pad-h-4 surface-5 yellow shadow-2 mar-b-4">
+        x2.shadow-2
+      </div>
+    </div>
+    <div className="flex gap-4 stack-tablet">
+      <div className="large font-mono border pad-v-2 pad-h-4 surface-3 yellow shadow-2 mar-b-4">
+        x2
+      </div>
+      <div className="large font-mono border pad-v-2 pad-h-4 surface-3 yellow shadow-2 mar-b-4">
+        shadow-2
+      </div>
+    </div>
+  </div>
+</div>
+
+Working from right to left, the CSS classes start at the first period
+that isn't immediately before a number.  That rules out the period
+in the value of `0.4` for `opacity`.
+
+So the CSS classes start just after that, with `x2` being the first
+CSS class.  The CSS classes are then split on periods, giving us
+`x2` and `shadow-2`.
+
+Everything before that point is then split on hyphens, excluding
+any that come immediately before a number.  So the hyphen in
+the `-45` value for `rotate` is treated as a
+minus sign rather than a delimiter.  The result is that this part is
+split into three tokens: `arrow`, `rotate=-45`
+and `opacity=0.4`.
+
+The icon name is the longest leading subset of those components that
+matches a name in the icon library.  In this case it's just
+`arrow`, but you can have an icon name with hyphens in it,
+e.g. `arrow-alt`, and the algorithm will use that for the
+name.
+
+Any tokens remaining after the icon name has been resolved
+are assumed to be modifiers.  In this example, that's
+`rotate=-45` and `opacity=0.4`.

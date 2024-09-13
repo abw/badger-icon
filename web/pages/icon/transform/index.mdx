@@ -1,0 +1,37 @@
+import TransObj     from './_examples/TransObj.jsx'
+import TransObjSrc  from './_examples/TransObj.jsx?raw'
+import TransStr     from './_examples/TransStr.jsx'
+import TransStrSrc  from './_examples/TransStr.jsx?raw'
+import { Example, Link }  from '@abw/badger-website'
+
+# Icon
+
+## `transform`
+
+The `transform` property can be used to apply a custom transform to the icon.
+These are based on the <Link
+  href="https://fontawesome.com/docs/web/style/power-transform"
+  text="Font Awesome transforms"
+  targetBlank/>
+
+## Transform String
+
+The `transform` can be an SVG property string.
+
+<Example
+  Component={TransStr}
+  code={TransStrSrc}
+  undent={4}
+  expand
+/>
+
+## Transform Object
+
+The `transform` can also be an object.
+
+<Example
+  Component={TransObj}
+  code={TransObjSrc}
+  undent={4}
+  expand
+/>

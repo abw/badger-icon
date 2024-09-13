@@ -2,6 +2,8 @@ import React from 'react'
 import { WithIcons } from '@abw/badger-react-ui'
 import { NavLink } from 'react-router-dom'
 
+// Not used
+
 const Link = ({
   to,
   className='',
