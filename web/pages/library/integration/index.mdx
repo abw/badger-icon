@@ -1,0 +1,77 @@
+import IconIcons    from './_examples/IconIcons.jsx'
+import IconIconsSrc from './_examples/IconIcons.jsx?raw'
+import Custom       from './_examples/CustomIcon.jsx'
+import CustomSrc    from './_examples/CustomIcon.jsx?raw'
+import Theme        from './_examples/Theme.jsx'
+import ThemeSrc     from './_examples/Theme.jsx?raw'
+import { Example, Link } from '@abw/badger-website'
+import { ReactOneLouderLink, ViteLink, NextLink } from '@/site/Links.jsx'
+
+# Icon Library
+
+## Integration
+
+If you've create a custom icon library then you need to know how to integrate
+it so that the <Link to="/icon" text="Icon"/> component can access the icons.
+
+## The `library` Property
+
+The quick and simple approach is to pass your icon library data to the
+component via the `library` property.
+
+<Example
+  Component={IconIcons}
+  code={IconIconsSrc}
+  expand
+/>
+
+## A Custom Component
+
+It can get a bit tedious having to add the `library` property every time you
+use the `Icon` component.  Another approach is to define your own icon
+component that is a wrapper around it and injects the `library` property for
+you.
+
+You can call it anything you like.  In this example, we create a new `Icon`
+component which is a wrapper around the original `Icon`, imported as
+`BadgerIcon`.  Just remember to import *your* `Icon` component when you use it
+instead of the default one from `@abw/badger-icon`.
+
+<Example
+  Component={Custom}
+  code={CustomSrc}
+  expand
+/>
+
+## Theme Provider
+
+Another approach is to use the theme provider to automatically inject the
+`library` property into the `Icon` component.  This uses <ReactOneLouderLink/>
+as the theming engine.
+
+Import the `Theme` component and then enclose your app (or part of it) in a
+`Theme.Provider` element.  This would usually be done somewhere near the "top"
+of your application. For example, if you're using <ViteLink/> then the
+`main.jsx` (or `main.tsx`) would be the usual place.  For a <NextLink/> app,
+you could add it to the
+<Link href="https://nextjs.org/docs/pages/building-your-application/routing/custom-app" targetBlank text="_app.js"/>.
+
+The properties added to the `Theme.Provider` should include an `Icon` object
+including any properties that you want to automatically inject into the `Icon`
+component.  In this case, we want to set the `library` to reference our custom
+library.
+
+That's all you need to do.  Now you can use the standard `Icon` component
+anywhere in your app and it will automatically receive the `library` property
+for your custom icon library.
+
+You can also use the theme provider to inject properties into any other
+components in your application.  You just need to make a one-line change to
+the exported value for the component to wrap it with the `Themed` higher order
+component.  See the <ReactOneLouderLink/> documentation for further details.
+
+<Example
+  Component={Theme}
+  code={ThemeSrc}
+  expand
+/>

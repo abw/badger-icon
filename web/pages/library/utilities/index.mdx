@@ -1,0 +1,48 @@
+import AddIcon      from './_examples/AddIcon.jsx'
+import AddIconSrc   from './_examples/AddIcon.jsx?raw'
+import AddIcons     from './_examples/AddIcons.jsx'
+import AddIconsSrc  from './_examples/AddIcons.jsx?raw'
+import { Example, Link }    from '@abw/badger-website'
+
+# Icon Library
+
+## Utilities
+
+Adding icons to the default library is easy.  In these examples we'll keep it
+simple and assume that you've got an icon that is defined by a single `path`
+element.  We'll also assume that it's a stroked path rather than a filled
+path.
+
+If you're not sure what that means, or if you've got a more complex icon that
+you want to include then the
+<Link to="/library/data-format" text="data format"/> page describes the
+various different ways you can specify icon data.
+
+## `addIcon()`
+
+The `addIcon()` function can be used to add a single icon to the default
+library.  The first argument is the icon name, the second is the icon
+definition.  For simple icon paths like the one we're using in this example,
+you can specify just the path data (the `d` attribute from the `path`
+element).
+
+You can then use the icon by specifying the name, either by itself or with any
+additional modifiers or CSS classes.
+
+<Example
+  Component={AddIcon}
+  code={AddIconSrc}
+  expand
+/>
+
+## `addIcons()`
+
+The `addIcons()` function can be used to add multiple icons to the default
+library.  The only argument is an object in which the keys are the icon names
+and the corresponding values are the icon definitions.
+
+<Example
+  Component={AddIcons}
+  code={AddIconsSrc}
+  expand
+/>

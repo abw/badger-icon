@@ -1,0 +1,115 @@
+import Minimal      from './_examples/minimal.json?raw'
+import WidthHeight  from './_examples/width-height.json?raw'
+import Type         from './_examples/type.json?raw'
+import TypePrefix   from './_examples/type-prefix.json?raw'
+import MultiType    from './_examples/multi-type.json?raw'
+import Style        from './_examples/style.json?raw'
+import { Source, Link } from '@abw/badger-website'
+
+# Icon Library
+
+## Data Format
+
+The icon data format is designed to keep the library as small as possible,
+wherever possible.
+
+The `icons` are defined as a Javascript object where the keys are the icon
+names and the corresponding values are the icon data for that icon.
+
+## Minimal Example
+
+For simple icons that are composed from a single filled path you can define an
+icon to be a string containing the path data.
+
+<Source
+  code={Minimal}
+  language="json"
+  className="mar-b-8"
+  expand
+/>
+
+## Width and Height
+
+The default size for the SVG view box for the icon is 512 units wide and 512
+high.
+
+512 is 16 x 16, so when displayed at the default size of 16px, each unit in
+the source SVG coordinate system is 1/16th of a display pixel.  Or to put it
+another way, an icon displayed at a font size of 16rem will be 512px wide and
+512px high and each unit in the SVG source will equate to 1 display pixel.
+
+One benefit of this is that we can round coordinates to the nearest integer
+without any noticeable loss of precision.  An icon displayed at a size of
+16rem (512px x 512px) will be pixel perfect. An icon displayed at 32rem
+(1024px x 1024px) will have coordinates that are no more than 1 pixel out.
+
+Of course, you don't have to round your coordinates to the nearest integer,
+but doing can significantly reduce the size of the path data.  For example,
+a coordinate of `123` is 3 bytes, compared to `12.34` which is 5, and they
+have a similar precision.
+
+If your icon uses a different width and height then the icon can be defined
+as an object specifying the `width` and `height`.  If either is omitted then
+we assume it is 512.  The path data can be set using the `path` property.
+
+<Source
+  code={WidthHeight}
+  language="json"
+  className="mar-b-8"
+  expand
+/>
+
+## Type
+
+The `type` property can be set to define the basic icon type.  This defaults
+to `fill` which sets the `fill` color to `currentColor`.
+
+You can also set it to `line` for stroked icons.  This will set the `fill` to
+`none` and the `stroke` to `currentColor`.
+
+<Source
+  code={Type}
+  language="json"
+  className="mar-b-8"
+  expand
+/>
+
+As a shortcut you can prefix the path data with the type, separated by a
+colon.
+
+<Source
+  code={TypePrefix}
+  language="json"
+  className="mar-b-8"
+  expand
+/>
+
+## Modifiers
+
+The `type` property can include any number of modifiers to set the style
+and/or transforms.  It is equivalent to setting the
+<Link to="/icon/type" text="type"/> property when rendering an icon.
+
+You can also define multiple modifiers in the prefix to a simple path.
+
+<Source
+  code={MultiType}
+  language="json"
+  className="mar-b-8"
+  expand
+/>
+
+## Style
+
+The `style` property can be used to define styling for the icon.  It is
+equivalent to setting the <Link to="/icon/style" text="style"/> property when
+rendering an icon.
+
+It can be provided as a string or object.
+
+<Source
+  code={Style}
+  language="json"
+  className="mar-b-8"
+  expand
+/>
