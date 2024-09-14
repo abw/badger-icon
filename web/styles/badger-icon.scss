@@ -1,28 +1,9 @@
 @charset "utf-8";
-// @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap');
 
 $brand-hue:   26;
 $brand-color: 'orange';
-/*
-$brand-colors: (
-  brand: $brand-color,
-  // link: $link-color
-) !default;
-*/
 
 @import "@abw/badger-website/styles/badger-website.scss";
-
-
-// Load the Badger CSS styles
-// See https://abw.github.io/badger-css/
-// @import '@abw/badger-css/styles/badger.scss';
-
-// Load the night-and-day switcher styles
-// See https://abw.github.io/react-night-and-day/
-// @import '@abw/react-night-and-day/styles/night-and-day.css';
-
-// Load the additional badger-icon styles
-// @import '../../styles/badger-icon.scss';
 
 // Load the site-specific styles
 // @import "config/all.scss";
@@ -76,26 +57,6 @@ svg {
 .hover:hover {
   cursor: pointer;
 }
-
-// An attempt to add line numbers... but you end up with gaps :-(
-/*
-code {
-  counter-reset: step;
-  counter-increment: step 0;
+.hero .underview {
+  margin-top: 1rem;
 }
-
-code .line::before {
-  content: counter(step);
-  counter-increment: step;
-  width: 1rem;
-  margin-right: 1.5rem;
-  display: inline-block;
-  text-align: right;
-  color: rgba(115,138,148,.4)
-}
-code .line:last-child:empty::before {
-  content: ' ';
-  border: 1px solid red;
-  // counter-increment: none;
-}
-*/
