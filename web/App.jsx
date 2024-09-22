@@ -27,6 +27,7 @@ const App = () =>
       snippets={snippets}
       prevNextArrows
       sidebarToc={false}
+      linkUp={false}
       debugPages
     />
   </MDXProvider>
