@@ -23,6 +23,7 @@ const App = () =>
     pages={pages}
     sidebar={sidebar}
     snippets={snippets}
+    prevNextArrows
   />
 
 export default App
