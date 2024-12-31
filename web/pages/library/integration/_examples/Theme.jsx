@@ -1,6 +1,6 @@
 import React from 'react'
 import { MyIconLibrary } from '@/web/lib/index.js'
-import { Icon, Theme } from '@/lib/index.js'
+import { Icon, Theme } from '@/lib/index'
 
 {/* START */}
 // PRETEND: import { Icon, Theme } from '@abw/badger-icon'

@@ -22,10 +22,6 @@ export const Icon = ({
     return <SVGIcon {...prepareIconProps(props) as SVGIconProps} />
   }
   try {
-    // const p1 = props
-    // const p2 = resolveIconData(name, library, props)
-    // console.log(`props: `, { ...p1, ...p2 })
-
     const names = splitSpace(name)
     return names.length === 1
       ? <SVGIcon

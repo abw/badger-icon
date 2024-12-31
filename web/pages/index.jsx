@@ -5,7 +5,7 @@ import CheckData  from './_examples/check-data?raw'
 import IconTiles  from '@/examples/Icons.jsx'
 import Badger     from '@/svg/badger-icon.svg?react'
 import { now }    from '@abw/badger-timestamp'
-import { Icon }   from '@/lib/index.js'
+import { Icon }   from '@/lib/index'
 import { Hero, Source, Link, PeopleWhoShare } from '@abw/badger-website'
 
 const Home = () =>

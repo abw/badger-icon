@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
-import { Icon } from '@/lib/index.js'
+import { Icon } from '@/lib/index'
 
 const Testing = () => {
   const [icon, setIcon] = useState('bars')

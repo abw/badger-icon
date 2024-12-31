@@ -8,8 +8,8 @@ import define           from  './vite.defs.js'
 import fs               from 'node:fs'
 
 const https = {
-  key:  fs.readFileSync('etc/certs/badger-icon.local.wardley.org.key'),
-  cert: fs.readFileSync('etc/certs/badger-icon.local.wardley.org.crt'),
+  key:  fs.readFileSync('etc/certs/badger-icon.local.wardley.org-key.pem'),
+  cert: fs.readFileSync('etc/certs/badger-icon.local.wardley.org.pem'),
 }
 
 export default defineConfig({

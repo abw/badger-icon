@@ -1,5 +1,5 @@
 import React from 'react'
-import { Icon, splitSpace } from '@/lib/index.js'
+import { Icon, splitSpace } from '@/lib/index'
 
 export const Icons = ({
   names,
