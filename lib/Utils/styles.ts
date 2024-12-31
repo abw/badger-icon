@@ -1,6 +1,7 @@
 import { fail, isString } from '@abw/badger-utils'
 import { parseAttrs } from './attrs.js'
 import { CURRENT_COLOR } from '../constants.js'
+import { StyleFunctions, StyleProps, StylePropsTable } from '../types'
 
 // NOTE: A percentage value for stroke-width is always computed as a
 // percentage of the normalized viewBox diagonal length.  The values
@@ -11,7 +12,7 @@ import { CURRENT_COLOR } from '../constants.js'
 // to 1px we can express it as 1 / 22.627 = 4.42%
 
 const baseWidth     = 4.42
-const widthMultiple = n => `${baseWidth * n}%`
+const widthMultiple = (n: number) => `${baseWidth * n}%`
 
 export const nullStyle = {
   // fill:               'currentColor',
@@ -24,7 +25,9 @@ export const nullStyle = {
   */
 }
 
-export const styles = {
+// export type StylePropFunction =
+
+export const styles: StylePropsTable = {
   outline: {
     fill:   'none',
     stroke: 'currentColor',
@@ -74,63 +77,64 @@ export const styles = {
   thickest: {
     strokeWidth: widthMultiple(3.5),
   },
+  line: { }
 }
 styles.line = styles.outline
 
-export const styleFunctions = {
+export const styleFunctions: StyleFunctions = {
   ...Object.entries(styles).reduce(
     (fns, [name, styles]) => {
-      fns[name] = style => Object.assign(style, styles)
+      fns[name] = (style: StyleProps) => Object.assign(style, styles)
       return fns
     },
-    { }
+    { } as StyleFunctions
   ),
 
-  fill: (style, color) =>
-    style.fill = color === true ? CURRENT_COLOR : color,
+  fill: (style: StyleProps, color: boolean | string) =>
+    style.fill = color === true ? CURRENT_COLOR : color as string,
 
-  stroke: (style, color) =>
-    style.stroke = color === true ? CURRENT_COLOR : color,
+  stroke: (style: StyleProps, color: boolean | string) =>
+    style.stroke = color === true ? CURRENT_COLOR : color as string,
 
-  nofill: style =>
+  nofill: (style: StyleProps) =>
     delete style.fill,
 
-  nostroke: style =>
+  nostroke: (style: StyleProps) =>
     delete style.stroke,
 
-  strokewidth: (style, width) =>
+  strokewidth: (style: StyleProps, width: string) =>
     style.strokeWidth = width.match(/^[\d.]+$/)
       ? widthMultiple(parseFloat(width))
       : width,
 
-  opacity: (style, opacity) =>
+  opacity: (style: StyleProps, opacity: string) =>
     style.opacity = opacity,
 
-  fillopacity: (style, opacity) =>
+  fillopacity: (style: StyleProps, opacity: string) =>
     style.fillOpacity = opacity,
 
-  strokeopacity: (style, opacity) =>
+  strokeopacity: (style: StyleProps, opacity: string) =>
     style.strokeOpacity = opacity,
 
-  dasharray: (style, array) =>
+  dasharray: (style: StyleProps, array: string | number[]) =>
     style.strokeDasharray = array,
 
-  drawlength: (style, length) =>
+  drawlength: (style: StyleProps, length: string) =>
     style['--draw-length'] = length,
 
-  drawtime: (style, time) =>
+  drawtime: (style: StyleProps, time: string) =>
     style['--draw-time'] = time,
 
-  filltime: (style, time) =>
+  filltime: (style: StyleProps, time: string) =>
     style['--fill-time'] = time,
 }
 
 export function styleData(
-  style,
-  target={ ...nullStyle }
+  style: StyleProps | string,
+  target: StyleProps = { ...nullStyle }
 ) {
   const attrs = isString(style)
-    ? parseAttrs(style)
+    ? parseAttrs(style as string)
     : (style || { })
 
   return Object.entries(attrs).reduce(

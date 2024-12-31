@@ -1,5 +1,5 @@
 import { test, expect } from 'vitest'
-import { splitIconName } from '@/lib/index.js'
+import { splitIconName } from '@/lib/utils/index'
 
 test(
   'splitIconName() with empty string',
@@ -63,6 +63,17 @@ test(
   ).toEqual({
     dashes: ['foo', 'strokewidth:0.5'],
     classes: [ ],
+    style: { }
+  })
+)
+
+test(
+  'splitIconName() with float and class',
+  () => expect(
+    splitIconName('foo-strokewidth:0.5.spin')
+  ).toEqual({
+    dashes: ['foo', 'strokewidth:0.5'],
+    classes: ['spin'],
     style: { }
   })
 )

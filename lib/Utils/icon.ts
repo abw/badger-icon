@@ -4,9 +4,11 @@ import { joinClasses } from './classes.js'
 import { transformData } from './transform.js'
 import { applyModifiers } from './modifiers.js'
 import {
-  DASH, DEFAULT_ICON_WIDTH, DEFAULT_ICON_HEIGHT, FILL, PATH, POLYLINE,
-  POLYGON, SVG, ARRAY, CIRCLE, ELLIPSE, LINE, RECT, SPLIT_DASH
+  DASH, DEFAULT_ICON_WIDTH, DEFAULT_ICON_HEIGHT, FILL, SPLIT_DASH
 } from '../constants.js'
+import { IconSpec } from '../types.js'
+import { iconBodyGenerators } from './generators.js'
+import { splitIconName, resolveIconName } from './resolve.js'
 
 export const iconDefaults = {
   width:  DEFAULT_ICON_WIDTH,
@@ -14,98 +16,7 @@ export const iconDefaults = {
   type:   FILL
 }
 
-export const iconBodyGenerators = {
-  svg: svg => ({
-    element: SVG,
-    svg
-  }),
-  array: items => ({
-    element: ARRAY,
-    items
-  }),
-  path: d => ({
-    element: PATH,
-    d
-  }),
-  polygon: points => ({
-    element: POLYGON,
-    points
-  }),
-  polyline: points => ({
-    element: POLYLINE,
-    points
-  }),
-  circle: points => ({
-    element: CIRCLE,
-    ...expandPoints(points, 'cx cy r')
-  }),
-  ellipse: points => ({
-    element: ELLIPSE,
-    ...expandPoints(points, 'cx cy rx ry')
-  }),
-  line: points => ({
-    element: LINE,
-    ...expandPoints(points, 'x1 y1 x2 y2')
-  }),
-  rect: points => ({
-    element: RECT,
-    ...expandPoints(points, 'x y width height rx ry')
-  }),
-}
-
-export function expandPoints(string, names) {
-  const params = isArray(names) ? [...names] : splitList(names)
-  const points = splitList(string)
-  return points.reduce(
-    (object, point) => {
-      if (params.length) {
-        const param = params.shift()
-        object[param] = point
-      }
-      return object
-    },
-    { }
-  )
-}
-
-// An icon can be specified with a uri this:
-//   name1-name2-style1-style2.class1.class2?styleOpt1=val1&styleOpt2=val2
-//
-// We want to determine the longest dashed prefix that matches an icon in
-// iconData (e.g. name1-name2), the additional styling options (style1,
-// style2), the CSS classes to add (class1, class2) and additional styling
-// parameters ({ styleOpt1: val1, styleOpt2: val2 })
-
-
-// First split it into dashes (name1, name2, style1, style2), classes
-// (class1, class2) and style options ({ styleOpt1: val1, styleOpt2: val2 })
-export const splitIconName = uri => {
-  const [base, query=''] = uri.split('?')
-  const [dash, ...classes] = base.split(/\.(?!\d)/)
-  const dashes = dash.split(SPLIT_DASH).filter( d => d.length )
-  const style  = parseAttrs(query)
-  return {
-    dashes, classes, style
-  }
-}
-
-// Then we look for the long subsection of dashes that correspond to a name
-// in iconData, save it as the name (name1-name2) and leave the remaining
-// items in dashes (style1, style2)
-export const resolveIconName = (uri, icons) => {
-  const split = splitIconName(uri)
-  const { dashes } = split
-
-  for (let n = dashes.length; n > 0; n--) {
-    const slice = dashes.slice(0, n).join(DASH)
-    if (icons[slice]) {
-      split.name = dashes.splice(0, n).join(DASH)
-      break
-    }
-  }
-  return split
-}
-
+/*
 // Wrapping around that, we extract the icon data and sanitise it.
 export const resolveIconData = (uri, library, props={}) => {
   const { icons } = library
@@ -161,6 +72,8 @@ export const resolveIconData = (uri, library, props={}) => {
 
   return icon
 }
+
+*/
 
 export function expandPath(path) {
   const match = path.match(/^(.*?):(.*)/)
@@ -320,7 +233,7 @@ export const prepareIconProps = ({ size, ...icon }) => {
   applyModifiers(
     icon,
     icon.type
-      ? icon.type.split(SPLIT_DASH).filter( d => d.length )
+      ? icon.type.split(SPLIT_DASH).filter( (d: string) => d.length )
       : FILL
   )
   delete icon.type

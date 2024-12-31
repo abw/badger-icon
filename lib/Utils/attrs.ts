@@ -1,6 +1,7 @@
 import { isUndefined } from '@abw/badger-utils'
+import { PropsObject } from '../types'
 
-export function parseAttrs(string) {
+export function parseAttrs(string: string) {
   return string
     .split(/\s*[;&]\s*/)
     .filter( v => v.length > 0 )
@@ -10,6 +11,6 @@ export function parseAttrs(string) {
         attrs[name] = isUndefined(value) ? true : value
         return attrs
       },
-      { }
+      { } as PropsObject
     )
 }

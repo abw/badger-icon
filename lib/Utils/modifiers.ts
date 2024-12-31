@@ -3,14 +3,15 @@ import { styleFunctions } from './styles.js'
 import { transformFunctions, nullTransform } from './transform.js'
 import { nullStyle } from './styles.js'
 import { SPLIT_DASH } from '../constants.js'
+import { PropsObject, TransformObject } from '../types.js'
 
 export function applyModifiers(
-  icon,
-  modifiers
+  icon: PropsObject,
+  modifiers: string | string[]
 ) {
   const mods = isString(modifiers)
-    ? modifiers.split(SPLIT_DASH)
-    : modifiers
+    ? (modifiers as string).split(SPLIT_DASH)
+    : modifiers as string[]
 
   return mods.forEach(
     modifier => {
@@ -24,7 +25,10 @@ export function applyModifiers(
       }
       const transformer = transformFunctions[lcname]
         || fail(`Invalid style or transform: ${lcname}`)
-      transformer(icon.transform ||= { ...nullTransform }, value)
+      transformer(
+        (icon.transform ||= { ...nullTransform }) as TransformObject,
+        value
+      )
     },
   )
 }

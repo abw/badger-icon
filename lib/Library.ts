@@ -1,4 +1,6 @@
-export const Library = {
+import { IconData, IconLibrary, IconsData } from "./types"
+
+export const Library: IconLibrary = {
   defaults: {
     width: 512,
     height: 512,
@@ -116,11 +118,38 @@ export const Library = {
   }
 }
 
-export function addIcon(name, data, library=Library) {
+/**
+ * Add a named icon to the icon library.
+ *
+ * @example
+ * addIcon(
+ *   'vertical-line',
+ *   'line: 256,48 256,464'
+ * )
+ */
+
+export function addIcon(
+  name: string,
+  data: IconData,
+  library=Library
+): void {
   library.icons[name] = data
 }
 
-export function addIcons(icons, library=Library) {
+/**
+ * Add multiple named icons to the icon library.
+ *
+ * @example
+ * addIcons({
+ *   'vertical-line': 'line: 256,48 256,464',
+ *   'minus-size': 'M96,256L416,256',
+ * })
+ */
+
+export function addIcons(
+  icons: IconsData,
+  library=Library
+): void {
   Object.entries(icons).forEach(
     ([name, data]) => addIcon(name, data, library)
   )

@@ -25,7 +25,7 @@
     "test": "vitest --ui --coverage",
     "build": "$npm_execpath build:lib && $npm_execpath build:docs && $npm_execpath build:css",
     "build:css": "bin/build-css.sh",
-    "build:lib": "vite build",
+    "build:lib": "tsc && vite build",
     "build:docs": "vite build --config vite.docs.js",
     "preview": "vite preview --config vite.docs.js",
     "lint": "eslint 'lib/**/*.{js,jsx}' 'src/**/*.{js,jsx}'",
@@ -39,7 +39,7 @@
     "url": "https://github.com/abw/badger-icon/issues"
   },
   "dependencies": {
-    "@abw/badger-utils": "^1.0.22",
+    "@abw/badger-utils": "^1.2.0",
     "@abw/react-one-louder": "^0.0.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
@@ -69,6 +69,7 @@
     "rehype-mdx-code-props": "^3.0.1",
     "rollup-plugin-copy": "^3.5.0",
     "sass": "^1.69.5",
+    "typescript": "^5.7.2",
     "vite": "^5.4.2",
     "vite-jsconfig-paths": "^2.0.1",
     "vite-plugin-svgr": "^4.2.0",
