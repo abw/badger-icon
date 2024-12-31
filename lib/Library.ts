@@ -1,4 +1,4 @@
-import { IconData, IconLibrary, IconsData } from "./types"
+import { IconSource, IconLibrary, IconSources } from "./types"
 
 export const Library: IconLibrary = {
   defaults: {
@@ -130,7 +130,7 @@ export const Library: IconLibrary = {
 
 export function addIcon(
   name: string,
-  data: IconData,
+  data: IconSource,
   library=Library
 ): void {
   library.icons[name] = data
@@ -147,7 +147,7 @@ export function addIcon(
  */
 
 export function addIcons(
-  icons: IconsData,
+  icons: IconSources,
   library=Library
 ): void {
   Object.entries(icons).forEach(

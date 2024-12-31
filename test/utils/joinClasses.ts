@@ -1,5 +1,5 @@
 import { test, expect } from 'vitest'
-import { joinClasses } from '@/lib/index.js'
+import { joinClasses } from '@/lib/utils/index'
 
 test(
   'joinClasses() should ignore undefined values',

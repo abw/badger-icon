@@ -1,3 +1,6 @@
+import { MouseEventHandler } from "react"
+
+export type Nothing = undefined | null
 export type PropsObject = {
   [key: string]: unknown
 }
@@ -14,7 +17,7 @@ export type IconSources = {
 export type IconDefaults = {
   width:  number,
   height: number,
-  type:   string
+  type?:  string
 }
 
 export type IconLibrary = {
@@ -40,22 +43,15 @@ export type IconSpec = SplitIconName & {
 }
 
 export type IconBody = PropsObject
+export type IconStyle = StyleProps | string
 
 export type IconProps = IconDefaults & {
+  name?: string,
   body?: IconBody
-  style?: StyleProps,
+  style?: IconStyle,
   transform?: TransformObject,
+  className?: string
 }
-/*
-export type SplitIconName = {
-  name?: string
-  dashes?: string[],
-  classes?: string[],
-  style?: StyleProps,
-}
-*/
-
-
 
 export type TransformObject = {
   x: number,
@@ -97,7 +93,29 @@ export type StyleFunctions = {
   [key: string]: StyleFunction
 }
 
-export type BodyGenerator = (arg: string) => PropsObject
+export type BodyGenerator = (arg: string) => IconBody
 export type BodyGenerators = {
   [key: string] : BodyGenerator
+}
+
+export type SVGElement = (props: PropsObject) => JSX.Element
+export type SVGIconProps = {
+  onClick?: MouseEventHandler<SVGSVGElement>,
+  minx?: number,
+  miny?: number,
+  width: number,
+  height: number,
+  style: IconStyle,
+  transform: TransformObject,
+  className: string,
+  [key: string]: unknown
+}
+
+
+export type BodyProp = string | BodyObject | BodyProp[]
+export type BodyObject =  { element: string, [key: string]: unknown }
+
+export type IconsProps = {
+  names: string | string[],
+  className?: string
 }

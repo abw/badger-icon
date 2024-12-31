@@ -1,5 +1,5 @@
 import { test, expect } from 'vitest'
-import { parseAttrs } from '@/lib/index.js'
+import { parseAttrs } from '@/lib/utils/index'
 
 test(
   'parseAttrs() should handle empty string',

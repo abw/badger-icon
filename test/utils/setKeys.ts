@@ -1,5 +1,5 @@
 import { expect, test } from 'vitest'
-import { setKeys } from '@/lib/index.js'
+import { setKeys } from '@/lib/utils/index'
 
 test(
   'setKeys() should return keys that have truthy values',

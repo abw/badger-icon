@@ -1,5 +1,5 @@
 import { test, expect } from 'vitest'
-import { styleData } from '@/lib/index.js'
+import { styleData } from '@/lib/index'
 
 test(
   'styleData() should handle empty string',

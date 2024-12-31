@@ -1,11 +1,12 @@
 import { fail, isString, noValue } from '@abw/badger-utils'
 import { DASH, SPLIT_DASH } from '../constants.js'
-import { IconLibrary, IconSources, IconSpec, PropsObject, ResolvedIcon, SplitIconName } from '../types.js'
+import { IconLibrary, IconProps, IconSources, IconSpec, PropsObject, ResolvedIcon, SplitIconName, StyleProps } from '../types.js'
 import { parseAttrs } from './attrs.js'
-import { expandIconData } from './expand.js'
 import { joinClasses } from './classes.js'
 import { transformData } from './transform.js'
 import { applyModifiers } from './modifiers.js'
+import { iconDefaults } from './defaults.js'
+import { iconBody } from './body.js'
 
 /**
  * Split an icon uri into its constituent parts.
@@ -61,21 +62,24 @@ export const resolveIconName = (dashes: string[], icons: IconSources): ResolvedI
 }
 
 
-// Wrapping around that, we extract the icon data and sanitise it.
 export const resolveIconData = (
   uri: string,
   library: IconLibrary,
   props: PropsObject = { }
 ) => {
-  const { icons } = library
+  const { icons, defaults } = library
   const { dashes: nameDashes, classes, style } = splitIconName(uri)
-  // const
-  // const split = resolveIconName(uri, icons)
-  // const { name, classes, style, dashes } = split
   const [name, dashes, spec] = resolveIconName(nameDashes, icons)
     || fail(`No icon found matching any leading subset of ${nameDashes.join(DASH)}`)
 
-  const icon = expandIconData(data, library, { ...props, name })
+  const icon: IconProps = {
+    ...iconDefaults,
+    ...defaults,
+    ...props,
+    name,
+  }
+  // style
+  iconBody(icon, spec)
 
   // CSS classes can be merged into a single string
   if (classes.length || props.className) {
@@ -92,9 +96,18 @@ export const resolveIconData = (
 
   // expand any styles
   if (icon.style) {
+    console.log(`got icon style: `, icon.style);
     icon.style = isString(icon.style)
       ? parseAttrs(icon.style as string)
       : { ...icon.style as object }
+    console.log(`set icon style: `, icon.style);
+    if (style) {
+      Object.assign(icon.style, style)
+    }
+  }
+  else if (style) {
+    // apply any additional style in the icon uri
+    icon.style = style
   }
 
   // If explicit styles have been specified then they should take precedence
@@ -104,7 +117,7 @@ export const resolveIconData = (
     applyModifiers(icon, icon.type as string)
     delete icon.type
     if (saveStyle) {
-      Object.assign(icon.style, saveStyle)
+      Object.assign(icon.style as StyleProps, saveStyle)
     }
   }
 

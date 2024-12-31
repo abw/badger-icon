@@ -1,21 +1,24 @@
 import { test, expect } from 'vitest'
+import { IconLibrary } from '@/lib/types'
 import {
   resolveIconData, DEFAULT_ICON_WIDTH, DEFAULT_ICON_HEIGHT,
-  nullTransform
-} from '@/lib/index.js'
+  nullTransform,
+  iconDefaults
+} from '@/lib/index'
 
-const iconData = {
+const iconData: IconLibrary = {
+  defaults: iconDefaults,
   icons: {
     'foo-bar-baz':  'simple path',
     'foo-bar':      { path: 'nested path' },
-    'foo':          { path: 'another path', width: 524 },
-    'wiz':          { path: 'yet another path', width: 32, height: 24 },
-    'woz':          { path: 'transformed path', transform: 'rotate:45;grow=4' },
-    'waz':          { path: 'waz path', transform: { rotate: 90, shrink: 2, right: 3 } },
-    'flim':         { path: 'flim path', style: 'fill:red;stroke-width:99' },
-    'flam':         { path: 'flam path', style: { fill: 'blue', 'stroke-width': 24 } },
-    'wam':          { path: 'wam path', style: 'stroke-width:24' },
-    'bam':          { path: 'bam path', style: { 'stroke-width': 24 } },
+    'foo':          { body: 'another path', width: 524 },
+    'wiz':          { body: { path: 'yet another path' }, width: 32, height: 24 },
+    'woz':          { body: 'transformed path', transform: 'rotate:45;grow=4' },
+    'waz':          { body: 'waz path', transform: { rotate: 90, shrink: 2, right: 3 } },
+    'flim':         { body: 'flim path', style: 'fill:red;stroke-width:99' },
+    'flam':         { body: 'flam path', style: { fill: 'blue', 'stroke-width': 24 } },
+    'wam':          { body: 'wam path', style: 'stroke-width:24' },
+    'bam':          { body: 'bam path', style: { 'stroke-width': 24 } },
   }
 }
 
@@ -142,7 +145,7 @@ test(
   () => expect(
     resolveIconData('wiz', iconData)
   ).toEqual({
-    name:   'wiz',
+    name: 'wiz',
     width:  32,
     height: 24,
     body: {
@@ -174,6 +177,8 @@ test(
       x:      0,
       y:      0,
       size:   20,
+      scaleX: 1,
+      scaleY: 1,
       flipX:  false,
       flipY:  false,
       rotate: 45
@@ -202,6 +207,8 @@ test(
       size:   14,
       flipX:  false,
       flipY:  false,
+      scaleX: 1,
+      scaleY: 1,
       rotate: 90
     }
   })

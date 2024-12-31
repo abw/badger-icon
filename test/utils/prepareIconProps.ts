@@ -1,5 +1,5 @@
 import { test, expect } from 'vitest'
-import { prepareIconProps } from '@/lib/index.js'
+import { prepareIconProps } from '@/lib/index'
 
 test(
   'prepareIconProps() with size',

@@ -1,6 +1,7 @@
 export * from './attrs'
 export * from './body'
 export * from './classes'
+export * from './coerce'
 export * from './expand'
 export * from './functions'
 export * from './generators'

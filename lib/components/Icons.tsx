@@ -1,13 +1,13 @@
-import React from 'react'
-import Icon  from './Icon.jsx'
-import { splitSpace } from '../utils/functions.js'
+import Icon from './Icon'
+import { splitSpace } from '../utils/functions'
+import { IconsProps } from '../types'
 
 export const Icons = ({
   names,
   className
-}) =>
+}: IconsProps) =>
   <div className={`grid overlap ${className}`}>
-    { splitSpace(names)
+    { splitSpace(names as string)
       .map(
         name => <Icon name={name} key={name}/>
       )

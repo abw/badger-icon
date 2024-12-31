@@ -1,13 +1,13 @@
 import React from 'react'
 import { it, expect } from 'vitest'
-import { render } from '@testing-library/react'
-import { Icon, Library } from '@/lib/index.js'
+import { render, screen } from '@testing-library/react'
+import { Icon, Library } from '@/lib/index'
 
 const CustomLibrary = {
   icons: {
     foo: 'M1,1L23,23',
     bar: {
-      path: 'M1,1L31,47',
+      body: 'M1,1L31,47',
       className: 'wibble'
     },
     baz: {
@@ -87,7 +87,7 @@ it(
     const { container } = render(
       <Icon name="bar" library={CustomLibrary}/>
     )
-    // screen.debug()
+    screen.debug()
     const icon = container.querySelector('svg.icon')
     const path = icon.querySelector('path')
     expect(icon).toHaveClass('icon')
@@ -102,7 +102,7 @@ it(
     )
     expect(path).toHaveAttribute(
       'd',
-      expect.stringMatching(CustomLibrary.icons.bar.path)
+      expect.stringMatching(CustomLibrary.icons.bar.body)
     )
   }
 )

@@ -1,10 +1,16 @@
-import React from 'react'
+import { ReactNode } from 'react'
+import { TransformObject } from '../types'
 
 export default function Transform({
   width,
   height,
   transform,
   children
+}: {
+  width: number,
+  height: number,
+  transform: TransformObject,
+  children: ReactNode
 }) {
   const halfw = width / 2
   const halfh = height / 2
@@ -26,4 +32,3 @@ export default function Transform({
     </g>
   )
 }
-

@@ -1,32 +1,22 @@
 import { test, expect } from 'vitest'
-import { transformData } from '@/lib/index.js'
+import { nullTransform, transformData } from '@/lib/index'
 
 test(
   'transformData() should handle empty string',
   () => expect(
     transformData('')
-  ).toEqual({
-    x:      0,
-    y:      0,
-    size:   16,
-    flipX:  false,
-    flipY:  false,
-    rotate: 0
-  })
+  ).toEqual(
+    nullTransform
+  )
 )
 
 test(
   'transformData() should handle null',
   () => expect(
     transformData(null)
-  ).toEqual({
-    x:      0,
-    y:      0,
-    size:   16,
-    flipX:  false,
-    flipY:  false,
-    rotate: 0
-  })
+  ).toEqual(
+    nullTransform
+  )
 )
 
 test(
@@ -36,12 +26,8 @@ test(
       'flipX'
     )
   ).toEqual({
-    x:      0,
-    y:      0,
-    size:   16,
-    flipX:  true,
-    flipY:  false,
-    rotate: 0
+    ...nullTransform,
+    flipX: true,
   })
 )
 
@@ -52,12 +38,8 @@ test(
       'flipx'
     )
   ).toEqual({
-    x:      0,
-    y:      0,
-    size:   16,
-    flipX:  true,
-    flipY:  false,
-    rotate: 0
+    ...nullTransform,
+    flipX: true,
   })
 )
 
@@ -68,12 +50,8 @@ test(
       'flip-x'
     )
   ).toEqual({
-    x:      0,
-    y:      0,
-    size:   16,
-    flipX:  true,
-    flipY:  false,
-    rotate: 0
+    ...nullTransform,
+    flipX: true,
   })
 )
 
@@ -84,12 +62,8 @@ test(
       'flip=x'
     )
   ).toEqual({
-    x:      0,
-    y:      0,
-    size:   16,
-    flipX:  true,
-    flipY:  false,
-    rotate: 0
+    ...nullTransform,
+    flipX: true,
   })
 )
 
@@ -100,12 +74,8 @@ test(
       'flip-x'
     )
   ).toEqual({
-    x:      0,
-    y:      0,
-    size:   16,
-    flipX:  true,
-    flipY:  false,
-    rotate: 0
+    ...nullTransform,
+    flipX: true,
   })
 )
 
@@ -116,12 +86,8 @@ test(
       'flipY'
     )
   ).toEqual({
-    x:      0,
-    y:      0,
-    size:   16,
-    flipX:  false,
-    flipY:  true,
-    rotate: 0
+    ...nullTransform,
+    flipY: true,
   })
 )
 
@@ -132,12 +98,8 @@ test(
       'flipy'
     )
   ).toEqual({
-    x:      0,
-    y:      0,
-    size:   16,
-    flipX:  false,
-    flipY:  true,
-    rotate: 0
+    ...nullTransform,
+    flipY: true,
   })
 )
 
@@ -148,12 +110,8 @@ test(
       'flip-y'
     )
   ).toEqual({
-    x:      0,
-    y:      0,
-    size:   16,
-    flipX:  false,
-    flipY:  true,
-    rotate: 0
+    ...nullTransform,
+    flipY: true,
   })
 )
 
@@ -164,12 +122,8 @@ test(
       'flip=y'
     )
   ).toEqual({
-    x:      0,
-    y:      0,
-    size:   16,
-    flipX:  false,
-    flipY:  true,
-    rotate: 0
+    ...nullTransform,
+    flipY: true,
   })
 )
 
@@ -180,12 +134,9 @@ test(
       'flipX;flipY&flipX'
     )
   ).toEqual({
-    x:      0,
-    y:      0,
-    size:   16,
-    flipX:  true,
-    flipY:  true,
-    rotate: 0
+    ...nullTransform,
+    flipX: true,
+    flipY: true,
   })
 )
 
@@ -196,12 +147,8 @@ test(
       'grow=3'
     )
   ).toEqual({
-    x:      0,
-    y:      0,
-    size:   19,
-    flipX:  false,
-    flipY:  false,
-    rotate: 0
+    ...nullTransform,
+    size: 19,
   })
 )
 
@@ -212,12 +159,8 @@ test(
       'shrink:3'
     )
   ).toEqual({
-    x:      0,
-    y:      0,
-    size:   13,
-    flipX:  false,
-    flipY:  false,
-    rotate: 0
+    ...nullTransform,
+    size: 13,
   })
 )
 
@@ -228,12 +171,8 @@ test(
       'left:2'
     )
   ).toEqual({
-    x:      -2,
-    y:      0,
-    size:   16,
-    flipX:  false,
-    flipY:  false,
-    rotate: 0
+    ...nullTransform,
+    x: -2,
   })
 )
 
@@ -244,12 +183,8 @@ test(
       'right:2'
     )
   ).toEqual({
-    x:      2,
-    y:      0,
-    size:   16,
-    flipX:  false,
-    flipY:  false,
-    rotate: 0
+    ...nullTransform,
+    x: 2,
   })
 )
 
@@ -260,12 +195,8 @@ test(
       'left:-3'
     )
   ).toEqual({
-    x:      3,
-    y:      0,
-    size:   16,
-    flipX:  false,
-    flipY:  false,
-    rotate: 0
+    ...nullTransform,
+    x: 3,
   })
 )
 
@@ -276,12 +207,8 @@ test(
       'up:2'
     )
   ).toEqual({
-    x:      0,
-    y:      -2,
-    size:   16,
-    flipX:  false,
-    flipY:  false,
-    rotate: 0
+    ...nullTransform,
+    y: -2,
   })
 )
 
@@ -292,12 +219,8 @@ test(
       'down:2'
     )
   ).toEqual({
-    x:      0,
-    y:      2,
-    size:   16,
-    flipX:  false,
-    flipY:  false,
-    rotate: 0
+    ...nullTransform,
+    y: 2,
   })
 )
 
@@ -308,11 +231,7 @@ test(
       'rotate:90'
     )
   ).toEqual({
-    x:      0,
-    y:      0,
-    size:   16,
-    flipX:  false,
-    flipY:  false,
+    ...nullTransform,
     rotate: 90
   })
 )
@@ -324,11 +243,7 @@ test(
       'rotate:90 rotate:45 & rotate=55'
     )
   ).toEqual({
-    x:      0,
-    y:      0,
-    size:   16,
-    flipX:  false,
-    flipY:  false,
+    ...nullTransform,
     rotate: 55
   })
 )
@@ -345,6 +260,8 @@ test(
     size:   19,
     flipX:  true,
     flipY:  true,
+    scaleX: 1,
+    scaleY: 1,
     rotate: 90
   })
 )
@@ -361,6 +278,8 @@ test(
       size:   14,
       flipX:  true,
       flipY:  false,
+      scaleX: 1,
+      scaleY: 1,
       rotate: 90
     })
 
@@ -375,6 +294,8 @@ test(
       size:   19,
       flipX:  true,
       flipY:  true,
+      scaleX: 1,
+      scaleY: 1,
       rotate: 135
     })
   }
@@ -392,6 +313,8 @@ test(
       size:   16,
       flipX:  true,
       flipY:  false,
+      scaleX: 1,
+      scaleY: 1,
       rotate: 90
     })
 
@@ -406,6 +329,8 @@ test(
       size:   16,
       flipX:  false,
       flipY:  true,
+      scaleX: 1,
+      scaleY: 1,
       rotate: 135
     })
   }

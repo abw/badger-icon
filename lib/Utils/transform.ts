@@ -1,20 +1,10 @@
 import { fail, isString } from '@abw/badger-utils'
 import { parseAttrs } from './attrs.js'
 import { TransformFunctions, TransformObject } from '../types'
+import { asFloat, asInt } from './coerce.js'
 
 // Derived from the transform code from FontAwesome:
 // https://github.com/FortAwesome/Font-Awesome/blob/6.x/js-packages/%40fortawesome/fontawesome-svg-core/index.js#L2706
-
-export const asFloat = (n: string | number): number =>
-  isString(n)
-    ? parseFloat(n as string)
-    : (n as number)
-
-export const asInt = (n: string | number): number =>
-  isString(n)
-    ? parseInt(n as string)
-    : (n as number)
-
 
 export const nullTransform: TransformObject = {
   x:      0,

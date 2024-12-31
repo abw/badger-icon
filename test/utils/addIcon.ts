@@ -1,5 +1,5 @@
 import { test, expect } from 'vitest'
-import { Library, addIcon, addIcons } from '@/lib/index.js'
+import { Library, addIcon, addIcons } from '@/lib/index'
 
 test(
   'addIcon() should add an icon',

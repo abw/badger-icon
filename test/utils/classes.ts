@@ -1,5 +1,5 @@
 import { test, expect } from 'vitest'
-import { classes } from '@/lib/index.js'
+import { classes } from '@/lib/index'
 
 test(
   'classes() should flatten array of class names',
