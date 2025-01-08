@@ -20,17 +20,17 @@ dependencies:
 
 devDependencies:
   '@abw/badger-css':
-    specifier: ^1.1.17
-    version: 1.1.17
+    specifier: ^1.2.6
+    version: 1.2.6
   '@abw/badger-react-ui':
-    specifier: ^1.3.1
-    version: 1.3.1(react-dom@18.2.0)(react@18.2.0)
+    specifier: ^1.3.13
+    version: 1.3.13(react-dom@18.2.0)(react@18.2.0)
   '@abw/badger-timestamp':
-    specifier: ^1.0.4
-    version: 1.0.4
+    specifier: ^1.2.0
+    version: 1.2.0
   '@abw/badger-website':
-    specifier: ^0.2.5
-    version: 0.2.5(@types/react@18.2.37)(react-dom@18.2.0)(react@18.2.0)
+    specifier: ^0.2.7
+    version: 0.2.7(@types/react@18.2.37)(react-dom@18.2.0)(react@18.2.0)
   '@abw/react-context':
     specifier: ^2.0.3
     version: 2.0.3
@@ -124,15 +124,8 @@ packages:
       js-yaml: 4.1.0
     dev: true
 
-  /@abw/badger-css@1.1.17:
-    resolution: {integrity: sha512-Hd5yqakV/0usMZwyHCLpIdrNnkR+VeFqy2VEkBD4U18B8ly6P6eBYWwvGfxiq9NQYavKBPAkMY77Epkag3h7Ug==}
-    hasBin: true
-    dependencies:
-      '@abw/badger': 1.2.4
-    dev: true
-
-  /@abw/badger-css@1.2.1:
-    resolution: {integrity: sha512-BkoJ6x4QQGIC3MEIvWbs+awVYPKVh/i12maSgoADEMz/nZOU32CrgToaEXOBfxnFpZTwCKwK/PvUqtHA7TFTZQ==}
+  /@abw/badger-css@1.2.6:
+    resolution: {integrity: sha512-fTS3+q0M1zAcOSbKBRPfUdCRAvUW2JuBx2cbY/UeL1BtGcVJCfp4CWBeq3J+a4BbGkymXQQcS1KzG1arp2xc3g==}
     hasBin: true
     dependencies:
       '@abw/badger': 1.2.4
@@ -152,33 +145,13 @@ packages:
       '@abw/badger-utils': 1.2.0
     dev: true
 
-  /@abw/badger-form@1.1.1(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-zWN6MpKV5hqCF4EH3rFAXqIPz/92q7PQYyG1kAxUT2ctBznJXDI1W7PEWK/d1sGJ2gbtUCqmEQDDeP3Z7G2Jng==}
+  /@abw/badger-form@1.1.3(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-PrmoFB2Gxss8/rZGvqzWopxmlZJ4rjEiNIsuGr2mp9YHF+6Wh2n6lF5uE+L1vcCVSpjKpFcSdXYdtE7OPXw+iA==}
     peerDependencies:
       react: ^18.2.0
       react-dom: ^18.2.0
     dependencies:
-      '@abw/react-context': 2.1.0
-      react: 18.2.0
-      react-dom: 18.2.0(react@18.2.0)
-    dev: true
-
-  /@abw/badger-form@1.1.2(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-19bvDqKTeYbTPasQqzfedY0pyGb+2duARixdpMbh0OPAZhN4yqWUhGt9P48NHpac+JzGE/dVzqbwZsXGJRmGFA==}
-    peerDependencies:
-      react: ^18.2.0
-      react-dom: ^18.2.0
-    dependencies:
-      '@abw/react-context': 2.1.0
-      react: 18.2.0
-      react-dom: 18.2.0(react@18.2.0)
-    dev: true
-
-  /@abw/badger-icon@0.1.4:
-    resolution: {integrity: sha512-XgzVotu7Hoano5H9BAzrGEISy/V1CINQHfeJkGaWOnUAEVFH1N+5TPbVQJKLFKDM97MY1RMlxw68MXqgoOEsaA==}
-    dependencies:
-      '@abw/badger-utils': 1.2.0
-      '@abw/react-one-louder': 0.0.6
+      '@abw/react-context': 2.1.1(react-dom@18.2.0)(react@18.2.0)
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
     dev: true
@@ -192,62 +165,29 @@ packages:
       react-dom: 18.2.0(react@18.2.0)
     dev: true
 
-  /@abw/badger-react-ui@1.3.1(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-dy0vIGzrTD7C3K00wplcYmOV1lQPOZos++JCkpcTtZrk+D6t5b4EN2eKmuspb3Fe90VJkMjB7a65xkN5333Hyg==}
+  /@abw/badger-react-ui@1.3.13(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-qPmARVU4Dm9ZQ0CQ4syHB8mCdbx3ZIUsrYRi8NmEsa7l42oBzUh8mYwGGcLaD2lBk/fP2TDW0X78y1xF7Q3kAQ==}
     peerDependencies:
       react: ^18.2.0
       react-dom: ^18.2.0
     dependencies:
-      '@abw/badger-css': 1.1.17
-      '@abw/badger-form': 1.1.1(react-dom@18.2.0)(react@18.2.0)
-      '@abw/badger-icon': 0.1.4
-      '@abw/badger-utils': 1.2.0
-      '@abw/react-context': 2.1.0
-      '@abw/react-one-louder': 0.0.6
-      '@dnd-kit/core': 6.1.0(react-dom@18.2.0)(react@18.2.0)
-      '@dnd-kit/modifiers': 7.0.0(@dnd-kit/core@6.1.0)(react@18.2.0)
-      '@dnd-kit/sortable': 8.0.0(@dnd-kit/core@6.1.0)(react@18.2.0)
-      '@dnd-kit/utilities': 3.2.2(react@18.2.0)
-      '@floating-ui/react': 0.26.23(react-dom@18.2.0)(react@18.2.0)
-      react: 18.2.0
-      react-dom: 18.2.0(react@18.2.0)
-    dev: true
-
-  /@abw/badger-react-ui@1.3.8(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-lZNZWDlCepj/QZ0wvZFiSW2h6wJKg3IhAIwkcsYSCNnV0cuzmi05hKgkIoRbh8umO1rmcuHuY8qu2Yz1gy/2IA==}
-    peerDependencies:
-      react: ^18.2.0
-      react-dom: ^18.2.0
-    dependencies:
-      '@abw/badger-css': 1.2.1
-      '@abw/badger-form': 1.1.2(react-dom@18.2.0)(react@18.2.0)
+      '@abw/badger-css': 1.2.6
+      '@abw/badger-form': 1.1.3(react-dom@18.2.0)(react@18.2.0)
       '@abw/badger-icon': 0.1.6
       '@abw/badger-utils': 1.2.0
-      '@abw/react-context': 2.1.0
+      '@abw/react-context': 2.1.1(react-dom@18.2.0)(react@18.2.0)
       '@abw/react-one-louder': 0.0.6
-      '@dnd-kit/core': 6.1.0(react-dom@18.2.0)(react@18.2.0)
-      '@dnd-kit/modifiers': 7.0.0(@dnd-kit/core@6.1.0)(react@18.2.0)
-      '@dnd-kit/sortable': 8.0.0(@dnd-kit/core@6.1.0)(react@18.2.0)
+      '@dnd-kit/core': 6.3.1(react-dom@18.2.0)(react@18.2.0)
+      '@dnd-kit/modifiers': 7.0.0(@dnd-kit/core@6.3.1)(react@18.2.0)
+      '@dnd-kit/sortable': 8.0.0(@dnd-kit/core@6.3.1)(react@18.2.0)
       '@dnd-kit/utilities': 3.2.2(react@18.2.0)
-      '@floating-ui/react': 0.26.24(react-dom@18.2.0)(react@18.2.0)
+      '@floating-ui/react': 0.26.28(react-dom@18.2.0)(react@18.2.0)
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
     dev: true
 
-  /@abw/badger-timestamp@1.0.4:
-    resolution: {integrity: sha512-7JBcF9rxwihiiEG1UQlv1/jdntg8BJmzTADAj5psTWbRNvDh4XHkdeoVnbf0nRCq08q5472mx8wbpgNzrwb2RQ==}
-    dependencies:
-      '@abw/badger-utils': 1.2.0
-    dev: true
-
-  /@abw/badger-timestamp@1.0.6:
-    resolution: {integrity: sha512-/s7rVCa9s0bWvad8xMkc0l2H28e4d8K4IiYTtCTQZjtOwcknun34Ni093tgAQh6jq15PEkVIVnkuPlJSDglAzg==}
-    dependencies:
-      '@abw/badger-utils': 1.2.0
-    dev: true
-
-  /@abw/badger-timestamp@1.1.0:
-    resolution: {integrity: sha512-RNvC6Wedn0ToPkys5TbjK+50cfVrac9Kp/phBAovDcQvV0LV+LGBSIVPepEgUi1uPXOyzbJPNQF3uciAdpmWgw==}
+  /@abw/badger-timestamp@1.2.0:
+    resolution: {integrity: sha512-7dS6N0UI2p0j3yLXVXDD6SNN4EEowbUt8ho3bZ7S8/S4B9Pp7FLqiTJx3nXA1ACjwU37HipgVoScwJTqs/939g==}
     dependencies:
       '@abw/badger-utils': 1.2.0
     dev: true
@@ -255,15 +195,15 @@ packages:
   /@abw/badger-utils@1.2.0:
     resolution: {integrity: sha512-7JZOL5m4HoT3MvAy09A+JlwfDi4eXqngUau8syfr4Wt897ylD5vGTavJQH+tNKdMe1Dc33Y6MjSngGyYQ7eqEQ==}
 
-  /@abw/badger-website@0.2.5(@types/react@18.2.37)(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-M7EqrG9RbzXyQyTDq5S4RjUiO3o6H3sdNIwxybeQsWYOlWdAIe0jf8h9csGsnF6k32XojV7kIm7T3ksIPxF1zg==}
+  /@abw/badger-website@0.2.7(@types/react@18.2.37)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-sXpktqCp4yxlyCRN/crPcgaC1s1TBG1GfU0AraBbf2xoeszj/jVD8JtTqwnJl4QRk2g9Tic14a3spTQHLkSeRg==}
     peerDependencies:
       react: ^18.2.0
       react-dom: ^18.2.0
     dependencies:
-      '@abw/badger-css': 1.1.17
-      '@abw/badger-react-ui': 1.3.8(react-dom@18.2.0)(react@18.2.0)
-      '@abw/badger-timestamp': 1.1.0
+      '@abw/badger-css': 1.2.6
+      '@abw/badger-react-ui': 1.3.13(react-dom@18.2.0)(react@18.2.0)
+      '@abw/badger-timestamp': 1.2.0
       '@abw/badger-utils': 1.2.0
       '@abw/react-context': 2.1.0
       '@abw/react-night-and-day': 0.0.6(react-dom@18.2.0)(react@18.2.0)
@@ -281,7 +221,7 @@ packages:
     dependencies:
       '@abw/badger-codecs': 1.0.3
       '@abw/badger-filesystem': 1.0.5
-      '@abw/badger-timestamp': 1.0.4
+      '@abw/badger-timestamp': 1.2.0
       '@abw/badger-utils': 1.2.0
       commander: 10.0.1
       dotenv: 16.3.1
@@ -295,7 +235,7 @@ packages:
     dependencies:
       '@abw/badger-codecs': 1.0.3
       '@abw/badger-filesystem': 1.0.6
-      '@abw/badger-timestamp': 1.0.6
+      '@abw/badger-timestamp': 1.2.0
       '@abw/badger-utils': 1.2.0
       chokidar: 3.6.0
       commander: 11.1.0
@@ -313,6 +253,16 @@ packages:
 
   /@abw/react-context@2.1.0:
     resolution: {integrity: sha512-P+aM29cGPCcJNt1/6jsdtifnwfZeSttINVRar279v/o0UbCrwYkdig/RsDXJ97M5VlEYDkcqyW91Bfu1nyLkTg==}
+    dependencies:
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+    dev: true
+
+  /@abw/react-context@2.1.1(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-rlTNBMyYf4QwVZit20UkgRRCLJdQ1Xo6pzn5KIQrrgOh7w17dnsJHE9VL91mmijUscsB/7Oe11+oQ01j/m0I+w==}
+    peerDependencies:
+      react: ^18.2.0
+      react-dom: ^18.2.0
     dependencies:
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
@@ -605,47 +555,47 @@ packages:
     resolution: {integrity: sha512-RpfLEtTlyIxeNPGKcokS+p3BZII/Q3bYxryFRglh5H3A3T8q9fsLYm72VYAMEOOIBLEa8o93kFLiBDUWKrwXZA==}
     dev: true
 
-  /@dnd-kit/accessibility@3.1.0(react@18.2.0):
-    resolution: {integrity: sha512-ea7IkhKvlJUv9iSHJOnxinBcoOI3ppGnnL+VDJ75O45Nss6HtZd8IdN8touXPDtASfeI2T2LImb8VOZcL47wjQ==}
+  /@dnd-kit/accessibility@3.1.1(react@18.2.0):
+    resolution: {integrity: sha512-2P+YgaXF+gRsIihwwY1gCsQSYnu9Zyj2py8kY5fFvUM1qm2WA2u639R6YNVfU4GWr+ZM5mqEsfHZZLoRONbemw==}
     peerDependencies:
       react: '>=16.8.0'
     dependencies:
       react: 18.2.0
-      tslib: 2.7.0
+      tslib: 2.8.1
     dev: true
 
-  /@dnd-kit/core@6.1.0(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-J3cQBClB4TVxwGo3KEjssGEXNJqGVWx17aRTZ1ob0FliR5IjYgTxl5YJbKTzA6IzrtelotH19v6y7uoIRUZPSg==}
+  /@dnd-kit/core@6.3.1(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-xkGBRQQab4RLwgXxoqETICr6S5JlogafbhNsidmrkVv2YRs5MLwpjoF2qpiGjQt8S9AoxtIV603s0GIUpY5eYQ==}
     peerDependencies:
       react: '>=16.8.0'
       react-dom: '>=16.8.0'
     dependencies:
-      '@dnd-kit/accessibility': 3.1.0(react@18.2.0)
+      '@dnd-kit/accessibility': 3.1.1(react@18.2.0)
       '@dnd-kit/utilities': 3.2.2(react@18.2.0)
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
-      tslib: 2.7.0
+      tslib: 2.8.1
     dev: true
 
-  /@dnd-kit/modifiers@7.0.0(@dnd-kit/core@6.1.0)(react@18.2.0):
+  /@dnd-kit/modifiers@7.0.0(@dnd-kit/core@6.3.1)(react@18.2.0):
     resolution: {integrity: sha512-BG/ETy3eBjFap7+zIti53f0PCLGDzNXyTmn6fSdrudORf+OH04MxrW4p5+mPu4mgMk9kM41iYONjc3DOUWTcfg==}
     peerDependencies:
       '@dnd-kit/core': ^6.1.0
       react: '>=16.8.0'
     dependencies:
-      '@dnd-kit/core': 6.1.0(react-dom@18.2.0)(react@18.2.0)
+      '@dnd-kit/core': 6.3.1(react-dom@18.2.0)(react@18.2.0)
       '@dnd-kit/utilities': 3.2.2(react@18.2.0)
       react: 18.2.0
       tslib: 2.7.0
     dev: true
 
-  /@dnd-kit/sortable@8.0.0(@dnd-kit/core@6.1.0)(react@18.2.0):
+  /@dnd-kit/sortable@8.0.0(@dnd-kit/core@6.3.1)(react@18.2.0):
     resolution: {integrity: sha512-U3jk5ebVXe1Lr7c2wU7SBZjcWdQP+j7peHJfCspnA81enlu88Mgd7CC8Q+pub9ubP7eKVETzJW+IBAhsqbSu/g==}
     peerDependencies:
       '@dnd-kit/core': ^6.1.0
       react: '>=16.8.0'
     dependencies:
-      '@dnd-kit/core': 6.1.0(react-dom@18.2.0)(react@18.2.0)
+      '@dnd-kit/core': 6.3.1(react-dom@18.2.0)(react@18.2.0)
       '@dnd-kit/utilities': 3.2.2(react@18.2.0)
       react: 18.2.0
       tslib: 2.7.0
@@ -904,41 +854,17 @@ packages:
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: true
 
-  /@floating-ui/core@1.6.7:
-    resolution: {integrity: sha512-yDzVT/Lm101nQ5TCVeK65LtdN7Tj4Qpr9RTXJ2vPFLqtLxwOrpoxAHAJI8J3yYWUc40J0BDBheaitK5SJmno2g==}
+  /@floating-ui/core@1.6.9:
+    resolution: {integrity: sha512-uMXCuQ3BItDUbAMhIXw7UPXRfAlOAvZzdK9BWpE60MCn+Svt3aLn9jsPTi/WNGlRUu2uI0v5S7JiIUsbsvh3fw==}
     dependencies:
-      '@floating-ui/utils': 0.2.7
+      '@floating-ui/utils': 0.2.9
     dev: true
 
-  /@floating-ui/core@1.6.8:
-    resolution: {integrity: sha512-7XJ9cPU+yI2QeLS+FCSlqNFZJq8arvswefkZrYI1yQBbftw6FyrZOxYSh+9S7z7TpeWlRt9zJ5IhM1WIL334jA==}
+  /@floating-ui/dom@1.6.13:
+    resolution: {integrity: sha512-umqzocjDgNRGTuO7Q8CU32dkHkECqI8ZdMZ5Swb6QAM0t5rnlrN3lGo1hdpscRd3WS8T6DKYK4ephgIH9iRh3w==}
     dependencies:
-      '@floating-ui/utils': 0.2.8
-    dev: true
-
-  /@floating-ui/dom@1.6.10:
-    resolution: {integrity: sha512-fskgCFv8J8OamCmyun8MfjB1Olfn+uZKjOKZ0vhYF3gRmEUXcGOjxWL8bBr7i4kIuPZ2KD2S3EUIOxnjC8kl2A==}
-    dependencies:
-      '@floating-ui/core': 1.6.7
-      '@floating-ui/utils': 0.2.7
-    dev: true
-
-  /@floating-ui/dom@1.6.11:
-    resolution: {integrity: sha512-qkMCxSR24v2vGkhYDo/UzxfJN3D4syqSjyuTFz6C7XcpU1pASPRieNI0Kj5VP3/503mOfYiGY891ugBX1GlABQ==}
-    dependencies:
-      '@floating-ui/core': 1.6.8
-      '@floating-ui/utils': 0.2.8
-    dev: true
-
-  /@floating-ui/react-dom@2.1.1(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-4h84MJt3CHrtG18mGsXuLCHMrug49d7DFkU0RMIyshRveBeyV2hmV/pDaF2Uxtu8kgq5r46llp5E5FQiR0K2Yg==}
-    peerDependencies:
-      react: '>=16.8.0'
-      react-dom: '>=16.8.0'
-    dependencies:
-      '@floating-ui/dom': 1.6.10
-      react: 18.2.0
-      react-dom: 18.2.0(react@18.2.0)
+      '@floating-ui/core': 1.6.9
+      '@floating-ui/utils': 0.2.9
     dev: true
 
   /@floating-ui/react-dom@2.1.2(react-dom@18.2.0)(react@18.2.0):
@@ -947,43 +873,26 @@ packages:
       react: '>=16.8.0'
       react-dom: '>=16.8.0'
     dependencies:
-      '@floating-ui/dom': 1.6.11
+      '@floating-ui/dom': 1.6.13
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
     dev: true
 
-  /@floating-ui/react@0.26.23(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-9u3i62fV0CFF3nIegiWiRDwOs7OW/KhSUJDNx2MkQM3LbE5zQOY01sL3nelcVBXvX7Ovvo3A49I8ql+20Wg/Hw==}
-    peerDependencies:
-      react: '>=16.8.0'
-      react-dom: '>=16.8.0'
-    dependencies:
-      '@floating-ui/react-dom': 2.1.1(react-dom@18.2.0)(react@18.2.0)
-      '@floating-ui/utils': 0.2.7
-      react: 18.2.0
-      react-dom: 18.2.0(react@18.2.0)
-      tabbable: 6.2.0
-    dev: true
-
-  /@floating-ui/react@0.26.24(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-2ly0pCkZIGEQUq5H8bBK0XJmc1xIK/RM3tvVzY3GBER7IOD1UgmC2Y2tjj4AuS+TC+vTE1KJv2053290jua0Sw==}
+  /@floating-ui/react@0.26.28(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-yORQuuAtVpiRjpMhdc0wJj06b9JFjrYF4qp96j++v2NBpbi6SEGF7donUJ3TMieerQ6qVkAv1tgr7L4r5roTqw==}
     peerDependencies:
       react: '>=16.8.0'
       react-dom: '>=16.8.0'
     dependencies:
       '@floating-ui/react-dom': 2.1.2(react-dom@18.2.0)(react@18.2.0)
-      '@floating-ui/utils': 0.2.8
+      '@floating-ui/utils': 0.2.9
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
       tabbable: 6.2.0
     dev: true
 
-  /@floating-ui/utils@0.2.7:
-    resolution: {integrity: sha512-X8R8Oj771YRl/w+c1HqAC1szL8zWQRwFvgDwT129k9ACdBoud/+/rX9V0qiMl6LWUdP9voC2nDVZYPMQQsb6eA==}
-    dev: true
-
-  /@floating-ui/utils@0.2.8:
-    resolution: {integrity: sha512-kym7SodPp8/wloecOpcmSnWJsK7M0E5Wg8UcFA+uO4B9s5d0ywXOEro/8HM9x0rW+TljRzul/14UYz3TleT3ig==}
+  /@floating-ui/utils@0.2.9:
+    resolution: {integrity: sha512-MDWhGtE+eHw5JW7lq4qhc5yRLS11ERl1c7Z6Xd0a58DozHES6EnNNwUWbMiG4J9Cgj053Bhk8zvlhFYKVhULwg==}
     dev: true
 
   /@fortawesome/fontawesome-common-types@6.4.2:
@@ -5762,6 +5671,10 @@ packages:
 
   /tslib@2.7.0:
     resolution: {integrity: sha512-gLXCKdN1/j47AiHiOkJN69hJmcbGTHI0ImLmbYLHykhgeN0jVGola9yVjFgzCUklsZQMW55o+dW7IXv3RCXDzA==}
+    dev: true
+
+  /tslib@2.8.1:
+    resolution: {integrity: sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w==}
     dev: true
 
   /type-check@0.4.0:
