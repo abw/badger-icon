@@ -4,6 +4,7 @@ import svgr             from 'vite-plugin-svgr'
 import react            from '@vitejs/plugin-react'
 import define           from  './vite.defs.js'
 import copy             from 'rollup-plugin-copy'
+import dts              from 'vite-plugin-dts'
 
 const NAME   = `badger-icon`
 const MODULE = `abw/${NAME}`
@@ -12,7 +13,8 @@ export default defineConfig({
   plugins: [
     react(),
     svgr(),
-    jsconfigPaths()
+    jsconfigPaths(),
+    dts()
   ],
   define,
   test: {
@@ -26,7 +28,7 @@ export default defineConfig({
     minify: true,
     sourcemap: false,
     lib: {
-      entry: 'lib/index.js',
+      entry: 'lib/index.ts',
       name: MODULE,
       fileName: NAME,
     },

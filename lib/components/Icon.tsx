@@ -1,23 +1,24 @@
 import Library      from '../Library.js'
 import SVGIcon      from '../SVG/Icon.jsx'
-import { Themed }   from '../Theme.js'
+import { Themed }   from '../Theme'
 import { IconLibrary, SVGIconProps } from '../types.js'
 import { resolveIconData, prepareIconProps, classes, splitSpace } from '../utils/index.js'
 import { fail, isString } from '@abw/badger-utils'
 
 // TODO: fixedWidth
+export type IconComponentProps = {
+  name?: string,
+  iconsClass?: string,
+  library?: IconLibrary,
+  className?: string,
+}
 
 export const Icon = ({
   name,
   iconsClass='icons',
   library=Library,
   ...props
-}: {
-  name?: string,
-  iconsClass: string,
-  library: IconLibrary,
-  className?: string,
-}) => {
+}: IconComponentProps ) => {
   if (! name) {
     return <SVGIcon {...prepareIconProps(props) as SVGIconProps} />
   }
