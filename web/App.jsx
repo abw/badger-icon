@@ -26,6 +26,7 @@ const App = () =>
       sidebar={sidebar}
       snippets={snippets}
       prevNextArrows
+      prevNextArrowsText
       sidebarToc={false}
       linkUp={false}
       debugPages
