@@ -12,9 +12,12 @@ const CustomLibrary = {
 it(
   'renders an icon with an svg string',
   () => {
+    console.log(`pre`)
+
     const { container } = render(
       <Icon name="foo" library={CustomLibrary}/>
     )
+    console.log(`post`)
     // screen.debug()
     const icon = container.querySelector('svg.icon')
     const circle = icon.querySelector('circle')

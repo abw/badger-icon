@@ -1,6 +1,6 @@
 import React from 'react'
 import { it, expect } from 'vitest'
-import { render, screen } from '@testing-library/react'
+import { render } from '@testing-library/react'
 import { Icon } from '@/lib/index'
 
 const Library = {
@@ -51,7 +51,7 @@ it(
     const { container } = render(
       <Icon name="bar" library={Library}/>
     )
-    screen.debug()
+    // screen.debug()
     const icon = container.querySelector('svg.icon')
     const path = icon.querySelector('path')
     expect(icon).toHaveClass('icon')

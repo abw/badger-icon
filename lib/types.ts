@@ -1,4 +1,4 @@
-import { MouseEventHandler } from "react"
+import { MouseEventHandler } from 'react'
 
 export type Nothing = undefined | null
 export type PropsObject = {
@@ -64,14 +64,14 @@ export type TransformObject = {
   rotate: number
 }
 
-export type TransformFunction = (transform: TransformObject, ...args: any[]) => void
+export type TransformFunction = (transform: TransformObject, ...args: unknown[]) => void
 
 export type TransformFunctions = {
   [key: string]: TransformFunction
 }
 
 export type StyleProps = {
-  [key: string]: any
+  [key: string]: unknown
 //  fill?: string,
 //  stroke?: string,
 //  opacity?: string,
@@ -88,7 +88,7 @@ export type StylePropsTable = {
   [key: string]: StyleProps
 }
 
-export type StyleFunction = (style: StyleProps, ...args: any[]) => void
+export type StyleFunction = (style: StyleProps, ...args: unknown[]) => void
 export type StyleFunctions = {
   [key: string]: StyleFunction
 }

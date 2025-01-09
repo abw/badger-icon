@@ -1,7 +1,5 @@
 import { isArray, splitList } from '@abw/badger-utils'
-import { ExpandedPath, IconLibrary, IconProps, IconSource, StringPropsObject } from '../types'
-import { iconBody, iconStringBody } from './body'
-import { iconDefaults } from './defaults'
+import { ExpandedPath, StringPropsObject } from '../types'
 
 /**
  * Split a string of the form `"type:path"` into an object containing the

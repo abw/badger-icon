@@ -23,7 +23,7 @@ const elements: { [key: string]: SVGElement } = {
 }
 
 export const Body = (props: PropsObject) => {
-  const { path, body, ...rest }: {
+  const { path, body }: {
     path?: string,
     body?: BodyProp
   } = props

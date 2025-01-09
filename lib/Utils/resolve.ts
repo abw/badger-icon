@@ -1,6 +1,6 @@
-import { fail, isString, noValue } from '@abw/badger-utils'
+import { fail, isString } from '@abw/badger-utils'
 import { DASH, SPLIT_DASH } from '../constants.js'
-import { IconLibrary, IconProps, IconSources, IconSpec, PropsObject, ResolvedIcon, SplitIconName, StyleProps } from '../types.js'
+import { IconLibrary, IconProps, IconSources, PropsObject, ResolvedIcon, SplitIconName, StyleProps } from '../types.js'
 import { parseAttrs } from './attrs.js'
 import { joinClasses } from './classes.js'
 import { transformData } from './transform.js'
@@ -96,11 +96,11 @@ export const resolveIconData = (
 
   // expand any styles
   if (icon.style) {
-    console.log(`got icon style: `, icon.style);
+    // console.log(`got icon style: `, icon.style);
     icon.style = isString(icon.style)
       ? parseAttrs(icon.style as string)
       : { ...icon.style as object }
-    console.log(`set icon style: `, icon.style);
+    // console.log(`set icon style: `, icon.style);
     if (style) {
       Object.assign(icon.style, style)
     }

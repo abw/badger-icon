@@ -1,4 +1,4 @@
-import { isString } from "@abw/badger-utils"
+import { isString } from '@abw/badger-utils'
 
 export const asFloat = (n: string | number): number =>
   isString(n)

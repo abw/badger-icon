@@ -1,4 +1,4 @@
-import { IconSource, IconLibrary, IconSources } from "./types"
+import { IconSource, IconLibrary, IconSources } from './types'
 
 export const Library: IconLibrary = {
   defaults: {
