@@ -31,6 +31,7 @@
     "lint": "eslint 'lib/**/*.{js,jsx,ts,tsx}'",
     "icons": "svg-icon-librarian -f icons/config.yaml -c icons/custom -o lib/iconlib.js -y"
   },
+  "homepage": "https://badgerpower.com/badger-icon/",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/abw/badger-icon.git"
