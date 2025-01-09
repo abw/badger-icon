@@ -22,7 +22,10 @@ export default defineConfig({
     globals: true,
     setupFiles: './test/setup.js',
     include: ['test/**/*.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
-    exclude: ['test/setup.js', 'test/lib', 'test/old']
+    exclude: ['test/setup.js', 'test/lib', 'test/old'],
+    coverage: {
+      include: ['lib/**/*']
+    }
   },
   build: {
     minify: true,
