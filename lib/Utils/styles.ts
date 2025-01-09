@@ -14,7 +14,7 @@ import { StyleFunctions, StyleProps, StylePropsTable } from '../types'
 const baseWidth     = 4.42
 const widthMultiple = (n: number) => `${baseWidth * n}%`
 
-export const nullStyle = {
+export const nullStyle: StyleProps = {
   // fill:               'currentColor',
   // stroke:             'currentColor',
   /*

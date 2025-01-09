@@ -64,14 +64,20 @@ export type TransformObject = {
   rotate: number
 }
 
-export type TransformFunction = (transform: TransformObject, ...args: unknown[]) => void
+// Go directly to Typescript jail.  Do not pass Go.  Do not collect £200.
+// Not that you were going to anyway, because this is free software and
+// no-one is going to pay you for the time it takes you to properly type
+// these functions that no-one else is ever going to use.
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export type TransformFunction = (transform: TransformObject, ...args: any[]) => void
 
 export type TransformFunctions = {
   [key: string]: TransformFunction
 }
 
 export type StyleProps = {
-  [key: string]: unknown
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  [key: string]: any
 //  fill?: string,
 //  stroke?: string,
 //  opacity?: string,
@@ -88,7 +94,9 @@ export type StylePropsTable = {
   [key: string]: StyleProps
 }
 
-export type StyleFunction = (style: StyleProps, ...args: unknown[]) => void
+// Yeah, sorry Typescript but I really don't give a shit about these params
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export type StyleFunction = (style: StyleProps, ...args: any[]) => void
 export type StyleFunctions = {
   [key: string]: StyleFunction
 }
