@@ -1,6 +1,6 @@
 {
   "name": "@abw/badger-icon",
-  "version": "1.0.0-alpha-1",
+  "version": "1.0.0-alpha-2",
   "description": "SVG Icon rendering for React",
   "type": "module",
   "files": [
@@ -8,17 +8,23 @@
   ],
   "main": "./dist/badger-icon.umd.cjs",
   "module": "./dist/badger-icon.js",
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/badger-icon.js",
-      "require": "./dist/badger-icon.umd.cjs"
+      "require": "./dist/badger-icon.umd.cjs",
+      "import": {
+        "types":  "./dist/index.d.ts",
+        "default": "./dist/badger-icon.js"
+      }
     },
     "./styles/*": "./dist/styles/*"
   },
   "author": "Andy Wardley",
   "licence": "ISC",
   "keywords": [
-    "react"
+    "react",
+    "icon",
+    "SVG"
   ],
   "scripts": {
     "dev": "vite --config vite.docs.js",
