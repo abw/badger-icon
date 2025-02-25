@@ -1,6 +1,6 @@
 {
   "name": "@abw/badger-icon",
-  "version": "1.0.0-alpha-2",
+  "version": "1.0.0",
   "description": "SVG Icon rendering for React",
   "type": "module",
   "files": [
@@ -13,7 +13,7 @@
     ".": {
       "require": "./dist/badger-icon.umd.cjs",
       "import": {
-        "types":  "./dist/index.d.ts",
+        "types": "./dist/index.d.ts",
         "default": "./dist/badger-icon.js"
       }
     },
@@ -45,11 +45,13 @@
   "bugs": {
     "url": "https://github.com/abw/badger-icon/issues"
   },
+  "peerDependencies": {
+    "react": "^18.2.0 || ^19.0.0",
+    "react-dom": "^18.2.0 || ^19.0.0"
+  },
   "dependencies": {
-    "@abw/badger-utils": "^1.2.1",
-    "@abw/react-one-louder": "1.0.0-alpha-2",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "@abw/badger-utils": "^1.2.4",
+    "@abw/react-one-louder": "1.0.0"
   },
   "devDependencies": {
     "@abw/badger-css": "^1.2.6",
@@ -80,7 +82,7 @@
     "react-syntax-highlighter": "^15.5.0",
     "rehype-mdx-code-props": "^3.0.1",
     "rollup-plugin-copy": "^3.5.0",
-    "sass": "^1.69.5",
+    "sass": "=1.78.0",
     "typescript": "^5.7.2",
     "typescript-eslint": "^8.19.1",
     "vite": "^5.4.2",
