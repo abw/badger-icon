@@ -34,10 +34,10 @@ export function expandPoints(
     : splitList(names as string)
   const points = splitList(string)
   return points.reduce(
-    (object, point) => {
+    (object: StringPropsObject, point) => {
       if (params.length) {
-        const param = params.shift()
-        object[param] = point
+        const param = params.shift() as string
+        object[param] = point as string
       }
       return object
     },
