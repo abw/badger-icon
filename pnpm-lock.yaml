@@ -23,8 +23,8 @@ devDependencies:
     specifier: ^1.2.6
     version: 1.2.6
   '@abw/badger-react-ui':
-    specifier: ^1.3.13
-    version: 1.3.13(react-dom@18.2.0)(react@18.2.0)
+    specifier: ^1.3.14
+    version: 1.3.14(react-dom@18.2.0)(react@18.2.0)
   '@abw/badger-timestamp':
     specifier: ^1.2.1
     version: 1.2.1
@@ -158,38 +158,41 @@ packages:
       '@abw/badger-utils': 1.2.4
     dev: true
 
-  /@abw/badger-form@1.1.3(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-PrmoFB2Gxss8/rZGvqzWopxmlZJ4rjEiNIsuGr2mp9YHF+6Wh2n6lF5uE+L1vcCVSpjKpFcSdXYdtE7OPXw+iA==}
+  /@abw/badger-form@1.1.4(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-InZj8ER36B21GrF+tTuNLJMuPdb4Wimftgxs6osNh16tJAOWEbSoO4JP+0eIftP22LCiLYMfACFzpjcUOWNgqg==}
     peerDependencies:
-      react: ^18.2.0
-      react-dom: ^18.2.0
+      react: ^18.2.0 || ^19.0.0
+      react-dom: ^18.2.0 || ^19.0.0
     dependencies:
-      '@abw/react-context': 2.1.1(react-dom@18.2.0)(react@18.2.0)
+      '@abw/react-context': 3.0.0(react-dom@18.2.0)(react@18.2.0)
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
     dev: true
 
-  /@abw/badger-icon@0.1.6:
-    resolution: {integrity: sha512-llg968l7UyShOihzO9KjdZ+HLre3QgywaHasNzz/AwEz8UN/jQE86ZFms8hFAn3lK9y6Ei15XzIcfJCHEP2ZjA==}
+  /@abw/badger-icon@1.0.0(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-bQB6fY8BH/Edls8JAhecj6Xm8et64s2PDf3wsUxgB0BAdEcoj/aBEg1Xu0O8vK9r5sr50X+V/i0qRfus05pVaQ==}
+    peerDependencies:
+      react: ^18.2.0 || ^19.0.0
+      react-dom: ^18.2.0 || ^19.0.0
     dependencies:
       '@abw/badger-utils': 1.2.4
-      '@abw/react-one-louder': 0.0.6
+      '@abw/react-one-louder': 1.0.0(react-dom@18.2.0)(react@18.2.0)
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
     dev: true
 
-  /@abw/badger-react-ui@1.3.13(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-qPmARVU4Dm9ZQ0CQ4syHB8mCdbx3ZIUsrYRi8NmEsa7l42oBzUh8mYwGGcLaD2lBk/fP2TDW0X78y1xF7Q3kAQ==}
+  /@abw/badger-react-ui@1.3.14(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-AZEP2NGEwEvymM4JNhFFW7b3h3OEm7ASq6R6wltjcOewC+2yPzwK4Gn4KfDTahwIhctlJYapf2fUZiX797xucg==}
     peerDependencies:
-      react: ^18.2.0
-      react-dom: ^18.2.0
+      react: ^18.2.0 || ^19.0.0
+      react-dom: ^18.2.0 || ^19.0.0
     dependencies:
       '@abw/badger-css': 1.2.6
-      '@abw/badger-form': 1.1.3(react-dom@18.2.0)(react@18.2.0)
-      '@abw/badger-icon': 0.1.6
+      '@abw/badger-form': 1.1.4(react-dom@18.2.0)(react@18.2.0)
+      '@abw/badger-icon': 1.0.0(react-dom@18.2.0)(react@18.2.0)
       '@abw/badger-utils': 1.2.4
-      '@abw/react-context': 2.1.1(react-dom@18.2.0)(react@18.2.0)
-      '@abw/react-one-louder': 0.0.6
+      '@abw/react-context': 3.0.0(react-dom@18.2.0)(react@18.2.0)
+      '@abw/react-one-louder': 1.0.0(react-dom@18.2.0)(react@18.2.0)
       '@dnd-kit/core': 6.3.1(react-dom@18.2.0)(react@18.2.0)
       '@dnd-kit/modifiers': 7.0.0(@dnd-kit/core@6.3.1)(react@18.2.0)
       '@dnd-kit/sortable': 8.0.0(@dnd-kit/core@6.3.1)(react@18.2.0)
@@ -219,7 +222,7 @@ packages:
       react-dom: ^18.2.0 || ^19.0.0
     dependencies:
       '@abw/badger-css': 1.2.6
-      '@abw/badger-react-ui': 1.3.13(react-dom@18.2.0)(react@18.2.0)
+      '@abw/badger-react-ui': 1.3.14(react-dom@18.2.0)(react@18.2.0)
       '@abw/badger-timestamp': 1.2.1
       '@abw/badger-utils': 1.2.4
       '@abw/react-context': 3.0.0(react-dom@18.2.0)(react@18.2.0)
@@ -261,16 +264,6 @@ packages:
       prompts: 2.4.2
     dev: true
 
-  /@abw/react-context@2.1.1(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-rlTNBMyYf4QwVZit20UkgRRCLJdQ1Xo6pzn5KIQrrgOh7w17dnsJHE9VL91mmijUscsB/7Oe11+oQ01j/m0I+w==}
-    peerDependencies:
-      react: ^18.2.0
-      react-dom: ^18.2.0
-    dependencies:
-      react: 18.2.0
-      react-dom: 18.2.0(react@18.2.0)
-    dev: true
-
   /@abw/react-context@3.0.0(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-e2/dYIbTOzrrydMiZKbntcy24wgNSAZ90eNm1bWom3UY3JQBADU6JdzU+Hm317+qSvl+idSYlzRNE5n7gF8IlA==}
     peerDependencies:
@@ -291,13 +284,6 @@ packages:
       react-dom: 18.2.0(react@18.2.0)
     dev: true
 
-  /@abw/react-one-louder@0.0.6:
-    resolution: {integrity: sha512-UtXUwZVyXPGOzhA3eaOC6TaooWI4/dsAcwOoYnLntPFSIvt5kMBpsfo+F665z1jZ9g/KMtlLl3QVwYhsm+e3rA==}
-    dependencies:
-      react: 18.2.0
-      react-dom: 18.2.0(react@18.2.0)
-    dev: true
-
   /@abw/react-one-louder@1.0.0(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-9rtv2Uh2wEU/tmbXwIrgzKxaGiZk3CrZB/zLR4RiIuZfsZuclP4P7o432YFEiSOLYX7zG92aaGtX07sQqTx6+Q==}
     peerDependencies:
@@ -306,7 +292,6 @@ packages:
     dependencies:
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
-    dev: false
 
   /@abw/svg-icon-librarian@1.0.9:
     resolution: {integrity: sha512-mUMvuEbD0EncLQgatgB8DUGKuTp3iPF3WHTdqzGyFC6UlH84H8k/p0jbqO8VzGtdZQxyZI3s59eY+s0KynJkKA==}
