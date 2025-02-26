@@ -26,17 +26,17 @@ devDependencies:
     specifier: ^1.3.13
     version: 1.3.13(react-dom@18.2.0)(react@18.2.0)
   '@abw/badger-timestamp':
-    specifier: ^1.2.0
-    version: 1.2.0
+    specifier: ^1.2.1
+    version: 1.2.1
   '@abw/badger-website':
-    specifier: ^0.3.1
-    version: 0.3.1(@types/react@18.2.37)(react-dom@18.2.0)(react@18.2.0)
+    specifier: ^1.0.0
+    version: 1.0.0(@types/react@18.2.37)(react-dom@18.2.0)(react@18.2.0)
   '@abw/react-context':
-    specifier: ^2.0.3
-    version: 2.0.3
+    specifier: ^3.0.0
+    version: 3.0.0(react-dom@18.2.0)(react@18.2.0)
   '@abw/react-night-and-day':
-    specifier: ^0.0.6
-    version: 0.0.6(react-dom@18.2.0)(react@18.2.0)
+    specifier: ^1.0.0
+    version: 1.0.0(react-dom@18.2.0)(react@18.2.0)
   '@abw/svg-icon-librarian':
     specifier: ^1.0.9
     version: 1.0.9
@@ -104,8 +104,8 @@ devDependencies:
     specifier: ^3.5.0
     version: 3.5.0
   sass:
-    specifier: ^1.69.5
-    version: 1.69.5
+    specifier: '=1.78.0'
+    version: 1.78.0
   typescript:
     specifier: ^5.7.2
     version: 5.7.2
@@ -114,7 +114,7 @@ devDependencies:
     version: 8.19.1(eslint@9.17.0)(typescript@5.7.2)
   vite:
     specifier: ^5.4.2
-    version: 5.4.2(sass@1.69.5)
+    version: 5.4.2(sass@1.78.0)
   vite-jsconfig-paths:
     specifier: ^2.0.1
     version: 2.0.1(vite@5.4.2)
@@ -126,7 +126,7 @@ devDependencies:
     version: 4.2.0(rollup@4.34.8)(typescript@5.7.2)(vite@5.4.2)
   vitest:
     specifier: ^2.1.8
-    version: 2.1.8(@vitest/ui@2.1.8)(jsdom@22.1.0)(sass@1.69.5)
+    version: 2.1.8(@vitest/ui@2.1.8)(jsdom@22.1.0)(sass@1.78.0)
 
 packages:
 
@@ -199,8 +199,8 @@ packages:
       react-dom: 18.2.0(react@18.2.0)
     dev: true
 
-  /@abw/badger-timestamp@1.2.0:
-    resolution: {integrity: sha512-7dS6N0UI2p0j3yLXVXDD6SNN4EEowbUt8ho3bZ7S8/S4B9Pp7FLqiTJx3nXA1ACjwU37HipgVoScwJTqs/939g==}
+  /@abw/badger-timestamp@1.2.1:
+    resolution: {integrity: sha512-FFG7QrtczEznPKCe32D0mOBZdgACGOsGbEM2L3a1/qG4HCVN0JeFyvSNxQQeQDzPxvZjyZFyjBATL8uEadOGOw==}
     dependencies:
       '@abw/badger-utils': 1.2.0
     dev: true
@@ -212,23 +212,23 @@ packages:
   /@abw/badger-utils@1.2.4:
     resolution: {integrity: sha512-CagLBQYx8/RBDjCmnqwZ11fu7hGwN3HstFay49yiUnBeEACrO3cap7MerBpe7E5G4k65Gi0oobAzACB0b+C2XQ==}
 
-  /@abw/badger-website@0.3.1(@types/react@18.2.37)(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-VXExHXyVFevVzlwB5sM9i0244tXyd06PT+S0RErSFNnzYSjKSMfnw4D3ZZiF0sKD2tOpIFiQhlCYJhJRZ+fAJw==}
+  /@abw/badger-website@1.0.0(@types/react@18.2.37)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-tqAUQ65iwLBE6Oh4FjNyHoMOZCcNV6CF4bJXfMG3J9J++EDuW00JwVPgB23FORsqtTD6ljxM+pETTyIk5avDrw==}
     peerDependencies:
-      react: ^18.2.0
-      react-dom: ^18.2.0
+      react: ^18.2.0 || ^19.0.0
+      react-dom: ^18.2.0 || ^19.0.0
     dependencies:
       '@abw/badger-css': 1.2.6
       '@abw/badger-react-ui': 1.3.13(react-dom@18.2.0)(react@18.2.0)
-      '@abw/badger-timestamp': 1.2.0
+      '@abw/badger-timestamp': 1.2.1
       '@abw/badger-utils': 1.2.4
-      '@abw/react-context': 2.1.1(react-dom@18.2.0)(react@18.2.0)
-      '@abw/react-night-and-day': 0.0.6(react-dom@18.2.0)(react@18.2.0)
+      '@abw/react-context': 3.0.0(react-dom@18.2.0)(react@18.2.0)
+      '@abw/react-night-and-day': 1.0.0(react-dom@18.2.0)(react@18.2.0)
       '@mdx-js/react': 3.0.1(@types/react@18.2.37)(react@18.2.0)
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
-      react-router: 6.28.1(react@18.2.0)
-      react-router-dom: 6.28.1(react-dom@18.2.0)(react@18.2.0)
+      react-router: 6.29.0(react@18.2.0)
+      react-router-dom: 6.29.0(react-dom@18.2.0)(react@18.2.0)
     transitivePeerDependencies:
       - '@types/react'
     dev: true
@@ -238,7 +238,7 @@ packages:
     dependencies:
       '@abw/badger-codecs': 1.0.3
       '@abw/badger-filesystem': 1.0.5
-      '@abw/badger-timestamp': 1.2.0
+      '@abw/badger-timestamp': 1.2.1
       '@abw/badger-utils': 1.2.4
       commander: 10.0.1
       dotenv: 16.3.1
@@ -252,20 +252,13 @@ packages:
     dependencies:
       '@abw/badger-codecs': 1.0.3
       '@abw/badger-filesystem': 1.0.6
-      '@abw/badger-timestamp': 1.2.0
+      '@abw/badger-timestamp': 1.2.1
       '@abw/badger-utils': 1.2.4
       chokidar: 3.6.0
       commander: 11.1.0
       dotenv: 16.4.5
       js-yaml: 4.1.0
       prompts: 2.4.2
-    dev: true
-
-  /@abw/react-context@2.0.3:
-    resolution: {integrity: sha512-9kjqEB09vdWh8ZjcIgf8Ci43WrkDIrhRBCm0juDxDfe/5QjPUhrK7A3zjaTkw+qHYvF6+c/kpndLrCjowyLaJA==}
-    dependencies:
-      react: 18.2.0
-      react-dom: 18.2.0(react@18.2.0)
     dev: true
 
   /@abw/react-context@2.1.1(react-dom@18.2.0)(react@18.2.0):
@@ -278,11 +271,21 @@ packages:
       react-dom: 18.2.0(react@18.2.0)
     dev: true
 
-  /@abw/react-night-and-day@0.0.6(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-HVvyYuRxs8soPO1c/AFQqylx6uQqe9OHvxdJVVCzOtEtDYRFyM5NGY5Ob9ugUrSkg7o1Ru8p1vDfAJ+7/nyMvQ==}
+  /@abw/react-context@3.0.0(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-e2/dYIbTOzrrydMiZKbntcy24wgNSAZ90eNm1bWom3UY3JQBADU6JdzU+Hm317+qSvl+idSYlzRNE5n7gF8IlA==}
     peerDependencies:
-      react: ^18.2.0
-      react-dom: ^18.2.0
+      react: ^18.2.0 || 19.0.0
+      react-dom: ^18.2.0 || 19.0.0
+    dependencies:
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+    dev: true
+
+  /@abw/react-night-and-day@1.0.0(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-MFLvGLcBFM4wBuNNwya2bAsmeGJMDFsJRcDgb6MLAzD6EoT0F65W1K3KhQFn/3ysUq3COQ2GxogbNYvrMtH6ug==}
+    peerDependencies:
+      react: ^18.2.0 || ^19.0.0
+      react-dom: ^18.2.0 || ^19.0.0
     dependencies:
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
@@ -1224,8 +1227,8 @@ packages:
     engines: {node: '>=14.0.0'}
     dev: true
 
-  /@remix-run/router@1.21.0:
-    resolution: {integrity: sha512-xfSkCAchbdG5PnbrKqFWwia4Bi61nH+wm8wLEqfHDyp7Y3dZzgqS2itV8i4gAq9pC2HsTpwyBC6Ds8VHZ96JlA==}
+  /@remix-run/router@1.22.0:
+    resolution: {integrity: sha512-MBOl8MeOzpK0HQQQshKB7pABXbmyHizdTpqnrIseTbsv0nAepwC2ENZa1aaBExNQcpLoXmWthhak8SABLzvGPw==}
     engines: {node: '>=14.0.0'}
     dev: true
 
@@ -1753,7 +1756,7 @@ packages:
       dom-accessibility-api: 0.5.16
       lodash: 4.17.21
       redent: 3.0.0
-      vitest: 2.1.8(@vitest/ui@2.1.8)(jsdom@22.1.0)(sass@1.69.5)
+      vitest: 2.1.8(@vitest/ui@2.1.8)(jsdom@22.1.0)(sass@1.78.0)
     dev: true
 
   /@testing-library/react@14.1.0(react-dom@18.2.0)(react@18.2.0):
@@ -2056,7 +2059,7 @@ packages:
       '@babel/plugin-transform-react-jsx-source': 7.24.7(@babel/core@7.25.2)
       '@types/babel__core': 7.20.5
       react-refresh: 0.14.2
-      vite: 5.4.2(sass@1.69.5)
+      vite: 5.4.2(sass@1.78.0)
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -2082,7 +2085,7 @@ packages:
       std-env: 3.8.0
       test-exclude: 7.0.1
       tinyrainbow: 1.2.0
-      vitest: 2.1.8(@vitest/ui@2.1.8)(jsdom@22.1.0)(sass@1.69.5)
+      vitest: 2.1.8(@vitest/ui@2.1.8)(jsdom@22.1.0)(sass@1.78.0)
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -2110,7 +2113,7 @@ packages:
       '@vitest/spy': 2.1.8
       estree-walker: 3.0.3
       magic-string: 0.30.17
-      vite: 5.4.2(sass@1.69.5)
+      vite: 5.4.2(sass@1.78.0)
     dev: true
 
   /@vitest/pretty-format@2.1.8:
@@ -2152,7 +2155,7 @@ packages:
       sirv: 3.0.0
       tinyglobby: 0.2.10
       tinyrainbow: 1.2.0
-      vitest: 2.1.8(@vitest/ui@2.1.8)(jsdom@22.1.0)(sass@1.69.5)
+      vitest: 2.1.8(@vitest/ui@2.1.8)(jsdom@22.1.0)(sass@1.78.0)
     dev: true
 
   /@vitest/utils@2.1.8:
@@ -2188,7 +2191,7 @@ packages:
       '@vue/shared': 3.5.13
       entities: 4.5.0
       estree-walker: 2.0.2
-      source-map-js: 1.2.0
+      source-map-js: 1.2.1
     dev: true
 
   /@vue/compiler-dom@3.5.13:
@@ -2512,8 +2515,8 @@ packages:
     resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}
     dev: true
 
-  /binary-extensions@2.2.0:
-    resolution: {integrity: sha512-jDctJ/IVQbZoJykoeHbhXpOlNBqGNcwXJKJog42E5HDPUwQTSdjCHdihjj0DlnheQ7blbT6dHOafNAiS8ooQKA==}
+  /binary-extensions@2.3.0:
+    resolution: {integrity: sha512-Ceh+7ox5qe7LJuLHoY0feh3pHuUDHAcRUeyL2VYghZwfpkNIy/+8Ocg0a3UuSoYzavmylwuLWQOf3hl0jjMMIw==}
     engines: {node: '>=8'}
     dev: true
 
@@ -2530,11 +2533,11 @@ packages:
       balanced-match: 1.0.2
     dev: true
 
-  /braces@3.0.2:
-    resolution: {integrity: sha512-b8um+L1RzM3WDSzvhm6gIz1yfTbBt6YTlcEKAvsmqCZZFw46z626lVj9j1yEPW33H5H+lBQpZMP1k8l+78Ha0A==}
+  /braces@3.0.3:
+    resolution: {integrity: sha512-yQbXgO/OSZVD2IsiLlro+7Hf6Q18EJrKSEsdoMzKePKXct3gvD8oLcOQdIzGupr5Fj+EDe8gO/lxc1BzfMpxvA==}
     engines: {node: '>=8'}
     dependencies:
-      fill-range: 7.0.1
+      fill-range: 7.1.1
     dev: true
 
   /browserslist@4.23.3:
@@ -2674,27 +2677,12 @@ packages:
     engines: {node: '>= 16'}
     dev: true
 
-  /chokidar@3.5.3:
-    resolution: {integrity: sha512-Dr3sfKRP6oTcjf2JmUmFJfeVMvXBdegxB0iVQ5eb2V10uFJUCAS8OByZdVAyVb8xXNz3GjjTgj9kLWsZTqE6kw==}
-    engines: {node: '>= 8.10.0'}
-    dependencies:
-      anymatch: 3.1.3
-      braces: 3.0.2
-      glob-parent: 5.1.2
-      is-binary-path: 2.1.0
-      is-glob: 4.0.3
-      normalize-path: 3.0.0
-      readdirp: 3.6.0
-    optionalDependencies:
-      fsevents: 2.3.3
-    dev: true
-
   /chokidar@3.6.0:
     resolution: {integrity: sha512-7VT13fmjotKpGipCW9JEQAusEPE+Ei8nl6/g4FBAmIm0GOOLMua9NDDo/DWp0ZAxCr3cPq5ZpBqmPAQgDda2Pw==}
     engines: {node: '>= 8.10.0'}
     dependencies:
       anymatch: 3.1.3
-      braces: 3.0.2
+      braces: 3.0.3
       glob-parent: 5.1.2
       is-binary-path: 2.1.0
       is-glob: 4.0.3
@@ -3503,8 +3491,8 @@ packages:
       flat-cache: 4.0.1
     dev: true
 
-  /fill-range@7.0.1:
-    resolution: {integrity: sha512-qOo9F+dMUmC2Lcb4BbVvnKJxTPjCm+RRpe4gDuGrzkL7mEVl/djYSu2OdQ2Pa302N4oqkSg9ir6jaLWJ2USVpQ==}
+  /fill-range@7.1.1:
+    resolution: {integrity: sha512-YsGpe3WHLK8ZYi4tWDg2Jy3ebRz2rXowDxnld4bkQB00cc/1Zw9AWnC0i9ztDJitivtQvaI9KaLyKrc+hBW0yg==}
     engines: {node: '>=8'}
     dependencies:
       to-regex-range: 5.0.1
@@ -3979,8 +3967,8 @@ packages:
     engines: {node: '>= 4'}
     dev: true
 
-  /immutable@4.3.4:
-    resolution: {integrity: sha512-fsXeu4J4i6WNWSikpI88v/PcVflZz+6kMhUfIwc5SY+poQRPnaf5V7qds6SUyUN3cVxEzuCab7QIoLOQ+DQ1wA==}
+  /immutable@4.3.7:
+    resolution: {integrity: sha512-1hqclzwYwjRDFLjcFxOM5AYkkG0rpFPpr1RLPMEuGczoS7YA8gLhy8SWXYRAA/XwfEHpfo3cw5JGioS32fnMRw==}
     dev: true
 
   /import-fresh@3.3.0:
@@ -4125,7 +4113,7 @@ packages:
     resolution: {integrity: sha512-ZMERYes6pDydyuGidse7OsHxtbI7WVeUEozgR/g7rd0xUimYNlvZRE/K2MgZTjWy725IfelLeVcEM97mmtRGXw==}
     engines: {node: '>=8'}
     dependencies:
-      binary-extensions: 2.2.0
+      binary-extensions: 2.3.0
     dev: true
 
   /is-boolean-object@1.1.2:
@@ -5088,7 +5076,7 @@ packages:
     resolution: {integrity: sha512-DMy+ERcEW2q8Z2Po+WNXuw3c5YaUSFjAO5GsJqfEl7UjvtIuFKO6ZrKvcItdy98dwFI2N1tg3zNIdKaQT+aNdA==}
     engines: {node: '>=8.6'}
     dependencies:
-      braces: 3.0.2
+      braces: 3.0.3
       picomatch: 2.3.1
     dev: true
 
@@ -5462,7 +5450,7 @@ packages:
     dependencies:
       nanoid: 3.3.7
       picocolors: 1.0.1
-      source-map-js: 1.2.0
+      source-map-js: 1.2.1
     dev: true
 
   /prelude-ls@1.2.1:
@@ -5567,17 +5555,17 @@ packages:
       react-router: 6.18.0(react@18.2.0)
     dev: true
 
-  /react-router-dom@6.28.1(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-YraE27C/RdjcZwl5UCqF/ffXnZDxpJdk9Q6jw38SZHjXs7NNdpViq2l2c7fO7+4uWaEfcwfGCv3RSg4e1By/fQ==}
+  /react-router-dom@6.29.0(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-pkEbJPATRJ2iotK+wUwHfy0xs2T59YPEN8BQxVCPeBZvK7kfPESRc/nyxzdcxR17hXgUPYx2whMwl+eo9cUdnQ==}
     engines: {node: '>=14.0.0'}
     peerDependencies:
       react: '>=16.8'
       react-dom: '>=16.8'
     dependencies:
-      '@remix-run/router': 1.21.0
+      '@remix-run/router': 1.22.0
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
-      react-router: 6.28.1(react@18.2.0)
+      react-router: 6.29.0(react@18.2.0)
     dev: true
 
   /react-router@6.18.0(react@18.2.0):
@@ -5590,13 +5578,13 @@ packages:
       react: 18.2.0
     dev: true
 
-  /react-router@6.28.1(react@18.2.0):
-    resolution: {integrity: sha512-2omQTA3rkMljmrvvo6WtewGdVh45SpL9hGiCI9uUrwGGfNFDIvGK4gYJsKlJoNVi6AQZcopSCballL+QGOm7fA==}
+  /react-router@6.29.0(react@18.2.0):
+    resolution: {integrity: sha512-DXZJoE0q+KyeVw75Ck6GkPxFak63C4fGqZGNijnWgzB/HzSP1ZfTlBj5COaGWwhrMQ/R8bXiq5Ooy4KG+ReyjQ==}
     engines: {node: '>=14.0.0'}
     peerDependencies:
       react: '>=16.8'
     dependencies:
-      '@remix-run/router': 1.21.0
+      '@remix-run/router': 1.22.0
       react: 18.2.0
     dev: true
 
@@ -5881,14 +5869,14 @@ packages:
     resolution: {integrity: sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==}
     dev: true
 
-  /sass@1.69.5:
-    resolution: {integrity: sha512-qg2+UCJibLr2LCVOt3OlPhr/dqVHWOa9XtZf2OjbLs/T4VPSJ00udtgJxH3neXZm+QqX8B+3cU7RaLqp1iVfcQ==}
+  /sass@1.78.0:
+    resolution: {integrity: sha512-AaIqGSrjo5lA2Yg7RvFZrlXDBCp3nV4XP73GrLGvdRWWwk+8H3l0SDvq/5bA4eF+0RFPLuWUk3E+P1U/YqnpsQ==}
     engines: {node: '>=14.0.0'}
     hasBin: true
     dependencies:
-      chokidar: 3.5.3
-      immutable: 4.3.4
-      source-map-js: 1.0.2
+      chokidar: 3.6.0
+      immutable: 4.3.7
+      source-map-js: 1.2.1
     dev: true
 
   /saxes@6.0.0:
@@ -6064,16 +6052,6 @@ packages:
     dependencies:
       dot-case: 3.0.4
       tslib: 2.7.0
-    dev: true
-
-  /source-map-js@1.0.2:
-    resolution: {integrity: sha512-R0XvVJ9WusLiqTCEiGCmICCMplcCkIwwR11mOSD9CR5u+IXYdiseeEuXCVAjS54zqwkLcPNnmU4OeJ6tUrWhDw==}
-    engines: {node: '>=0.10.0'}
-    dev: true
-
-  /source-map-js@1.2.0:
-    resolution: {integrity: sha512-itJW8lvSA0TXEphiRoawsCksnlf8SyvmFzIhltqAHluXd88pkCd+cXJVHTDwdCr0IzwptSm035IHQktUu1QUMg==}
-    engines: {node: '>=0.10.0'}
     dev: true
 
   /source-map-js@1.2.1:
@@ -6642,12 +6620,12 @@ packages:
       globrex: 0.1.2
       recrawl-sync: 2.2.3
       tsconfig-paths: 3.14.2
-      vite: 5.4.2(sass@1.69.5)
+      vite: 5.4.2(sass@1.78.0)
     transitivePeerDependencies:
       - supports-color
     dev: true
 
-  /vite-node@2.1.8(sass@1.69.5):
+  /vite-node@2.1.8(sass@1.78.0):
     resolution: {integrity: sha512-uPAwSr57kYjAUux+8E2j0q0Fxpn8M9VoyfGiRI8Kfktz9NcYMCenwY5RnZxnF1WTu3TGiYipirIzacLL3VVGFg==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
@@ -6656,7 +6634,7 @@ packages:
       debug: 4.4.0
       es-module-lexer: 1.6.0
       pathe: 1.1.2
-      vite: 5.4.2(sass@1.69.5)
+      vite: 5.4.2(sass@1.78.0)
     transitivePeerDependencies:
       - '@types/node'
       - less
@@ -6689,7 +6667,7 @@ packages:
       local-pkg: 0.5.1
       magic-string: 0.30.17
       typescript: 5.7.2
-      vite: 5.4.2(sass@1.69.5)
+      vite: 5.4.2(sass@1.78.0)
     transitivePeerDependencies:
       - '@types/node'
       - rollup
@@ -6704,14 +6682,14 @@ packages:
       '@rollup/pluginutils': 5.1.0(rollup@4.34.8)
       '@svgr/core': 8.1.0(typescript@5.7.2)
       '@svgr/plugin-jsx': 8.1.0(@svgr/core@8.1.0)
-      vite: 5.4.2(sass@1.69.5)
+      vite: 5.4.2(sass@1.78.0)
     transitivePeerDependencies:
       - rollup
       - supports-color
       - typescript
     dev: true
 
-  /vite@5.4.2(sass@1.69.5):
+  /vite@5.4.2(sass@1.78.0):
     resolution: {integrity: sha512-dDrQTRHp5C1fTFzcSaMxjk6vdpKvT+2/mIdE07Gw2ykehT49O0z/VHS3zZ8iV/Gh8BJJKHWOe5RjaNrW5xf/GA==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
@@ -6745,12 +6723,12 @@ packages:
       esbuild: 0.21.5
       postcss: 8.4.41
       rollup: 4.21.1
-      sass: 1.69.5
+      sass: 1.78.0
     optionalDependencies:
       fsevents: 2.3.3
     dev: true
 
-  /vitest@2.1.8(@vitest/ui@2.1.8)(jsdom@22.1.0)(sass@1.69.5):
+  /vitest@2.1.8(@vitest/ui@2.1.8)(jsdom@22.1.0)(sass@1.78.0):
     resolution: {integrity: sha512-1vBKTZskHw/aosXqQUlVWWlGUxSJR8YtiyZDJAFeW2kPAeX6S3Sool0mjspO+kXLuxVWlEDDowBAeqeAQefqLQ==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
@@ -6794,8 +6772,8 @@ packages:
       tinyexec: 0.3.2
       tinypool: 1.0.2
       tinyrainbow: 1.2.0
-      vite: 5.4.2(sass@1.69.5)
-      vite-node: 2.1.8(sass@1.69.5)
+      vite: 5.4.2(sass@1.78.0)
+      vite-node: 2.1.8(sass@1.78.0)
       why-is-node-running: 2.3.0
     transitivePeerDependencies:
       - less
