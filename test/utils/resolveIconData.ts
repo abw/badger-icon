@@ -21,6 +21,15 @@ const iconData: IconLibrary = {
     'bam':          { body: 'bam path', style: { 'stroke-width': 24 } },
   }
 }
+const iconData2: IconLibrary = {
+  defaults: {
+    ...iconDefaults,
+    type: 'stroke'
+  },
+  icons: {
+    'wim':          { path: 'wim path', type: 'fill' },
+  }
+}
 
 test(
   'resolveIconData() with simple string path',
@@ -412,6 +421,24 @@ test(
       x: 4,
       rotate: 90
     }
+  })
+)
+
+test(
+  'resolveIconData() path with type',
+  () => expect(
+    resolveIconData('wim', iconData2)
+  ).toEqual({
+    name:   'wim',
+    width:  DEFAULT_ICON_WIDTH,
+    height: DEFAULT_ICON_HEIGHT,
+    body: {
+      element: 'path',
+      d: 'wim path',
+    },
+    style: {
+      fill: 'currentColor'
+    },
   })
 )
 

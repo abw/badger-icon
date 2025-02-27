@@ -33,3 +33,17 @@ test(
   }
 )
 
+test(
+  'addIcon() should add an icon with a type',
+  () => {
+    addIcon(
+      'bar',
+      { path: 'M1,1L10,11', type: 'fill' }
+    )
+    expect(
+      Library.icons.bar
+    ).toStrictEqual(
+      { path: 'M1,1L10,11', type: 'fill' }
+    )
+  }
+)
