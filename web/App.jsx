@@ -29,7 +29,7 @@ const App = () =>
       prevNextArrowsText
       sidebarToc={false}
       linkUp={false}
-      debugPages
+      // debugPages
     />
   </MDXProvider>
 

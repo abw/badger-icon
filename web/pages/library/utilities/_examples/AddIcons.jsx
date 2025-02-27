@@ -8,6 +8,10 @@ const AddIconsExample = () => {
   addIcons({
     pyramid:   'M256,96L64,416L448,416L256,96Z',
     lightning: 'M320,32L160,288L240,288L192,480L352,224L272,224L320,32Z',
+    flash: {
+      path: 'M320,32L160,288L240,288L192,480L352,224L272,224L320,32Z',
+      type: 'fill'
+    }
   })
   return (
     <div className="flex gap-4 wrap x6">
@@ -17,6 +21,7 @@ const AddIconsExample = () => {
       <Icon name="lightning"/>
       <Icon name="lightning-thinner"/>
       <Icon name="lightning-fill"/>
+      <Icon name="flash"/>
     </div>
   )
 }

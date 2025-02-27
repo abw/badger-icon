@@ -31,8 +31,6 @@ export const prepareIconProps = ({
       styleProps = { ...icon.style }
     }
   }
-  // console.log(`styleProps: `)
-
 
   applyModifiers(
     icon,

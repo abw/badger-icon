@@ -36,8 +36,13 @@ export const iconBody = (
     //
   }
   else {
+    // There may be a type in the data
     icon.body = iconBodyType(data)
+    if (isObject(data) && (data as PropsObject).type) {
+      icon.type = (data as PropsObject).type as string
+    }
   }
+
   return icon
 }
 
