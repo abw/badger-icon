@@ -36,10 +36,18 @@ export const iconBody = (
     //
   }
   else {
-    // There may be a type in the data
+    // There may be a type, width and/or height in the data
     icon.body = iconBodyType(data)
-    if (isObject(data) && (data as PropsObject).type) {
-      icon.type = (data as PropsObject).type as string
+    if (isObject(data)) {
+      if ((data as PropsObject).type) {
+        icon.type = (data as PropsObject).type as string
+      }
+      if ((data as PropsObject).width) {
+        icon.width = (data as PropsObject).width as number
+      }
+      if ((data as PropsObject).height) {
+        icon.height = (data as PropsObject).height as number
+      }
     }
   }
 
