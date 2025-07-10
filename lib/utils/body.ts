@@ -50,7 +50,6 @@ export const iconBody = (
       }
     }
   }
-
   return icon
 }
 
@@ -173,7 +172,11 @@ export function iconObjectBody(
     const value = body[key]
     if (hasValue(value)) {
       // if there is then have the generator function generate the body
-      return generator(value as string)
+      const generated = generator(value as string)
+      if (body.modifiers) {
+        applyModifiers(generated, body.modifiers as string)
+      }
+      return generated
     }
   }
 

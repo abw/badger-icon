@@ -8,6 +8,8 @@ import ObjArray     from './_examples/ObjectArray.jsx'
 import ObjArraySrc  from './_examples/ObjectArray.jsx?raw'
 import Badger       from './_examples/Badger.jsx'
 import BadgerSrc    from './_examples/Badger.jsx?raw'
+import Modifiers    from './_examples/Modifiers.jsx'
+import ModifiersSrc from './_examples/Modifiers.jsx?raw'
 import String       from './_examples/String.jsx'
 import StringSrc    from './_examples/String.jsx?raw'
 import { Example }  from '@abw/badger-website'
@@ -67,6 +69,16 @@ attributes supported by the element.
 <Example
   Component={Badger}
   code={BadgerSrc}
+  expand
+/>
+
+Each element in the array can define its own style `modifiers`.  Note that
+we currently only support style modifiers (e.g. `thin`, `square`, `opacity`, etc)
+and not any of the transformation modifiers (e.g. `flip`, `rotate`, etc).
+
+<Example
+  Component={Modifiers}
+  code={ModifiersSrc}
   expand
 />
 

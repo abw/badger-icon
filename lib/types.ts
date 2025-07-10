@@ -121,7 +121,11 @@ export type SVGIconProps = {
 
 
 export type BodyProp = string | BodyObject | BodyProp[]
-export type BodyObject =  { element: string, [key: string]: unknown }
+export type BodyObject =  {
+  element: string,
+  transform?: TransformObject,
+  [key: string]: unknown
+}
 
 export type IconsProps = {
   names: string | string[],
